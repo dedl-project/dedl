@@ -13,7 +13,7 @@
 <https://w3id.org/def/dedl> rdf:type owl:Ontology ;
                              dc:description "The Data Ecosystem Description Language (DEDL) is an abstract language to describe concepts of data ecosystems, in which different participants (i.e., organizations and individuals) share data as the primary aim."@en ;
                              dc:title "DEDL Vocabulary & Expression 0.1"@en ;
-                             dcterms:creator "Jiahang Chen" ;
+                             dcterms:creator "Lennart Klöpper, Jiahang Chen" ;
                              rdfs:comment "This is a vocabulary for DEDL version 0.1"@en ;
                              rdfs:label "DEDL"@en ;
                              owl:versionInfo 0.1 .
