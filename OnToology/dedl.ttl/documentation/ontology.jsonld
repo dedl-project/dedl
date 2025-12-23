@@ -28,7 +28,7 @@
     "@value" : "DEDL Vocabulary & Expression 0.1"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "Jiahang Chen"
+    "@value" : "Lennart Klöpper, Jiahang Chen"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
