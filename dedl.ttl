@@ -11,12 +11,12 @@
 @base <https://w3id.org/def/dedl#> .
 
 <https://w3id.org/def/dedl> rdf:type owl:Ontology ;
-                             dc:description "The Data Ecosystem Description Language (DEDL) is an abstract language to describe concepts of data ecosystems, in which different participants (i.e., organizations and individuals) share data as the primary aim."@en ;
-                             dc:title "DEDL Vocabulary & Expression 0.1"@en ;
+                             dc:description "The Data Ecosystem Description Language (DEDL) is an abstract language to describe concepts of data ecosystems, in which different participants (i.e., organizations and individuals) share data and generate value as the primary aim."@en ;
+                             dc:title "DEDL Vocabulary & Expression 0.2"@en ;
                              dcterms:creator "Lennart Klöpper, Jiahang Chen" ;
-                             rdfs:comment "This is a vocabulary for DEDL version 0.1"@en ;
+                             rdfs:comment "This is a vocabulary for DEDL version 0.2"@en ;
                              rdfs:label "DEDL"@en ;
-                             owl:versionInfo 0.1 .
+                             owl:versionInfo 0.2 .
 
 #################################################################
 #    Annotation properties
@@ -69,7 +69,7 @@ dedl:authenticationFactor rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/def/dedl#authenticationProcess
 dedl:authenticationProcess rdf:type owl:ObjectProperty ;
                            rdfs:domain dedl:Authenticator ;
-                           rdfs:range dedl:AuthenticationProcess ;
+                           rdfs:range dedl:Authentication ;
                            rdfs:comment "Links an Authenticator to the AuthenticationProcess used for identity verification."@en ;
                            rdfs:label "authenticationProcess"@en .
 
@@ -101,15 +101,18 @@ dedl:authorizationArchitecture rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/def/dedl#authorizationProcess
 dedl:authorizationProcess rdf:type owl:ObjectProperty ;
                           rdfs:domain dedl:Authorizator ;
-                          rdfs:range dedl:AuthorizationProcess ;
-                          rdfs:comment "Indicates the AuthorizationProcess followed by an Authorizator."@en ;
+                          rdfs:range dedl:Authorization ;
+                          rdfs:comment "Indicates the Authorization followed by an Authorizator."@en ;
                           rdfs:label "authorizationProcess"@en .
 
 
-###  https://w3id.org/def/dedl#element
-dedl:element rdf:type owl:ObjectProperty ;
-             rdfs:domain dedl:DataEcosystem ;
-             rdfs:range dedl:DataEcosystemElement .
+###  https://w3id.org/def/dedl#dataEcosystemElement
+dedl:dataEcosystemElement rdf:type owl:ObjectProperty ;
+                          rdfs:domain dedl:DataEcosystem ;
+                          rdfs:range dedl:DataEcosystemElement ;
+                          rdfs:comment ""@en ;
+                          rdfs:label "dataEcosystemElement"@en ;
+                          rdfs:seeAlso "composedBy"@en .
 
 
 ###  https://w3id.org/def/dedl#entity
@@ -165,12 +168,22 @@ dedl:relationship rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/def/dedl#uses
 dedl:uses rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf dedl:relationship .
+          rdfs:domain dedl:Participant ;
+          rdfs:range dedl:TechnicalDataEcosystemElement ;
+          rdfs:comment ""@en ;
+          rdfs:label "uses"@en .
 
 
 #################################################################
 #    Classes
 #################################################################
+
+###  https://w3id.org/def/dedl#API
+dedl:API rdf:type owl:Class ;
+         rdfs:subClassOf dedl:Interface ;
+         rdfs:comment "Application Programming Interface; a subclass of Interface representing a set of protocols allowing different software entities to communicate within a data ecosystem."@en ;
+         rdfs:label "API"@en .
+
 
 ###  https://w3id.org/def/dedl#AccessControlModel
 dedl:AccessControlModel rdf:type owl:Class ;
@@ -178,16 +191,31 @@ dedl:AccessControlModel rdf:type owl:Class ;
                         rdfs:label "AccessControlModel"@en .
 
 
+###  https://w3id.org/def/dedl#AgreementStorage
+dedl:AgreementStorage rdf:type owl:Class ;
+                      rdfs:subClassOf dedl:PolicyStorage ;
+                      rdfs:comment "A subclass of PolicyStorage where concluded contracts are stored, ensuring that agreements between Participants are documented and accessible."@en ;
+                      rdfs:label "AgreementStorage"@en .
+
+
+###  https://w3id.org/def/dedl#AuditAndLogging
+dedl:AuditAndLogging rdf:type owl:Class ;
+                     rdfs:subClassOf dedl:TechnicalDataEcosystemElement ;
+                     rdfs:comment "A component responsible for documenting activities within a data ecosystem to ensure transparency."@en ;
+                     rdfs:label "AuditAndLogging"@en .
+
+
+###  https://w3id.org/def/dedl#Authentication
+dedl:Authentication rdf:type owl:Class ;
+                    rdfs:subClassOf dedl:Process ;
+                    rdfs:comment "A procedure or sequence of steps that verify the identity of a user or entity."@en ;
+                    rdfs:label "Authentication"@en .
+
+
 ###  https://w3id.org/def/dedl#AuthenticationFactor
 dedl:AuthenticationFactor rdf:type owl:Class ;
                           rdfs:comment "An element used to verify the identity of a user or entity (e.g. password, token, biometrics)."@en ;
                           rdfs:label "AuthenticationFactor"@en .
-
-
-###  https://w3id.org/def/dedl#AuthenticationProcess
-dedl:AuthenticationProcess rdf:type owl:Class ;
-                           rdfs:comment "A procedure or sequence of steps that verify the identity of a user or entity."@en ;
-                           rdfs:label "AuthenticationProcess"@en .
 
 
 ###  https://w3id.org/def/dedl#AuthenticationProtocol
@@ -204,28 +232,58 @@ dedl:AuthenticationRiskContext rdf:type owl:Class ;
 
 ###  https://w3id.org/def/dedl#Authenticator
 dedl:Authenticator rdf:type owl:Class ;
-                   rdfs:subClassOf dedl:TechnicalDataEcosystemElement ;
-                   rdfs:comment "An actor or component responsible for carrying out the authentication process."@en ;
+                   rdfs:subClassOf dedl:IdentityAndAccessManagement ;
+                   rdfs:comment "An Participant or component responsible for carrying out the authentication process."@en ;
                    rdfs:label "Authenticator"@en .
+
+
+###  https://w3id.org/def/dedl#Authorization
+dedl:Authorization rdf:type owl:Class ;
+                   rdfs:subClassOf dedl:Process ;
+                   rdfs:comment "A method or set of steps determining if an entity may access a resource."@en ;
+                   rdfs:label "Authorization"@en .
 
 
 ###  https://w3id.org/def/dedl#AuthorizationArchitecture
 dedl:AuthorizationArchitecture rdf:type owl:Class ;
-                               rdfs:comment "A structural framework that defines how authorization decisions are made and enforced."@en ;
+                               rdfs:subClassOf dedl:IdentityAndAccessManagement ;
+                               rdfs:comment "A subclass of IdentityAndAccessManagement representing a structural framework that defines how authorization decisions are made and enforced."@en ;
                                rdfs:label "AuthorizationArchitecture"@en .
-
-
-###  https://w3id.org/def/dedl#AuthorizationProcess
-dedl:AuthorizationProcess rdf:type owl:Class ;
-                          rdfs:comment "A method or set of steps determining if an entity may access a resource."@en ;
-                          rdfs:label "AuthorizationProcess"@en .
 
 
 ###  https://w3id.org/def/dedl#Authorizator
 dedl:Authorizator rdf:type owl:Class ;
-                  rdfs:subClassOf dedl:TechnicalDataEcosystemElement ;
-                  rdfs:comment "An actor or component that assesses permissions and enforces authorization decisions."@en ;
+                  rdfs:subClassOf dedl:IdentityAndAccessManagement ;
+                  rdfs:comment "A participant or component that assesses permissions and enforces authorization decisions."@en ;
                   rdfs:label "Authorizator"@en .
+
+
+###  https://w3id.org/def/dedl#Communication
+dedl:Communication rdf:type owl:Class ;
+                   rdfs:subClassOf dedl:TechnicalDataEcosystemElement ;
+                   rdfs:comment "A mechanism through which participants in a data ecosystem exchange information and interact with each other."@en ;
+                   rdfs:label "Communication"@en .
+
+
+###  https://w3id.org/def/dedl#ContractAgreeing
+dedl:ContractAgreeing rdf:type owl:Class ;
+                      rdfs:subClassOf dedl:Negotiating ;
+                      rdfs:comment "A subclass of Negotiation representing the concluding process between data providers and consumers  when a policy is accepted by both parties and a contract is formed."@en ;
+                      rdfs:label "ContractAgreeing"@en .
+
+
+###  https://w3id.org/def/dedl#ContractOffering
+dedl:ContractOffering rdf:type owl:Class ;
+                      rdfs:subClassOf dedl:Negotiating ;
+                      rdfs:comment "A subclass of Negotiating representing the process where data offers are made available to potential consumers."@en ;
+                      rdfs:label "ContractOffering"@en .
+
+
+###  https://w3id.org/def/dedl#ContractRequesting
+dedl:ContractRequesting rdf:type owl:Class ;
+                        rdfs:subClassOf dedl:Negotiating ;
+                        rdfs:comment "A subclass of Negotiating representing the process where potential data consumers request specific conditions for the use or access of data."@en ;
+                        rdfs:label "ContractRequesting"@en .
 
 
 ###  https://w3id.org/def/dedl#DataEcosystem
@@ -236,8 +294,43 @@ dedl:DataEcosystem rdf:type owl:Class ;
 
 ###  https://w3id.org/def/dedl#DataEcosystemElement
 dedl:DataEcosystemElement rdf:type owl:Class ;
-                          dcterms:abstract "Abstraction of consisting elements in a data ecosystem, which can be specified to technical data ecosystem elements and participants"@en ;
+                          rdfs:comment "An element within a data ecosystem that contributes to its functionality and processes."@en ;
                           rdfs:label "DataEcosystemElement"@en .
+
+
+###  https://w3id.org/def/dedl#DataExchanging
+dedl:DataExchanging rdf:type owl:Class ;
+                    rdfs:subClassOf dedl:Transacting ;
+                    rdfs:comment "A subclass of Transaction that represents the process that facilitates the transfer of data within a data ecosystem between Participants."@en ;
+                    rdfs:label "DataExchanging"@en .
+
+
+###  https://w3id.org/def/dedl#DataOffering
+dedl:DataOffering rdf:type owl:Class ;
+                  rdfs:subClassOf dedl:Publishing ;
+                  rdfs:comment "A sublcass of Publishing representing the process where participants make their data available to others in the data ecosystem."@en ;
+                  rdfs:label "DataOffering"@en .
+
+
+###  https://w3id.org/def/dedl#DataSpaceConnector
+dedl:DataSpaceConnector rdf:type owl:Class ;
+                        rdfs:subClassOf dedl:Interface ;
+                        rdfs:comment "A subclass of Interface enabling secure and standardized interaction within data spaces (i.e., specialized realizations of data ecosystems)."@en ;
+                        rdfs:label "DataSpaceConnector"@en .
+
+
+###  https://w3id.org/def/dedl#DataStorage
+dedl:DataStorage rdf:type owl:Class ;
+                 rdfs:subClassOf dedl:Storage ;
+                 rdfs:comment "A subclass of Storage dedicated to string data within a data ecosystem."@en ;
+                 rdfs:label "DataStorage"@en .
+
+
+###  https://w3id.org/def/dedl#DataStoring
+dedl:DataStoring rdf:type owl:Class ;
+                 rdfs:subClassOf dedl:Publishing ;
+                 rdfs:comment "A subclass of Publishing representing the process that ensures datasets are stored securely, either centrally or decentrally, depending on the architecture of the data ecosystem."@en ;
+                 rdfs:label "DataStoring"@en .
 
 
 ###  https://w3id.org/def/dedl#Decision
@@ -252,11 +345,70 @@ dedl:Entity rdf:type owl:Class ;
             rdfs:label "Entity"@en .
 
 
+###  https://w3id.org/def/dedl#Finding
+dedl:Finding rdf:type owl:Class ;
+             rdfs:subClassOf dedl:Process ;
+             rdfs:comment "An optional process that enables information or data to be found within a data ecosystem."@en ;
+             rdfs:label "Finding"@en .
+
+
+###  https://w3id.org/def/dedl#GUI
+dedl:GUI rdf:type owl:Class ;
+         rdfs:subClassOf dedl:Interface ;
+         rdfs:comment "Graphical User Interface; a subclass of Interface representing an interface through which users can visually interact with components of a data ecosystem."@en ;
+         rdfs:label "GUI"@en .
+
+
+###  https://w3id.org/def/dedl#IdentityAndAccessManagement
+dedl:IdentityAndAccessManagement rdf:type owl:Class ;
+                                 rdfs:subClassOf dedl:TechnicalDataEcosystemElement ;
+                                 rdfs:comment "A framework ensuring that only authorized Participants have access to a data ecosystem."@en ;
+                                 rdfs:label "IdentityAndAccessManagement"@en .
+
+
+###  https://w3id.org/def/dedl#IdentityProvider
+dedl:IdentityProvider rdf:type owl:Class ;
+                      rdfs:subClassOf dedl:IdentityAndAccessManagement ;
+                      rdfs:comment "A subclass of IdentityAndAccessManagement representing a component responsible for managing digital identities, facilitating onboarding and offboarding processes in a data ecosystem."@en ;
+                      rdfs:label "IdentityProvider"@en .
+
+
 ###  https://w3id.org/def/dedl#Individual
 dedl:Individual rdf:type owl:Class ;
                 rdfs:subClassOf dedl:Participant ;
                 rdfs:comment "A subclass of Participant representing a legal person."@en ;
                 rdfs:label "Individual"@en .
+
+
+###  https://w3id.org/def/dedl#Interface
+dedl:Interface rdf:type owl:Class ;
+               rdfs:subClassOf dedl:TechnicalDataEcosystemElement ;
+               rdfs:comment "An access point for participants to join and interact within a data ecosystem."@en ;
+               rdfs:label "Interface"@en .
+
+
+###  https://w3id.org/def/dedl#Negotiating
+dedl:Negotiating rdf:type owl:Class ;
+                 rdfs:subClassOf dedl:Process ;
+                 rdfs:comment "An optional process where participants discuss and agree on policies leading to contracts within a data ecosystem."@en ;
+                 rdfs:label "Negotiating"@en .
+
+
+###  https://w3id.org/def/dedl#Offboarding
+dedl:Offboarding rdf:type owl:Class ;
+                 rdfs:subClassOf dedl:Process .
+
+
+###  https://w3id.org/def/dedl#OfferStorage
+dedl:OfferStorage rdf:type owl:Class ;
+                  rdfs:subClassOf dedl:PolicyStorage ;
+                  rdfs:comment "A subclass of PolicyStorage where data offers are stored, allowing participants in a data ecosystem to publish and manage their available datasets or services."@en ;
+                  rdfs:label "OfferStorage"@en .
+
+
+###  https://w3id.org/def/dedl#Onboarding
+dedl:Onboarding rdf:type owl:Class ;
+                rdfs:subClassOf dedl:Process .
 
 
 ###  https://w3id.org/def/dedl#Organization
@@ -269,7 +421,7 @@ dedl:Organization rdf:type owl:Class ;
 ###  https://w3id.org/def/dedl#Participant
 dedl:Participant rdf:type owl:Class ;
                  rdfs:subClassOf dedl:DataEcosystemElement ;
-                 rdfs:comment "a stakeholder within the data ecosystem (either an Individual or Organization)."@en ;
+                 rdfs:comment "A stakeholder participating in or operating the data ecosystem (either an Individual or Organization)."@en ;
                  rdfs:label "Participant"@en .
 
 
@@ -285,17 +437,66 @@ dedl:PolicyLanguage rdf:type owl:Class ;
                     rdfs:label "PolicyLanguage"@en .
 
 
+###  https://w3id.org/def/dedl#PolicyStorage
+dedl:PolicyStorage rdf:type owl:Class ;
+                   rdfs:subClassOf dedl:Storage ;
+                   rdfs:comment "A subclass of storage that stores the conditions under which access to resources in a data ecosystem is granted and how they may be used."@en ;
+                   rdfs:label "PolicyStorage"@en .
+
+
 ###  https://w3id.org/def/dedl#Process
 dedl:Process rdf:type owl:Class ;
              rdfs:comment "A series of operations or activities performed within the data ecosystem."@en ;
              rdfs:label "Process"@en .
 
 
+###  https://w3id.org/def/dedl#Publishing
+dedl:Publishing rdf:type owl:Class ;
+                rdfs:subClassOf dedl:Process ;
+                rdfs:comment "An optional process that makes data discoverable and allows its findability through catalogs or metadata integration."@en ;
+                rdfs:label "Publishing"@en .
+
+
+###  https://w3id.org/def/dedl#RunTimeEnvironment
+dedl:RunTimeEnvironment rdf:type owl:Class ;
+                        rdfs:subClassOf dedl:TechnicalDataEcosystemElement ;
+                        rdfs:comment "An infrastructure required for executing services within a data ecosystem, providing the necessary computing resources."@en ;
+                        rdfs:label "RunTimeEnvironment"@en .
+
+
+###  https://w3id.org/def/dedl#Service
+dedl:Service rdf:type owl:Class ;
+             rdfs:subClassOf dedl:TechnicalDataEcosystemElement ;
+             rdfs:comment "A service developed to address specific needs within a data ecosystem, often involving data processing or visualization."@en ;
+             rdfs:label "Service" .
+
+
+###  https://w3id.org/def/dedl#ServiceExecuting
+dedl:ServiceExecuting rdf:type owl:Class ;
+                      rdfs:subClassOf dedl:Transacting ;
+                      rdfs:comment "A  subclass of Transaction representing the process that enables third-party services execution to generate additional value from the managed data in a data ecosystem."@en ;
+                      rdfs:label "ServiceExecuting"@en .
+
+
+###  https://w3id.org/def/dedl#Storage
+dedl:Storage rdf:type owl:Class ;
+             rdfs:subClassOf dedl:TechnicalDataEcosystemElement ;
+             rdfs:comment "A component where various types of information are stored in a data ecosystem."@en ;
+             rdfs:label "Storage"@en .
+
+
 ###  https://w3id.org/def/dedl#TechnicalDataEcosystemElement
 dedl:TechnicalDataEcosystemElement rdf:type owl:Class ;
                                    rdfs:subClassOf dedl:DataEcosystemElement ;
-                                   dc:description "Technical components used in a data ecosystem, e.g., authenticators and authorizators"@en ;
+                                   rdfs:comment "A subclass of DataEcosystemElement focused on technical components necessary for the operation of a data ecosystem."@en ;
                                    rdfs:label "TechnicalDataEcosystemElement"@en .
+
+
+###  https://w3id.org/def/dedl#Transacting
+dedl:Transacting rdf:type owl:Class ;
+                 rdfs:subClassOf dedl:Process ;
+                 rdfs:comment "A mandatory process that enables the exchange or transfer of data or other resources between Participants within a data ecosystem."@en ;
+                 rdfs:label "Transacting"@en .
 
 
 ###  https://w3id.org/def/didl#Identity
@@ -371,16 +572,6 @@ dedl:Device rdf:type owl:NamedIndividual ,
             rdfs:label "Device"@en .
 
 
-###  https://w3id.org/def/dedl#Exchange
-dedl:Exchange rdf:type owl:NamedIndividual ,
-                       dedl:Process .
-
-
-###  https://w3id.org/def/dedl#Find
-dedl:Find rdf:type owl:NamedIndividual ,
-                   dedl:Process .
-
-
 ###  https://w3id.org/def/dedl#Geolocation
 dedl:Geolocation rdf:type owl:NamedIndividual ,
                           dedl:AuthenticationRiskContext ;
@@ -432,7 +623,7 @@ dedl:MultiFactor rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/def/dedl#Negotiate
 dedl:Negotiate rdf:type owl:NamedIndividual ,
-                        dedl:AuthorizationProcess ;
+                        dedl:Authorization ;
                rdfs:comment "An authorization process involving negotiation or exchange of data before deciding access."@en ;
                rdfs:label "Negotiate"@en .
 
@@ -458,19 +649,9 @@ dedl:OIDC rdf:type owl:NamedIndividual ,
           rdfs:label "OIDC"@en .
 
 
-###  https://w3id.org/def/dedl#Offboarding
-dedl:Offboarding rdf:type owl:NamedIndividual ,
-                          dedl:Process .
-
-
-###  https://w3id.org/def/dedl#Onboarding
-dedl:Onboarding rdf:type owl:NamedIndividual ,
-                         dedl:Process .
-
-
 ###  https://w3id.org/def/dedl#OneWay
 dedl:OneWay rdf:type owl:NamedIndividual ,
-                     dedl:AuthenticationProcess ;
+                     dedl:Authentication ;
             rdfs:comment "A one-direction authentication process, typically from a client to a server."@en ;
             rdfs:label "OneWay"@en .
 
@@ -491,7 +672,7 @@ dedl:PolicyBasedArchitecture rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/def/dedl#Poll
 dedl:Poll rdf:type owl:NamedIndividual ,
-                   dedl:AuthorizationProcess ;
+                   dedl:Authorization ;
           rdfs:comment "An authorization process where a client periodically checks the server for an access decision."@en ;
           rdfs:label "Poll"@en .
 
@@ -503,14 +684,9 @@ dedl:Ponder rdf:type owl:NamedIndividual ,
             rdfs:label "Ponder"@en .
 
 
-###  https://w3id.org/def/dedl#Publish
-dedl:Publish rdf:type owl:NamedIndividual ,
-                      dedl:Process .
-
-
 ###  https://w3id.org/def/dedl#Push
 dedl:Push rdf:type owl:NamedIndividual ,
-                   dedl:AuthorizationProcess ;
+                   dedl:Authorization ;
           rdfs:comment "An authorization process where the server proactively notifies the client about decisions."@en ;
           rdfs:label "Push"@en .
 
@@ -559,7 +735,7 @@ dedl:SingleFactor rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/def/dedl#ThreeWay
 dedl:ThreeWay rdf:type owl:NamedIndividual ,
-                       dedl:AuthenticationProcess ;
+                       dedl:Authentication ;
               rdfs:comment "An authentication process involving a three-part handshake or three-step verification."@en ;
               rdfs:label "ThreeWay"@en .
 
@@ -580,7 +756,7 @@ dedl:TokenBasedArchitecture rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/def/dedl#TwoWay
 dedl:TwoWay rdf:type owl:NamedIndividual ,
-                     dedl:AuthenticationProcess ;
+                     dedl:Authentication ;
             rdfs:comment "A mutual authentication process where both parties verify each other's identity."@en ;
             rdfs:label "TwoWay"@en .
 
