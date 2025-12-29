@@ -140,22 +140,7 @@ dedl:memberOf rdf:type owl:ObjectProperty ;
           rdfs:domain dedl:Participant ;
           rdfs:range dedl:Organization ;
           rdfs:label "memberOf"@en .
-
-
-									
-									
-							  
 							 
-						   
-							   
-
-
-									  
-									  
-								   
-						   
-								   
-
 
 ###  https://w3id.org/def/dedl#operates
 dedl:operates rdf:type owl:ObjectProperty ;
