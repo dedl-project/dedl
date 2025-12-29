@@ -70,7 +70,7 @@ dedl:authenticationFactor rdf:type owl:ObjectProperty ;
 dedl:authenticationProcess rdf:type owl:ObjectProperty ;
                            rdfs:domain dedl:Authenticator ;
                            rdfs:range dedl:Authentication ;
-                           rdfs:comment "Links an Authenticator to the AuthenticationProcess used for identity verification."@en ;
+                           rdfs:comment "Links an Authenticator to the authentication process used for identity verification."@en ;
                            rdfs:label "authenticationProcess"@en .
 
 
@@ -102,17 +102,23 @@ dedl:authorizationArchitecture rdf:type owl:ObjectProperty ;
 dedl:authorizationProcess rdf:type owl:ObjectProperty ;
                           rdfs:domain dedl:Authorizator ;
                           rdfs:range dedl:Authorization ;
-                          rdfs:comment "Indicates the Authorization followed by an Authorizator."@en ;
+                          rdfs:comment "Indicates the authorization process followed by an Authorizator."@en ;
                           rdfs:label "authorizationProcess"@en .
 
-
+###  https://w3id.org/def/dedl#dataEcosystem
+dedl:dataEcosystem rdf:type owl:ObjectProperty ;
+            rdfs:domain dedl:DataEcosystem ;
+            rdfs:range dedl:DataEcosystem ;
+            rdfs:comment "Indicates if the data ecosystem consists of multiple data ecosystem"@en ;
+            rdfs:label "dataEcosystem"@en ;
+            rdfs:seeAlso "composedOf (Oliveira)"@en .			
 ###  https://w3id.org/def/dedl#dataEcosystemElement
 dedl:dataEcosystemElement rdf:type owl:ObjectProperty ;
                           rdfs:domain dedl:DataEcosystem ;
                           rdfs:range dedl:DataEcosystemElement ;
                           rdfs:comment ""@en ;
                           rdfs:label "dataEcosystemElement"@en ;
-                          rdfs:seeAlso "composedBy"@en .
+                          rdfs:seeAlso "composedBy (Oliveira)"@en .
 
 
 ###  https://w3id.org/def/dedl#entity
@@ -129,12 +135,50 @@ dedl:identity rdf:type owl:ObjectProperty ;
               rdfs:range didl:Identity ;
               rdfs:comment "Indicates the Identity belonging to an Entity."@en ;
               rdfs:label "identity"@en .
+###  https://w3id.org/def/dedl#memberOf
+dedl:memberOf rdf:type owl:ObjectProperty ;
+          rdfs:domain dedl:Participant ;
+          rdfs:range dedl:Organization ;
+          rdfs:label "memberOf"@en .
+
+
+									
+									
+							  
+							 
+						   
+							   
+
+
+									  
+									  
+								   
+						   
+								   
 
 
 ###  https://w3id.org/def/dedl#operates
 dedl:operates rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf dedl:relationship .
+          rdfs:domain dedl:Participant ;
+          rdfs:range dedl:TechnicalDataEcosystemElement ;
+          rdfs:comment "Specifies an operator of a TechnicalDataEcosystemElement."@en ;
+          rdfs:label "operates"@en .									   
 
+
+###  https://w3id.org/def/dedl#operator
+dedl:operator rdf:type owl:ObjectProperty ;
+          rdfs:domain dedl:DataEcosystem ;
+          rdfs:range dedl:Participant ;
+          rdfs:comment "Specifies an operator of a DataEcosystem."@en ;
+          rdfs:label "operator"@en .
+
+
+###  https://w3id.org/def/dedl#participant
+dedl:participant rdf:type owl:ObjectProperty ;
+             rdfs:domain dedl:DataEcosystem ;
+             rdfs:range dedl:Participant ;
+             rdfs:isDefinedBy "Specifies a participant within a DataEcosystem."@en ;
+             rdfs:label "participant"@en .
 
 ###  https://w3id.org/def/dedl#policy
 dedl:policy rdf:type owl:ObjectProperty ;
@@ -158,12 +202,6 @@ dedl:process rdf:type owl:ObjectProperty ;
              rdfs:range dedl:Process ;
              rdfs:comment "Associates a DataEcosystem with a particular Process."@en ;
              rdfs:label "process"@en .
-
-
-###  https://w3id.org/def/dedl#relationship
-dedl:relationship rdf:type owl:ObjectProperty ;
-                  rdfs:domain dedl:Participant ;
-                  rdfs:range dedl:TechnicalDataEcosystemElement .
 
 
 ###  https://w3id.org/def/dedl#uses
@@ -246,7 +284,6 @@ dedl:Authorization rdf:type owl:Class ;
 
 ###  https://w3id.org/def/dedl#AuthorizationArchitecture
 dedl:AuthorizationArchitecture rdf:type owl:Class ;
-                               rdfs:subClassOf dedl:IdentityAndAccessManagement ;
                                rdfs:comment "A subclass of IdentityAndAccessManagement representing a structural framework that defines how authorization decisions are made and enforced."@en ;
                                rdfs:label "AuthorizationArchitecture"@en .
 
