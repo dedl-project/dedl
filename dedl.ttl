@@ -5,6 +5,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vc: <https://www.w3.org/ns/credentials/v2#> .
 @prefix dedl: <https://w3id.org/def/dedl#> .
 @prefix didl: <https://w3id.org/def/didl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -137,7 +138,7 @@ dedl:correspondsToProperty rdf:type owl:ObjectProperty ;
 dedl:correspondsToType rdf:type owl:ObjectProperty ;
                        rdfs:domain BBO:DataResource ;
                        rdfs:range owl:Class ;
-                       rdfs:comment "Associates a BBO:DataResource with an expected Property in another vocabulary (e.g. vc:VerifiableCredential)."@en ;
+                       rdfs:comment "Associates a BBO:DataResource with an expected Class in another vocabulary (e.g. vc:VerifiableCredential)."@en ;
                        rdfs:label "correspondsToType"@en .
 
 
