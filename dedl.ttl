@@ -1,5 +1,6 @@
 @prefix : <https://w3id.org/def/dedl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix BBO: <https://www.irit.fr/recherches/MELODI/ontologies/BBO#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -124,6 +125,22 @@ dedl:composedOf rdf:type owl:ObjectProperty ;
                 rdfs:label "composedOf"@en .
 
 
+###  https://w3id.org/def/dedl#correspondsToProperty
+dedl:correspondsToProperty rdf:type owl:ObjectProperty ;
+                           rdfs:domain BBO:DataResource ;
+                           rdfs:range rdf:Property ;
+                           rdfs:comment "Associates a BBO:DataResource with an expected Property in another vocabulary (e.g. schema:legalName)."@en ;
+                           rdfs:label "correspondsToProperty"@en .
+
+
+###  https://w3id.org/def/dedl#correspondsToType
+dedl:correspondsToType rdf:type owl:ObjectProperty ;
+                       rdfs:domain BBO:DataResource ;
+                       rdfs:range owl:Class ;
+                       rdfs:comment "Associates a BBO:DataResource with an expected Property in another vocabulary (e.g. vc:VerifiableCredential)."@en ;
+                       rdfs:label "correspondsToType"@en .
+
+
 ###  https://w3id.org/def/dedl#entity
 dedl:entity rdf:type owl:ObjectProperty ;
             owl:inverseOf dedl:inParticipant ;
@@ -192,6 +209,8 @@ dedl:operator rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/def/dedl#partOf
 dedl:partOf rdf:type owl:ObjectProperty ;
+            rdfs:domain dedl:DataEcosystem ;
+            rdfs:range dedl:DataEcosystem ;
             rdfs:comment "Indicates if the data ecosystem is part of another data ecosystem"@en ;
             rdfs:label "partOf"@en .
 
@@ -231,6 +250,8 @@ dedl:process rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/def/dedl#receivesDataFrom
 dedl:receivesDataFrom rdf:type owl:ObjectProperty ;
                       owl:inverseOf dedl:sendsDataTo ;
+                      rdfs:domain dedl:DataEcosystemElement ;
+                      rdfs:range dedl:DataEcosystemElement ;
                       rdfs:comment "Links elements by specifying where data is received from."@en ;
                       rdfs:label "receivesDataFrom?"@en .
 
@@ -244,7 +265,8 @@ dedl:sendsDataTo rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/def/dedl#status
-dedl:status rdf:type owl:ObjectProperty ;
+dedl:status rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
             rdfs:domain dedl:TechnicalDataEcosystemElement ;
             rdfs:range dedl:Status ;
             rdfs:comment "Associates TechnicalDataEcosystemElement with their current state-"@en ;
@@ -280,6 +302,14 @@ dedl:uses rdf:type owl:ObjectProperty ;
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+rdf:Property rdf:type owl:Class .
+
+
+###  http://www.w3.org/2002/07/owl#Class
+owl:Class rdf:type owl:Class .
+
 
 ###  https://w3id.org/def/dedl#API
 dedl:API rdf:type owl:Class ;
@@ -517,6 +547,7 @@ dedl:IdentityProvider rdf:type owl:Class ;
 ###  https://w3id.org/def/dedl#Individual
 dedl:Individual rdf:type owl:Class ;
                 rdfs:subClassOf dedl:Participant ;
+                owl:disjointWith dedl:Organization ;
                 rdfs:comment "A subclass of Participant representing a legal person."@en ;
                 rdfs:label "Individual"@en .
 
@@ -559,6 +590,7 @@ dedl:Onboarding rdf:type owl:Class ;
 ###  https://w3id.org/def/dedl#Organization
 dedl:Organization rdf:type owl:Class ;
                   rdfs:subClassOf dedl:Participant ;
+                  owl:disjointWith dedl:Individual ;
                   rdfs:comment "A subclass of Participant representing a legal entity."@en ;
                   rdfs:label "Organization"@en .
 
@@ -691,6 +723,10 @@ didl:Identity rdf:type owl:Class ;
               rdfs:subClassOf dedl:Base ;
               rdfs:comment "A unique collection of attributes, credentials, or characteristics of an entity."@en ;
               rdfs:label "Identity"@en .
+
+
+###  https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource
+BBO:DataResource rdf:type owl:Class .
 
 
 #################################################################
