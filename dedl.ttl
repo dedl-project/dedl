@@ -165,13 +165,6 @@ dedl:memberOf rdf:type owl:ObjectProperty ;
               rdfs:label "memberOf?"@en .
 
 
-###  https://w3id.org/def/dedl#operates
-dedl:operates rdf:type owl:ObjectProperty ;
-              rdfs:domain dedl:Participant ;
-              rdfs:range dedl:TechnicalDataEcosystemElement ;
-              rdfs:comment "Specifies an operator of a TechnicalDataEcosystemElement."@en ;
-              rdfs:label "operates"@en .
-
 ###  https://w3id.org/def/dedl#operatedBy
 dedl:operatedBy rdf:type owl:ObjectProperty ;
                 owl:inverseOf dedl:operates ;
@@ -179,6 +172,14 @@ dedl:operatedBy rdf:type owl:ObjectProperty ;
                 rdfs:range dedl:Participant ;
                 rdfs:comment "Indicates the Participant operating a TechnicalDataEcosystemElement (inverse of operates)."@en ;
                 rdfs:label "operatedBy"@en .
+
+
+###  https://w3id.org/def/dedl#operates
+dedl:operates rdf:type owl:ObjectProperty ;
+              rdfs:domain dedl:Participant ;
+              rdfs:range dedl:TechnicalDataEcosystemElement ;
+              rdfs:comment "Specifies an operator of a TechnicalDataEcosystemElement."@en ;
+              rdfs:label "operates"@en .
 
 
 ###  https://w3id.org/def/dedl#operator
@@ -242,6 +243,14 @@ dedl:sendsDataTo rdf:type owl:ObjectProperty ;
                  rdfs:label "sendsDataTo?"@en .
 
 
+###  https://w3id.org/def/dedl#status
+dedl:status rdf:type owl:ObjectProperty ;
+            rdfs:domain dedl:TechnicalDataEcosystemElement ;
+            rdfs:range dedl:Status ;
+            rdfs:comment "Associates TechnicalDataEcosystemElement with their current state-"@en ;
+            rdfs:label "status"@en .
+
+
 ###  https://w3id.org/def/dedl#technicalDataEcosystemElement
 dedl:technicalDataEcosystemElement rdf:type owl:ObjectProperty ;
                                    rdfs:domain dedl:DataEcosystem ;
@@ -251,13 +260,6 @@ dedl:technicalDataEcosystemElement rdf:type owl:ObjectProperty ;
                                    rdfs:seeAlso "composedBy (Oliveira)"@en .
 
 
-###  https://w3id.org/def/dedl#uses
-dedl:uses rdf:type owl:ObjectProperty ;
-          rdfs:domain dedl:Participant ;
-          rdfs:range dedl:TechnicalDataEcosystemElement ;
-          rdfs:comment "Specifies a user of a TechnicalDataEcosystemElement."@en ;
-          rdfs:label "uses"@en .
-
 ###  https://w3id.org/def/dedl#usedBy
 dedl:usedBy rdf:type owl:ObjectProperty ;
             owl:inverseOf dedl:uses ;
@@ -265,6 +267,14 @@ dedl:usedBy rdf:type owl:ObjectProperty ;
             rdfs:range dedl:Participant ;
             rdfs:comment "Indicates the Participant using a TechnicalDataEcosystemElement (inverse of uses)."@en ;
             rdfs:label "usedBy"@en .
+
+
+###  https://w3id.org/def/dedl#uses
+dedl:uses rdf:type owl:ObjectProperty ;
+          rdfs:domain dedl:Participant ;
+          rdfs:range dedl:TechnicalDataEcosystemElement ;
+          rdfs:comment "Specifies a user of a TechnicalDataEcosystemElement."@en ;
+          rdfs:label "uses"@en .
 
 
 #################################################################
@@ -655,15 +665,16 @@ dedl:Storage rdf:type owl:Class ;
 ###  https://w3id.org/def/dedl#TechnicalDataEcosystemElement
 dedl:TechnicalDataEcosystemElement rdf:type owl:Class ;
                                    rdfs:subClassOf dedl:DataEcosystemElement ,
-                                                  [ rdf:type owl:Restriction ;
-                                                    owl:onProperty dedl:operatedBy ;
-                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                    owl:onClass dedl:Participant ] ,
-                                                [ rdf:type owl:Restriction ;
-                                                    owl:onProperty dedl:usedBy ;
-                                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                    owl:onClass dedl:Participant
-                                                ] ;
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty dedl:usedBy ;
+                                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                     owl:onClass dedl:Participant
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty dedl:operatedBy ;
+                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                     owl:onClass dedl:Participant
+                                                   ] ;
                                    rdfs:comment "A subclass of DataEcosystemElement focused on technical components necessary for the operation of a data ecosystem."@en ;
                                    rdfs:label "TechnicalDataEcosystemElement"@en .
 
