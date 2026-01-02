@@ -663,6 +663,7 @@ dedl:PolicyStorage rdf:type owl:Class ;
 ###  https://w3id.org/def/dedl#Process
 dedl:Process rdf:type owl:Class ;
              rdfs:subClassOf dedl:Base ,
+                             BBO:FlowElementsContainer ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty dedl:byDataEcosystem ;
                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
