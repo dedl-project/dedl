@@ -300,6 +300,38 @@ dedl:uses rdf:type owl:ObjectProperty ;
           rdfs:label "uses"@en .
 
 
+###  https://w3id.org/def/dedl#hasEndpoint
+dedl:hasEndpoint rdf:type owl:ObjectProperty ;
+                 rdfs:domain dedl:Service ;
+                 rdfs:range dedl:Endpoint ;
+                 rdfs:comment "Associates a Service with an Endpoint resource that contains connection details (URL, method, auth, etc.)."@en ;
+                 rdfs:label "hasEndpoint"@en .
+
+
+###  https://w3id.org/def/dedl#httpMethod
+dedl:httpMethod rdf:type owl:DatatypeProperty ;
+                rdfs:domain dedl:Endpoint ;
+                rdfs:range xsd:string ;
+                rdfs:comment "HTTP method used to call the endpoint (e.g., GET, POST)."@en ;
+                rdfs:label "httpMethod"@en .
+
+
+###  https://w3id.org/def/dedl#authRequired
+dedl:authRequired rdf:type owl:DatatypeProperty ;
+                  rdfs:domain dedl:Endpoint ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:comment "Indicates whether authentication is required to call the endpoint."@en ;
+                  rdfs:label "authRequired"@en .
+
+
+###  https://w3id.org/def/dedl#authMethod
+dedl:authMethod rdf:type owl:DatatypeProperty ;
+                rdfs:domain dedl:Endpoint ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Authentication method or scheme (e.g., OAuth2, APIKey)."@en ;
+                rdfs:label "authMethod"@en .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -664,7 +696,13 @@ dedl:RunTimeEnvironment rdf:type owl:Class ;
 dedl:Service rdf:type owl:Class ;
              rdfs:subClassOf dedl:TechnicalDataEcosystemElement ;
              rdfs:comment "A service developed to address specific needs within a data ecosystem, often involving data processing or visualization."@en ;
-             rdfs:label "Service" .
+             rdfs:label "Service"@en .
+
+
+###  https://w3id.org/def/dedl#Endpoint
+dedl:Endpoint rdf:type owl:Class ;
+              rdfs:comment "Represents a network endpoint (URL) and its operational metadata for a Service."@en ;
+              rdfs:label "Endpoint"@en .
 
 
 ###  https://w3id.org/def/dedl#ServiceExecuting
