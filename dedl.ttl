@@ -220,7 +220,7 @@ dedl:partOf rdf:type owl:ObjectProperty ;
 dedl:participant rdf:type owl:ObjectProperty ;
                  rdfs:domain dedl:DataEcosystem ;
                  rdfs:range dedl:Participant ;
-                 rdfs:isDefinedBy "Specifies a participant within a DataEcosystem."@en ;
+                 rdfs:comment "Specifies a participant within a DataEcosystem."@en ;
                  rdfs:label "participant"@en .
 
 
