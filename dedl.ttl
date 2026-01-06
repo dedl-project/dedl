@@ -205,7 +205,7 @@ dedl:memberOf rdf:type owl:ObjectProperty ;
               rdfs:domain dedl:Individual ;
               rdfs:range dedl:Organization ;
               rdfs:comment "Links an Individual to an Organization."@en ;
-              rdfs:label "memberOf?"@en .
+              rdfs:label "memberOf"@en .
 
 
 ###  https://w3id.org/def/dedl#operatedBy
