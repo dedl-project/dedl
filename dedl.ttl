@@ -775,7 +775,7 @@ dedl:Transacting rdf:type owl:Class ;
                  rdfs:label "Transacting"@en .
 
 
-###  https://w3id.org/def/didl#Identity
+###  https://w3id.org/didl#Identity
 didl:Identity rdf:type owl:Class ;
               rdfs:subClassOf dedl:Base ;
               rdfs:comment "A unique collection of attributes, credentials, or characteristics of an entity."@en ;
