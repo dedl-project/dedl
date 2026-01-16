@@ -7,8 +7,8 @@
 @base <https://w3id.org/dedl#> .
 
 <https://w3id.org/dedl> rdf:type owl:Ontology ;
-                         <http://purl.org/dc/elements/1.1/creator> "Jiahang Chen"@en ,
-                                                                   "Lennart Klöpper"@en ;
+                         <http://purl.org/dc/elements/1.1/creator> "Lennart Klöpper"@en,
+                                                                   "Jiahang Chen"@en;
                          <http://purl.org/dc/elements/1.1/title> "DEDL Vocabulary & Expression 0.1"@en ;
                          <http://purl.org/dc/terms/abstract> "The Data Ecosystem Description Language (DEDL) is an abstract language to describe concepts of data ecosystems, in which different participants (i.e., organizations and individuals) share data and generate value as the primary aim."@en ;
                          <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by/4.0/" ;
@@ -16,8 +16,8 @@
                          rdfs:label "DEDL"@en ;
                          owl:versionInfo 0.1 ;
                          <https://schema.org/affiliation> "MMI, RWTH Aachen University" ;
-                         <https://schema.org/email> "chen@mmi.rwth-aachen.de" ,
-                                                    "kloepper@mmi.rwth-aachen.de" .
+                         <https://schema.org/email> "kloepper@mmi.rwth-aachen.de",
+                                                    "chen@mmi.rwth-aachen.de" .
 
 #################################################################
 #    Annotation properties
