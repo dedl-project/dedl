@@ -1,6 +1,6 @@
 <https://w3id.org/dedl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/dedl> <http://purl.org/dc/elements/1.1/creator> "Jiahang Chen"@en .
 <https://w3id.org/dedl> <http://purl.org/dc/elements/1.1/creator> "Lennart Klöpper"@en .
+<https://w3id.org/dedl> <http://purl.org/dc/elements/1.1/creator> "Jiahang Chen"@en .
 <https://w3id.org/dedl> <http://purl.org/dc/elements/1.1/title> "DEDL Vocabulary & Expression 0.1"@en .
 <https://w3id.org/dedl> <http://purl.org/dc/terms/abstract> "The Data Ecosystem Description Language (DEDL) is an abstract language to describe concepts of data ecosystems, in which different participants (i.e., organizations and individuals) share data and generate value as the primary aim."@en .
 <https://w3id.org/dedl> <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by/4.0/" .
@@ -8,8 +8,9 @@
 <https://w3id.org/dedl> <http://www.w3.org/2000/01/rdf-schema#label> "DEDL"@en .
 <https://w3id.org/dedl> <http://www.w3.org/2002/07/owl#versionInfo> "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/dedl> <https://schema.org/affiliation> "MMI, RWTH Aachen University" .
-<https://w3id.org/dedl> <https://schema.org/email> "chen@mmi.rwth-aachen.de" .
 <https://w3id.org/dedl> <https://schema.org/email> "kloepper@mmi.rwth-aachen.de" .
+<https://w3id.org/dedl> <https://schema.org/email> "chen@mmi.rwth-aachen.de" .
+
 # 
 # 
 # #################################################################
