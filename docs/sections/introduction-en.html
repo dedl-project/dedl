@@ -1,4 +1,25 @@
 <h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
--
+    <p>
+        Data ecosystems (DEs) bring together autonomous actors that share data, services, and infrastructure across organisational boundaries. While numerous initiatives (e.g., data spaces, data trustees, IoT platforms) describe the business or governance aspects of DEs, there is currently no generic, technology‑agnostic language that captures both the <strong>system behaviour</strong> (the processes that occur in a DE) and the <strong>system architecture</strong> (the software components that realise those processes). This lack of an abstract, technical description hampers development, comparability and interoperability of DE solutions.
+    </p>
+
+    <p>
+        The Data Ecosystem Description Language (DEDL) addresses this gap by providing a lightweight, information‑model‑based ontology.  DEDL defines a small set of core concepts—<code>DataEcosystem</code>, <code>Participant</code>, <code>Process</code>, <code>TechnicalDataEcosystemElement</code> and <code>Entity</code>—all inheriting from a common <code>Base</code> class that supplies the attributes <code>id</code>, <code>name</code> and <code>description</code>. Mandatory processes such as <em>Transacting</em>, <em>Onboarding</em> and <em>Off‑boarding</em> are modelled alongside optional processes (<em>Publishing</em>, <em>Finding</em>, <em>Negotiating</em>). Technical elements cover the essential building blocks of a DE, including Identity‑and‑Access‑Management, Audit‑And‑Logging, Storage, Communication, Interfaces (API, GUI, connector) and Run‑Time‑Environments.
+    </p>
+
+    <!-- ----- INFORMATION‑MODEL FIGURE ----- -->
+    <figure style="text-align:center; margin:2rem 0;">
+        <img src="../resources/dedl-core-model.svg"
+             alt="Core information model of DEDL (UML diagram)"
+             style="max-width:100%; height:auto;">
+        <figcaption>
+            Figure 1: The Data Ecosystem Description Language (DEDL) core information model, presented in UML format
+        </figcaption>
+    </figure>
+    <!-- ------------------------------------ -->
+
+    <p>
+        By exposing both the behavioural and architectural dimensions of a data ecosystem in a single, extensible ontology, DEDL enables systematic engineering, comparison and integration of DE solutions—whether they are fully centralised, federated, or hybrid.
+    </p>
 </span>
