@@ -8,6 +8,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dedl: <https://w3id.org/dedl#> .
 @prefix didl: <https://w3id.org/didl#> .
+@prefix ids: <https://w3id.org/idsa/core/> .
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
@@ -20,7 +21,7 @@
                                     "Lennart Klöpper"@en ;
                          dc:title "DEDL Vocabulary & Expression 0.1"@en ;
                          dcterms:abstract "The Data Ecosystem Description Language (DEDL) is an abstract language to describe concepts of data ecosystems, in which different participants (i.e., organizations and individuals) share data and generate value as the primary aim."@en ;
-                         dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
+                         dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                          rdfs:comment "This is a vocabulary for DEDL version 0.1"@en ;
                          rdfs:label "DEDL"@en ;
                          owl:versionInfo 0.1 ;
@@ -170,13 +171,21 @@ dedl:correspondsToThing rdf:type owl:ObjectProperty ;
                         rdfs:label "correspondsToThing"@en .
 
 
-###  https://w3id.org/dedl#dataFlow
-dedl:dataFlow rdf:type owl:ObjectProperty ,
-                       owl:SymmetricProperty ;
-              rdfs:domain dedl:TechnicalDataEcosystemElement ;
-              rdfs:range dedl:TechnicalDataEcosystemElement ;
-              rdfs:comment "Indicates that two TechnicalDataEcosystemElements exchange data. The property is deliberately undirected: it states that an exchange takes place, not who sends and who receives. Direction belongs to the integration layer and is expressed there via invokesEndpoint and exposedBy. This allows the system architecture to be described coarsely before any Process is modelled in detail."@en ;
-              rdfs:label "dataFlow"@en .
+###  https://w3id.org/dedl#dataEcosystemElement
+dedl:dataEcosystemElement rdf:type owl:ObjectProperty ;
+                          owl:inverseOf dedl:inDataEcosystem ;
+                          rdfs:domain dedl:DataEcosystem ;
+                          rdfs:range dedl:DataEcosystemElement ;
+                          rdfs:comment "Links a DataEcosystem to an element belonging to it (inverse of inDataEcosystem). Specialised by participant and technicalDataEcosystemElement, so that membership needs to be stated in one direction only."@en ;
+                          rdfs:label "dataEcosystemElement"@en .
+
+
+###  https://w3id.org/dedl#dependsOn
+dedl:dependsOn rdf:type owl:ObjectProperty ;
+               rdfs:domain dedl:TechnicalDataEcosystemElement ;
+               rdfs:range dedl:TechnicalDataEcosystemElement ;
+               rdfs:comment "Indicates that a TechnicalDataEcosystemElement needs or uses another one to fulfil its function, e.g. by calling its API, storing data in it or delegating authentication to it. Directed from the dependent element to the one it depends on; only direct dependencies are stated. What the dependency is for mostly follows from the type of the target (e.g. DataStorage, IdentityProvider). How it is realised, and in which direction data travels, belongs to the integration layer (invokesEndpoint, exposedBy). This allows the system architecture to be described coarsely before any Process is modelled in detail."@en ;
+               rdfs:label "dependsOn"@en .
 
 
 ###  https://w3id.org/dedl#endpoint
@@ -249,7 +258,7 @@ dedl:identity rdf:type owl:ObjectProperty ;
 dedl:inDataEcosystem rdf:type owl:ObjectProperty ;
                      rdfs:domain dedl:DataEcosystemElement ;
                      rdfs:range dedl:DataEcosystem ;
-                     rdfs:comment "Indicates the DataEcosystemElement belonging to a DataEcosystem."@en ;
+                     rdfs:comment "Indicates the DataEcosystem a DataEcosystemElement belongs to (inverse of dataEcosystemElement)."@en ;
                      rdfs:label "inDataEcosystem"@en .
 
 
@@ -259,6 +268,14 @@ dedl:inParticipant rdf:type owl:ObjectProperty ;
                    rdfs:range dedl:Participant ;
                    rdfs:comment "Indicates the Entity belonging to a Participant."@en ;
                    rdfs:label "inParticipant"@en .
+
+
+###  https://w3id.org/dedl#insertsDataResource
+dedl:insertsDataResource rdf:type owl:ObjectProperty ;
+                         rdfs:domain dedl:ParameterMapping ;
+                         rdfs:range BBO:DataResource ;
+                         rdfs:comment "Lists a DataResource whose value is inserted into the valueTemplate of this mapping. Used only together with valueTemplate; the placeholders of the template and the listed resources correspond one to one. Kept apart from source and evaluatesDataResource so that each property has a single meaning."@en ;
+                         rdfs:label "insertsDataResource"@en .
 
 
 ###  https://w3id.org/dedl#invokesEndpoint
@@ -298,23 +315,25 @@ dedl:operatedBy rdf:type owl:ObjectProperty ;
                 owl:inverseOf dedl:operates ;
                 rdfs:domain dedl:TechnicalDataEcosystemElement ;
                 rdfs:range dedl:Participant ;
-                rdfs:comment "Indicates the Participant operating a TechnicalDataEcosystemElement (inverse of operates)."@en ;
-                rdfs:label "operatedBy"@en .
+                rdfs:comment "Indicates the Participant responsible for the technical operation and maintenance of a TechnicalDataEcosystemElement (inverse of operates). Not to be confused with operator, which denotes the governance of the whole DataEcosystem. The infrastructure provider underneath (e.g. a cloud hoster) is not the operator in this sense."@en ;
+                rdfs:label "operatedBy"@en ;
+                rdfs:seeAlso ids:maintainer .
 
 
 ###  https://w3id.org/dedl#operates
 dedl:operates rdf:type owl:ObjectProperty ;
               rdfs:domain dedl:Participant ;
               rdfs:range dedl:TechnicalDataEcosystemElement ;
-              rdfs:comment "Specifies an operator of a TechnicalDataEcosystemElement."@en ;
+              rdfs:comment "Links a Participant to a TechnicalDataEcosystemElement it operates (inverse of operatedBy)."@en ;
               rdfs:label "operates"@en .
 
 
 ###  https://w3id.org/dedl#operator
 dedl:operator rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dedl:participant ;
               rdfs:domain dedl:DataEcosystem ;
               rdfs:range dedl:Participant ;
-              rdfs:comment "Specifies an operator of a DataEcosystem."@en ;
+              rdfs:comment "Specifies a Participant responsible for governing the DataEcosystem as a whole, e.g. setting its rules and admitting participants. Every operator is also a participant. Not to be confused with operatedBy, which denotes the technical operation of a single TechnicalDataEcosystemElement."@en ;
               rdfs:label "operator"@en .
 
 
@@ -336,6 +355,7 @@ dedl:partOf rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/dedl#participant
 dedl:participant rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dedl:dataEcosystemElement ;
                  rdfs:domain dedl:DataEcosystem ;
                  rdfs:range dedl:Participant ;
                  rdfs:comment "Specifies a participant within a DataEcosystem."@en ;
@@ -385,7 +405,7 @@ dedl:responseHttpBodySchema rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/dedl#source
 dedl:source rdf:type owl:ObjectProperty ;
             rdfs:domain dedl:ParameterMapping ;
-            rdfs:comment "Where a mapped value is taken from. Deliberately without rdfs:range: with mapsInput the source is a BBO:DataResource, with mapsOutput it is a field of the response schema. Since rdfs:range is an inference rule rather than a constraint, a union would only add uninformative type assertions, and the actual rule is conditional on the direction of the mapping. That rule belongs in SHACL."@en ;
+            rdfs:comment "Where a mapped value is taken from; alternatively the value is fixed by constantValue or built by valueTemplate. Deliberately without rdfs:range: with mapsInput the source is a BBO:DataResource, with mapsOutput it is a field of the response schema. Since rdfs:range is an inference rule rather than a constraint, a union would only add uninformative type assertions, and the actual rule is conditional on the direction of the mapping. That rule belongs in SHACL."@en ;
             rdfs:label "source"@en .
 
 
@@ -407,9 +427,10 @@ dedl:target rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/dedl#technicalDataEcosystemElement
 dedl:technicalDataEcosystemElement rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf dedl:dataEcosystemElement ;
                                    rdfs:domain dedl:DataEcosystem ;
                                    rdfs:range dedl:TechnicalDataEcosystemElement ;
-                                   rdfs:comment ""@en ;
+                                   rdfs:comment "Links a DataEcosystem to a TechnicalDataEcosystemElement belonging to it."@en ;
                                    rdfs:label "technicalDataEcosystemElement"@en ;
                                    rdfs:seeAlso "composedBy (Oliveira)"@en .
 
@@ -427,7 +448,7 @@ dedl:usedBy rdf:type owl:ObjectProperty ;
 dedl:uses rdf:type owl:ObjectProperty ;
           rdfs:domain dedl:Participant ;
           rdfs:range dedl:TechnicalDataEcosystemElement ;
-          rdfs:comment "Specifies a user of a TechnicalDataEcosystemElement."@en ;
+          rdfs:comment "Links a Participant to a TechnicalDataEcosystemElement it uses (inverse of usedBy)."@en ;
           rdfs:label "uses"@en .
 
 
@@ -449,6 +470,12 @@ hctl:forContentType rdf:type owl:DatatypeProperty ;
                     rdfs:comment "Used on Endpoint to state the media type of the request body, e.g. application/x-www-form-urlencoded. Reused from the W3C WoT hypermedia vocabulary instead of defining a DEDL term."@en .
 
 
+###  https://www.w3.org/2019/wot/json-schema#propertyName
+jsonschema:propertyName rdf:type owl:DatatypeProperty ;
+                        rdfs:isDefinedBy <https://www.w3.org/2019/wot/json-schema> ;
+                        rdfs:comment "Used on the DataSchema of a body field to state the JSON key under which it appears, which must match the API exactly."@en .
+
+
 ###  https://schema.org/urlTemplate
 schema:urlTemplate rdf:type owl:DatatypeProperty .
 
@@ -459,6 +486,14 @@ dedl:authenticationRequired rdf:type owl:DatatypeProperty ;
                             rdfs:range xsd:boolean ;
                             rdfs:comment "Indicates whether authentication is required to call the endpoint."@en ;
                             rdfs:label "authenticationRequired"@en .
+
+
+###  https://w3id.org/dedl#constantValue
+dedl:constantValue rdf:type owl:DatatypeProperty ;
+                   rdfs:domain dedl:ParameterMapping ;
+                   rdfs:range rdfs:Literal ;
+                   rdfs:comment "A fixed value written to the target of the mapping instead of a value read from a source; used with mapsInput. The literal keeps its datatype, e.g. string, number or boolean. Not reused from schema:value, which is defined for QuantitativeValue and PropertyValue nodes."@en ;
+                   rdfs:label "constantValue"@en .
 
 
 ###  https://w3id.org/dedl#containerImage
@@ -477,6 +512,14 @@ dedl:gaiaxTaCAccepted rdf:type owl:DatatypeProperty ;
                       rdfs:label "gaiaxTaCAccepted"@en .
 
 
+###  https://w3id.org/dedl#parameterName
+dedl:parameterName rdf:type owl:DatatypeProperty ;
+                   rdfs:domain dedl:HttpParameter ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Literal name of an HttpParameter as it appears in the request, i.e. the header field name or the path variable name, which must match the API exactly. Not reused from the W3C HTTP vocabulary because htv:fieldName is restricted to header fields and htv:paramName denotes a parameter inside a deconstructed header value, whereas HttpParameter abstracts over the location. schema:name stays reserved for human-readable labels."@en ;
+                   rdfs:label "parameterName"@en .
+
+
 ###  https://w3id.org/dedl#path
 dedl:path rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf schema:urlTemplate ;
@@ -492,6 +535,14 @@ dedl:statusCode rdf:type owl:DatatypeProperty ;
                 rdfs:range xsd:integer ;
                 rdfs:comment "HTTP status code of a response, e.g. 201 or 404."@en ;
                 rdfs:label "statusCode"@en .
+
+
+###  https://w3id.org/dedl#valueTemplate
+dedl:valueTemplate rdf:type owl:DatatypeProperty ;
+                   rdfs:domain dedl:ParameterMapping ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Builds the mapped value from fixed text and inserted values instead of reading it from a source; used with mapsInput. A template contains at least one placeholder; values without any are expressed by constantValue. A placeholder {id} names the @id of a BBO:DataResource in an InputSet of the mapping Task and listed via insertsDataResource; its value is inserted as is, without any encoding, and the result is always a string. Not reused from URI Templates (RFC 6570), because their expansion percent-encodes, which is correct for URIs but wrong for message bodies. Computations beyond insertion are deliberately out of scope."@en ;
+                   rdfs:label "valueTemplate"@en .
 
 
 #################################################################
@@ -696,7 +747,7 @@ dedl:DataSpaceConnector rdf:type owl:Class ;
 ###  https://w3id.org/dedl#DataStorage
 dedl:DataStorage rdf:type owl:Class ;
                  rdfs:subClassOf dedl:Storage ;
-                 rdfs:comment "A subclass of Storage dedicated to string data within a data ecosystem."@en ;
+                 rdfs:comment "A subclass of Storage dedicated to storing data within a data ecosystem."@en ;
                  rdfs:label "DataStorage"@en .
 
 
@@ -793,7 +844,7 @@ dedl:Individual rdf:type owl:Class ;
                 rdfs:subClassOf schema:Person ,
                                 dedl:Participant ;
                 owl:disjointWith dedl:Organization ;
-                rdfs:comment "A subclass of Participant representing a legal person."@en ;
+                rdfs:comment "A subclass of Participant representing a natural person."@en ;
                 rdfs:label "Individual"@en .
 
 
@@ -848,12 +899,7 @@ dedl:ParameterMapping rdf:type owl:Class ;
 
 ###  https://w3id.org/dedl#Participant
 dedl:Participant rdf:type owl:Class ;
-                 rdfs:subClassOf dedl:DataEcosystemElement ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty dedl:entity ;
-                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                   owl:onClass dedl:Entity
-                                 ] ;
+                 rdfs:subClassOf dedl:DataEcosystemElement ;
                  rdfs:comment "A stakeholder participating in or operating the data ecosystem (either an Individual or Organization)."@en ;
                  rdfs:label "Participant"@en .
 
@@ -949,11 +995,6 @@ dedl:Storage rdf:type owl:Class ;
 ###  https://w3id.org/dedl#TechnicalDataEcosystemElement
 dedl:TechnicalDataEcosystemElement rdf:type owl:Class ;
                                    rdfs:subClassOf dedl:DataEcosystemElement ,
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty dedl:usedBy ;
-                                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                     owl:onClass dedl:Participant
-                                                   ] ,
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty dedl:operatedBy ;
                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
