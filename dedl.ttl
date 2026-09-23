@@ -421,7 +421,7 @@ dedl:status rdf:type owl:ObjectProperty ,
 ###  https://w3id.org/dedl#target
 dedl:target rdf:type owl:ObjectProperty ;
             rdfs:domain dedl:ParameterMapping ;
-            rdfs:comment "Where a mapped value is written to. Deliberately without rdfs:range, for the same reason as source: with mapsInput the target is an HttpParameter or a field of the request schema, with mapsOutput it is a BBO:DataResource."@en ;
+            rdfs:comment "Where a mapped value is written to. Deliberately without rdfs:range, for the same reason as source: with mapsInput the target is an HttpParameter, a field of the request schema, or the request schema itself when the whole document is the value; with mapsOutput it is a BBO:DataResource."@en ;
             rdfs:label "target"@en .
 
 
@@ -450,6 +450,14 @@ dedl:uses rdf:type owl:ObjectProperty ;
           rdfs:range dedl:TechnicalDataEcosystemElement ;
           rdfs:comment "Links a Participant to a TechnicalDataEcosystemElement it uses (inverse of usedBy)."@en ;
           rdfs:label "uses"@en .
+
+
+###  https://w3id.org/dedl#valueEncoding
+dedl:valueEncoding rdf:type owl:ObjectProperty ;
+                   rdfs:domain dedl:HttpParameter ;
+                   rdfs:range dedl:ParameterEncoding ;
+                   rdfs:comment "States that the endpoint requires the value of this parameter to be transformed before it is placed into the request, e.g. base64url-encoded in a path. The transformation belongs to the endpoint, not to the mapping: a mapping states which value is meant, this property how it is carried."@en ;
+                   rdfs:label "valueEncoding"@en .
 
 
 #################################################################
@@ -891,6 +899,16 @@ dedl:Organization rdf:type owl:Class ;
                   rdfs:label "Organization"@en .
 
 
+###  https://w3id.org/dedl#ParameterEncoding
+dedl:ParameterEncoding rdf:type owl:Class ;
+                       owl:equivalentClass [ rdf:type owl:Class ;
+                                             owl:oneOf ( dedl:Base64Url
+                                                       )
+                                           ] ;
+                       rdfs:comment "Enumeration of the transformations an endpoint requires before a parameter value is placed into the request. Not reused from jsonschema:contentEncoding, which describes how the content of a StringSchema value is stored, is limited to the RFC values up to base64, and would leave the value itself encoded in the model."@en ;
+                       rdfs:label "ParameterEncoding"@en .
+
+
 ###  https://w3id.org/dedl#ParameterMapping
 dedl:ParameterMapping rdf:type owl:Class ;
                       rdfs:comment "Connects a value of the process with a field of a message. Referenced from a Task through mapsInput or mapsOutput; the mapping itself is direction-agnostic, which is why source and target carry mirrored meanings depending on which of the two properties points at it."@en ;
@@ -1074,6 +1092,13 @@ dedl:Allow rdf:type owl:NamedIndividual ,
                     dedl:Decision ;
            rdfs:comment "A Decision indicating that access is permitted."@en ;
            rdfs:label "Allow"@en .
+
+
+###  https://w3id.org/dedl#Base64Url
+dedl:Base64Url rdf:type owl:NamedIndividual ,
+                        dedl:ParameterEncoding ;
+               rdfs:comment "A ParameterEncoding requiring the value to be base64url-encoded without padding, as the Asset Administration Shell API does for identifiers carried in a path."@en ;
+               rdfs:label "Base64Url"@en .
 
 
 ###  https://w3id.org/dedl#Bearer
