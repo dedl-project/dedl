@@ -1,5 +1,4 @@
 @prefix : <https://w3id.org/dedl#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix vc: <https://www.w3.org/ns/credentials/v2#> .
 @prefix BBO: <https://www.irit.fr/recherches/MELODI/ontologies/BBO#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -14,36 +13,37 @@
 @prefix schema: <https://schema.org/> .
 @prefix jsonschema: <https://www.w3.org/2019/wot/json-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @base <https://w3id.org/dedl#> .
 
 <https://w3id.org/dedl> rdf:type owl:Ontology ;
-                         dc:creator "Jiahang Chen"@en ,
-                                    "Lennart Klöpper"@en ;
-                         dc:title "DEDL Vocabulary & Expression 0.1"@en ;
-                         dcterms:abstract "The Data Ecosystem Description Language (DEDL) is an abstract language to describe concepts of data ecosystems, in which different participants (i.e., organizations and individuals) share data and generate value as the primary aim."@en ;
+                         dcterms:abstract "DEDL-O is a reusable ontology for describing the technical architecture of data ecosystems, their processes and the connection between both. This integration layer states which process step calls which API endpoint and how data is mapped between them, which neither architecture nor process vocabularies can express on their own."@en ;
+                         dcterms:created "2025-05-01"^^xsd:date ;
+                         dcterms:creator <https://orcid.org/0000-0001-5970-6954> ,
+                                         <https://orcid.org/0009-0002-5632-5464> ;
+                         dcterms:description "An ontology for describing the technical architecture, processes and API integration of data ecosystems."@en ;
                          dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                         rdfs:comment "This is a vocabulary for DEDL version 0.1"@en ;
-                         rdfs:label "DEDL"@en ;
-                         owl:versionInfo 0.1 ;
-                         schema:affiliation "MMI, RWTH Aachen University" ;
-                         schema:email "chen@mmi.rwth-aachen.de" ,
-                                      "kloepper@mmi.rwth-aachen.de" .
+                         dcterms:publisher <https://www.mmi.rwth-aachen.de/> ;
+                         dcterms:title "Data Ecosystem Description Language Ontology (DEDL-O)"@en ;
+                         vann:preferredNamespacePrefix "dedl" ;
+                         vann:preferredNamespaceUri "https://w3id.org/dedl#" ;
+                         rdfs:label "DEDL-O"@en ;
+                         owl:incompatibleWith <https://w3id.org/dedl/0.1> ;
+                         owl:priorVersion <https://w3id.org/dedl/0.1> .
+
+<https://orcid.org/0000-0001-5970-6954> rdfs:label "Jiahang Chen" ;
+                                        schema:affiliation <https://www.mmi.rwth-aachen.de/> ;
+                                        schema:email "chen@mmi.rwth-aachen.de" .
+
+<https://orcid.org/0009-0002-5632-5464> rdfs:label "Lennart Klöpper" ;
+                                        schema:affiliation <https://www.mmi.rwth-aachen.de/> ;
+                                        schema:email "kloepper@mmi.rwth-aachen.de" .
+
+<https://www.mmi.rwth-aachen.de/> rdfs:label "MMI, RWTH Aachen University" .
 
 #################################################################
 #    Annotation properties
 #################################################################
-
-###  http://purl.org/dc/elements/1.1/creator
-dc:creator rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/description
-dc:description rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/title
-dc:title rdf:type owl:AnnotationProperty .
-
 
 ###  http://purl.org/dc/terms/abstract
 dcterms:abstract rdf:type owl:AnnotationProperty .
@@ -57,8 +57,28 @@ dcterms:created rdf:type owl:AnnotationProperty .
 dcterms:creator rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/license
 dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dcterms:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
 ###  https://schema.org/affiliation
