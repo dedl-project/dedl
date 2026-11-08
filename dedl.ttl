@@ -109,12 +109,12 @@ dedl:authenticationFactor rdf:type owl:ObjectProperty ;
                           rdfs:label "authenticationFactor"@en .
 
 
-###  https://w3id.org/dedl#authenticationProcess
-dedl:authenticationProcess rdf:type owl:ObjectProperty ;
+###  https://w3id.org/dedl#authenticationPattern
+dedl:authenticationPattern rdf:type owl:ObjectProperty ;
                            rdfs:domain dedl:Authenticator ;
-                           rdfs:range dedl:Authentication ;
-                           rdfs:comment "Links an Authenticator to the authentication process used for identity verification."@en ;
-                           rdfs:label "authenticationProcess"@en .
+                           rdfs:range dedl:AuthenticationPattern ;
+                           rdfs:comment "Indicates the interaction pattern an Authenticator uses to verify an identity, e.g. one-way or mutual. Replaces authenticationProcess, whose range mixed patterns with concrete Processes."@en ;
+                           rdfs:label "authenticationPattern"@en .
 
 
 ###  https://w3id.org/dedl#authenticationProtocol
@@ -149,12 +149,12 @@ dedl:authorizationArchitecture rdf:type owl:ObjectProperty ;
                                rdfs:label "authorizationArchitecture"@en .
 
 
-###  https://w3id.org/dedl#authorizationProcess
-dedl:authorizationProcess rdf:type owl:ObjectProperty ;
+###  https://w3id.org/dedl#authorizationPattern
+dedl:authorizationPattern rdf:type owl:ObjectProperty ;
                           rdfs:domain dedl:Authorizator ;
-                          rdfs:range dedl:Authorization ;
-                          rdfs:comment "Indicates the authorization process followed by an Authorizator."@en ;
-                          rdfs:label "authorizationProcess"@en .
+                          rdfs:range dedl:AuthorizationPattern ;
+                          rdfs:comment "Indicates the interaction pattern an Authorizator follows to reach and deliver an access decision, e.g. poll or push. Replaces authorizationProcess, whose range mixed patterns with concrete Processes."@en ;
+                          rdfs:label "authorizationPattern"@en .
 
 
 ###  https://w3id.org/dedl#byDataEcosystem
@@ -623,7 +623,7 @@ dedl:AuditAndLogging rdf:type owl:Class ;
 ###  https://w3id.org/dedl#Authentication
 dedl:Authentication rdf:type owl:Class ;
                     rdfs:subClassOf dedl:Process ;
-                    rdfs:comment "A procedure or sequence of steps that verify the identity of a user or entity."@en ;
+                    rdfs:comment "A Process of a data ecosystem that verifies the identity of a user or entity. Its members are concrete processes; the general interaction pattern is described by AuthenticationPattern."@en ;
                     rdfs:label "Authentication"@en .
 
 
@@ -631,6 +631,18 @@ dedl:Authentication rdf:type owl:Class ;
 dedl:AuthenticationFactor rdf:type owl:Class ;
                           rdfs:comment "An element used to verify the identity of a user or entity (e.g. password, token, biometrics)."@en ;
                           rdfs:label "AuthenticationFactor"@en .
+
+
+###  https://w3id.org/dedl#AuthenticationPattern
+dedl:AuthenticationPattern rdf:type owl:Class ;
+                           owl:equivalentClass [ rdf:type owl:Class ;
+                                                 owl:oneOf ( dedl:OneWay
+                                                             dedl:TwoWay
+                                                             dedl:ThreeWay
+                                                           )
+                                               ] ;
+                           rdfs:comment "Enumeration of interaction patterns for verifying an identity. A pattern classifies how an Authenticator works; it is not itself a Process of a data ecosystem."@en ;
+                           rdfs:label "AuthenticationPattern"@en .
 
 
 ###  https://w3id.org/dedl#AuthenticationProtocol
@@ -666,7 +678,7 @@ dedl:Authenticator rdf:type owl:Class ;
 ###  https://w3id.org/dedl#Authorization
 dedl:Authorization rdf:type owl:Class ;
                    rdfs:subClassOf dedl:Process ;
-                   rdfs:comment "A method or set of steps determining if an entity may access a resource."@en ;
+                   rdfs:comment "A Process of a data ecosystem that determines whether an entity may access a resource. Its members are concrete processes; the general interaction pattern is described by AuthorizationPattern."@en ;
                    rdfs:label "Authorization"@en .
 
 
@@ -674,6 +686,18 @@ dedl:Authorization rdf:type owl:Class ;
 dedl:AuthorizationArchitecture rdf:type owl:Class ;
                                rdfs:comment "A subclass of IdentityAndAccessManagement representing a structural framework that defines how authorization decisions are made and enforced."@en ;
                                rdfs:label "AuthorizationArchitecture"@en .
+
+
+###  https://w3id.org/dedl#AuthorizationPattern
+dedl:AuthorizationPattern rdf:type owl:Class ;
+                          owl:equivalentClass [ rdf:type owl:Class ;
+                                                owl:oneOf ( dedl:Negotiate
+                                                            dedl:Poll
+                                                            dedl:Push
+                                                          )
+                                              ] ;
+                          rdfs:comment "Enumeration of interaction patterns for reaching and delivering an access decision. A pattern classifies how an Authorizator works; it is not itself a Process of a data ecosystem."@en ;
+                          rdfs:label "AuthorizationPattern"@en .
 
 
 ###  https://w3id.org/dedl#Authorizator
@@ -1256,8 +1280,8 @@ dedl:MultiFactor rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/dedl#Negotiate
 dedl:Negotiate rdf:type owl:NamedIndividual ,
-                        dedl:Authorization ;
-               rdfs:comment "An authorization process involving negotiation or exchange of data before deciding access."@en ;
+                        dedl:AuthorizationPattern ;
+               rdfs:comment "An authorization pattern in which the parties negotiate or exchange data before access is decided."@en ;
                rdfs:label "Negotiate"@en .
 
 
@@ -1284,8 +1308,8 @@ dedl:OIDC rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/dedl#OneWay
 dedl:OneWay rdf:type owl:NamedIndividual ,
-                     dedl:Authentication ;
-            rdfs:comment "A one-direction authentication process, typically from a client to a server."@en ;
+                     dedl:AuthenticationPattern ;
+            rdfs:comment "A one-directional authentication pattern, typically a client proving its identity to a server."@en ;
             rdfs:label "OneWay"@en .
 
 
@@ -1312,8 +1336,8 @@ dedl:Path rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/dedl#Poll
 dedl:Poll rdf:type owl:NamedIndividual ,
-                   dedl:Authorization ;
-          rdfs:comment "An authorization process where a client periodically checks the server for an access decision."@en ;
+                   dedl:AuthorizationPattern ;
+          rdfs:comment "An authorization pattern in which a client periodically checks the server for an access decision."@en ;
           rdfs:label "Poll"@en .
 
 
@@ -1326,8 +1350,8 @@ dedl:Ponder rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/dedl#Push
 dedl:Push rdf:type owl:NamedIndividual ,
-                   dedl:Authorization ;
-          rdfs:comment "An authorization process where the server proactively notifies the client about decisions."@en ;
+                   dedl:AuthorizationPattern ;
+          rdfs:comment "An authorization pattern in which the server proactively notifies the client about decisions."@en ;
           rdfs:label "Push"@en .
 
 
@@ -1375,8 +1399,8 @@ dedl:SingleFactor rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/dedl#ThreeWay
 dedl:ThreeWay rdf:type owl:NamedIndividual ,
-                       dedl:Authentication ;
-              rdfs:comment "An authentication process involving a three-part handshake or three-step verification."@en ;
+                       dedl:AuthenticationPattern ;
+              rdfs:comment "An authentication pattern based on a three-part handshake or three-step verification."@en ;
               rdfs:label "ThreeWay"@en .
 
 
@@ -1396,8 +1420,8 @@ dedl:TokenBasedArchitecture rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/dedl#TwoWay
 dedl:TwoWay rdf:type owl:NamedIndividual ,
-                     dedl:Authentication ;
-            rdfs:comment "A mutual authentication process where both parties verify each other's identity."@en ;
+                     dedl:AuthenticationPattern ;
+            rdfs:comment "A mutual authentication pattern in which both parties verify each other's identity."@en ;
             rdfs:label "TwoWay"@en .
 
 
