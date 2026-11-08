@@ -17,11 +17,13 @@
 @base <https://w3id.org/dedl#> .
 
 <https://w3id.org/dedl> rdf:type owl:Ontology ;
+                         dcterms:bibliographicCitation "Lennart Klöpper, Jiahang Chen. Data Ecosystem Description Language Ontology (DEDL-O). Version 1.0.0. https://w3id.org/dedl/1.0.0"@en ;
                          dcterms:abstract "DEDL-O is a reusable ontology for describing the technical architecture of data ecosystems, their processes and the connection between both. This integration layer states which process step calls which API endpoint and how data is mapped between them, which neither architecture nor process vocabularies can express on their own."@en ;
                          dcterms:created "2025-05-01"^^xsd:date ;
-                         dcterms:creator <https://orcid.org/0000-0001-5970-6954> ,
-                                         <https://orcid.org/0009-0002-5632-5464> ;
+                         dcterms:creator <https://orcid.org/0009-0002-5632-5464> ,
+                                         <https://orcid.org/0000-0001-5970-6954> ;
                          dcterms:description "An ontology for describing the technical architecture, processes and API integration of data ecosystems."@en ;
+                         dcterms:issued "2026-11-08"^^xsd:date ;
                          dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                          dcterms:modified "2026-11-08"^^xsd:date ;
                          dcterms:publisher <https://www.mmi.rwth-aachen.de/> ;
@@ -52,6 +54,10 @@
 dcterms:abstract rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/bibliographicCitation
+dcterms:bibliographicCitation rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/created
 dcterms:created rdf:type owl:AnnotationProperty .
 
@@ -62,6 +68,10 @@ dcterms:creator rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/description
 dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
