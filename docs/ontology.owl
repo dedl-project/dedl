@@ -12,10 +12,12 @@
     <owl:Ontology rdf:about="https://w3id.org/dedl">
         <owl:versionIRI rdf:resource="https://w3id.org/dedl/1.0.0"/>
         <terms:abstract xml:lang="en">DEDL-O is a reusable ontology for describing the technical architecture of data ecosystems, their processes and the connection between both. This integration layer states which process step calls which API endpoint and how data is mapped between them, which neither architecture nor process vocabularies can express on their own.</terms:abstract>
+        <terms:bibliographicCitation xml:lang="en">Lennart Klöpper, Jiahang Chen. Data Ecosystem Description Language Ontology (DEDL-O). Version 1.0.0. https://w3id.org/dedl/1.0.0</terms:bibliographicCitation>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-05-01</terms:created>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-5970-6954"/>
         <terms:creator rdf:resource="https://orcid.org/0009-0002-5632-5464"/>
         <terms:description xml:lang="en">An ontology for describing the technical architecture, processes and API integration of data ecosystems.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-08</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-08</terms:modified>
         <terms:publisher rdf:resource="https://www.mmi.rwth-aachen.de/"/>
@@ -49,6 +51,13 @@
     
 
 
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
     <!-- http://purl.org/dc/terms/created -->
 
 
@@ -67,6 +76,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
     
 
 

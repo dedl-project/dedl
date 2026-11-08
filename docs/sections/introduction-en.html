@@ -1,6 +1,13 @@
 <h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div>
 <p>
+DEDL, the Data Ecosystem Description Language, was introduced together with its information model at
+<a href="https://link.springer.com/chapter/10.1007/978-3-032-32026-1_7">WorldCIST 2026</a>. DEDL-O is the OWL ontology of DEDL. It keeps the core concepts of the
+information model (data ecosystems, participants, technical elements, processes) and adds an integration layer that
+connects process steps to the API endpoints they call. The first ontology version, a direct formalisation of the
+information model, remains available at <a href="https://w3id.org/dedl/0.1">https://w3id.org/dedl/0.1</a>.
+</p>
+<p>
 Data ecosystems bring together autonomous participants that exchange data and services across organisational
 boundaries. Building and operating them requires knowing three things at once: which technical components exist
 and how they depend on each other, which processes the ecosystem runs, and which process step calls which API
@@ -26,7 +33,29 @@ The integration layer is constrained by the architecture layer: whoever executes
 component the process invokes. Validation rules that connect the layers in this way are part of the resource.
 </p>
 <p>
-DEDL-O 1.0.0 replaces version 0.1, which formalised the DEDL information model. It is not backward compatible;
-see the change log below. Terms that are no longer needed are marked as deprecated before they are removed.
+DEDL-O 1.0.0 is not backward compatible with version 0.1; see the change log below. Terms that are no longer
+needed are marked as deprecated before they are removed.
 </p>
+<h3 id="infomodel" class="list">Relation to the DEDL information model</h3>
+<p>
+Figure 1 shows the DEDL information model as published at <a href="https://link.springer.com/chapter/10.1007/978-3-032-32026-1_7">WorldCIST 2026</a>. It is the conceptual
+basis of DEDL-O, but it is not the schema of DEDL-O: the information model is written as UML classes with attributes,
+whereas DEDL-O expresses the same concepts in RDF and OWL. The table below shows how the elements of the information
+model are realised in DEDL-O.
+</p>
+<p style="text-align:center"><a href="resources/dedl-core-model.svg" title="Open in full size"><img src="resources/dedl-core-model.svg" alt="Core information model of DEDL (UML diagram)" style="width:60%; height:auto;"></a></p>
+<p><em>Figure 1: The DEDL core information model in UML, as published at WorldCIST 2026. Not the schema of DEDL-O. Click to enlarge.</em></p>
+<table>
+<caption>Table 1: Elements of the DEDL information model and their realisation in DEDL-O</caption>
+<thead><tr><th>Information model</th><th>DEDL-O</th></tr></thead>
+<tbody>
+<tr><td>attribute <code>id</code></td><td>the IRI of the instance</td></tr>
+<tr><td><code>Base</code> with <code>id</code>, <code>name</code>, <code>description</code></td><td><code>dedl:Base</code>; every instance has a <code>schema:name</code> and should have a <code>schema:description</code></td></tr>
+<tr><td><code>Reference</code> (pointer to another object by its id), e.g. <code>inDataEcosystem: Reference</code></td><td>object properties that point directly to the IRI, e.g. <code>dedl:inDataEcosystem</code>; <code>dedl:Reference</code> is deprecated</td></tr>
+<tr><td>core elements <code>DataEcosystem</code>, <code>DataEcosystemElement</code>, <code>Participant</code>, <code>TechnicalDataEcosystemElement</code>, <code>Entity</code>, <code>Process</code></td><td>classes of the same name in the <code>dedl:</code> namespace</td></tr>
+<tr><td><code>Process</code> and its subtypes (Onboarding, Transacting, Offboarding, ...)</td><td><code>dedl:Process</code> as a subclass of <code>BBO:Process</code>, so that processes can be modelled as BPMN flows</td></tr>
+<tr><td>enumeration <code>Status</code></td><td>class <code>dedl:Status</code> with the property <code>dedl:status</code></td></tr>
+<tr><td>&mdash; (not part of the information model)</td><td>integration layer: <code>dedl:invokesEndpoint</code>, <code>dedl:ParameterMapping</code>, directed dependencies with <code>dedl:dependsOn</code>, operation with <code>dedl:operatedBy</code></td></tr>
+</tbody>
+</table>
 </div>

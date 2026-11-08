@@ -16,12 +16,6 @@
       "en" : "DEDL-O"
     },
     "other" : {
-      "license" : [ {
-        "identifier" : "license",
-        "language" : "undefined",
-        "value" : "https://creativecommons.org/licenses/by/4.0/",
-        "type" : "iri"
-      } ],
       "priorVersion" : [ {
         "identifier" : "priorVersion",
         "language" : "undefined",
@@ -51,6 +45,30 @@
         "value" : "2025-05-01",
         "type" : "label"
       } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "DEDL-O is a reusable ontology for describing the technical architecture of data ecosystems, their processes and the connection between both. This integration layer states which process step calls which API endpoint and how data is mapped between them, which neither architecture nor process vocabularies can express on their own.",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Data Ecosystem Description Language Ontology (DEDL-O)",
+        "type" : "label"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
       "preferredNamespacePrefix" : [ {
         "identifier" : "preferredNamespacePrefix",
         "language" : "undefined",
@@ -69,16 +87,10 @@
         "value" : "2026-11-08",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "1.0.0",
-        "type" : "label"
-      } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
         "language" : "en",
-        "value" : "DEDL-O is a reusable ontology for describing the technical architecture of data ecosystems, their processes and the connection between both. This integration layer states which process step calls which API endpoint and how data is mapped between them, which neither architecture nor process vocabularies can express on their own.",
+        "value" : "Lennart Klöpper, Jiahang Chen. Data Ecosystem Description Language Ontology (DEDL-O). Version 1.0.0. https://w3id.org/dedl/1.0.0",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
@@ -87,10 +99,10 @@
         "value" : "https://w3id.org/dedl#",
         "type" : "label"
       } ],
-      "title" : [ {
-        "identifier" : "title",
-        "language" : "en",
-        "value" : "Data Ecosystem Description Language Ontology (DEDL-O)",
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-11-08",
         "type" : "label"
       } ]
     }
@@ -196,10 +208,10 @@
     "id" : "106",
     "type" : "owl:Class"
   }, {
-    "id" : "111",
+    "id" : "79",
     "type" : "owl:Class"
   }, {
-    "id" : "79",
+    "id" : "111",
     "type" : "owl:Class"
   }, {
     "id" : "80",
@@ -677,16 +689,6 @@
         "en" : "SAML2.0"
       }
     }, {
-      "iri" : "https://w3id.org/dedl#Signature",
-      "baseIri" : "https://w3id.org/dedl",
-      "comment" : {
-        "en" : "An authentication protocol relying on digital signatures for verification."
-      },
-      "labels" : {
-        "IRI-based" : "Signature",
-        "en" : "Signature"
-      }
-    }, {
       "iri" : "https://w3id.org/dedl#WebAuth",
       "baseIri" : "https://w3id.org/dedl",
       "comment" : {
@@ -695,6 +697,16 @@
       "labels" : {
         "IRI-based" : "WebAuth",
         "en" : "WebAuth"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#Signature",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An authentication protocol relying on digital signatures for verification."
+      },
+      "labels" : {
+        "IRI-based" : "Signature",
+        "en" : "Signature"
       }
     }, {
       "iri" : "https://w3id.org/dedl#Cryptography",
@@ -748,6 +760,19 @@
     },
     "id" : "50",
     "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Policy",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Policy",
+      "en" : "Policy"
+    },
+    "comment" : {
+      "en" : "A set of rules or guidelines that govern data usage, sharing, and access."
+    },
+    "id" : "54",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "https://w3id.org/dedl#PolicyLanguage",
     "baseIri" : "https://w3id.org/dedl",
@@ -830,20 +855,7 @@
     "comment" : {
       "en" : "A formal language for defining and expressing policies."
     },
-    "id" : "54"
-  }, {
-    "iri" : "https://w3id.org/dedl#Policy",
-    "baseIri" : "https://w3id.org/dedl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Policy",
-      "en" : "Policy"
-    },
-    "comment" : {
-      "en" : "A set of rules or guidelines that govern data usage, sharing, and access."
-    },
-    "id" : "55",
-    "superClasses" : [ "1" ]
+    "id" : "55"
   }, {
     "iri" : "https://w3id.org/dedl#Transacting",
     "baseIri" : "https://w3id.org/dedl",
@@ -1106,19 +1118,6 @@
     },
     "id" : "106"
   }, {
-    "iri" : "https://w3id.org/dedl#Finding",
-    "baseIri" : "https://w3id.org/dedl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Finding",
-      "en" : "Finding"
-    },
-    "comment" : {
-      "en" : "An optional process that enables information or data to be found within a data ecosystem."
-    },
-    "id" : "111",
-    "superClasses" : [ "31" ]
-  }, {
     "iri" : "https://w3id.org/dedl#RunTimeEnvironment",
     "baseIri" : "https://w3id.org/dedl",
     "instances" : 0,
@@ -1131,6 +1130,19 @@
     },
     "id" : "79",
     "superClasses" : [ "24" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Finding",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Finding",
+      "en" : "Finding"
+    },
+    "comment" : {
+      "en" : "An optional process that enables information or data to be found within a data ecosystem."
+    },
+    "id" : "111",
+    "superClasses" : [ "31" ]
   }, {
     "iri" : "https://w3id.org/dedl#Service",
     "baseIri" : "https://w3id.org/dedl",
@@ -1374,7 +1386,7 @@
       "IRI-based" : "Base",
       "en" : "Base"
     },
-    "subClasses" : [ "0", "55", "31", "25", "37" ],
+    "subClasses" : [ "0", "54", "31", "25", "37" ],
     "comment" : {
       "en" : "Common superclass of everything a DEDL model describes as a named thing: data ecosystems, their elements (participants and technical elements), entities, policies and processes. Every instance carries a human-readable schema:name and should carry a schema:description. It replaces the attributes id, name and description of the Base class in the DEDL information model; the id is the IRI of the instance."
     },
@@ -2667,12 +2679,12 @@
   }, {
     "iri" : "https://w3id.org/dedl#policyLanguage",
     "baseIri" : "https://w3id.org/dedl",
-    "range" : "54",
+    "range" : "55",
     "label" : {
       "IRI-based" : "policyLanguage",
       "en" : "policyLanguage"
     },
-    "domain" : "55",
+    "domain" : "54",
     "comment" : {
       "en" : "Specifies the PolicyLanguage used to express or encode a Policy."
     },
@@ -2806,7 +2818,7 @@
     "id" : "122"
   }, {
     "range" : "1",
-    "domain" : "55",
+    "domain" : "54",
     "attributes" : [ "anonymous", "object" ],
     "id" : "123"
   }, {
@@ -3162,6 +3174,20 @@
     "attributes" : [ "object" ],
     "id" : "180"
   }, {
+    "iri" : "https://w3id.org/dedl#requestHttpBodySchema",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "181",
+    "label" : {
+      "IRI-based" : "requestHttpBodySchema",
+      "en" : "requestHttpBodySchema"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Describes the structure of the request body of an endpoint. The encoding of that body is stated separately via hctl:forContentType."
+    },
+    "attributes" : [ "object" ],
+    "id" : "182"
+  }, {
     "iri" : "https://w3id.org/dedl#entity",
     "inverse" : "61",
     "baseIri" : "https://w3id.org/dedl",
@@ -3175,25 +3201,11 @@
       "en" : "Associates a Participant with a particular Entity in the data ecosystem."
     },
     "attributes" : [ "object" ],
-    "id" : "182"
-  }, {
-    "iri" : "https://w3id.org/dedl#requestHttpBodySchema",
-    "baseIri" : "https://w3id.org/dedl",
-    "range" : "181",
-    "label" : {
-      "IRI-based" : "requestHttpBodySchema",
-      "en" : "requestHttpBodySchema"
-    },
-    "domain" : "5",
-    "comment" : {
-      "en" : "Describes the structure of the request body of an endpoint. The encoding of that body is stated separately via hctl:forContentType."
-    },
-    "attributes" : [ "object" ],
     "id" : "183"
   }, {
     "iri" : "https://w3id.org/dedl#policy",
     "baseIri" : "https://w3id.org/dedl",
-    "range" : "55",
+    "range" : "54",
     "label" : {
       "IRI-based" : "policy",
       "en" : "policy"
@@ -3226,7 +3238,7 @@
       "IRI-based" : "accessControlModel",
       "en" : "accessControlModel"
     },
-    "domain" : "55",
+    "domain" : "54",
     "comment" : {
       "en" : "Associates a Policy with its AccessControlModel to define and enforce resource access rules."
     },

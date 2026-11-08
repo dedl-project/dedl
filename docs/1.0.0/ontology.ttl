@@ -9,10 +9,12 @@
 <https://w3id.org/dedl> rdf:type owl:Ontology ;
                          owl:versionIRI <https://w3id.org/dedl/1.0.0> ;
                          <http://purl.org/dc/terms/abstract> "DEDL-O is a reusable ontology for describing the technical architecture of data ecosystems, their processes and the connection between both. This integration layer states which process step calls which API endpoint and how data is mapped between them, which neither architecture nor process vocabularies can express on their own."@en ;
+                         <http://purl.org/dc/terms/bibliographicCitation> "Lennart Klöpper, Jiahang Chen. Data Ecosystem Description Language Ontology (DEDL-O). Version 1.0.0. https://w3id.org/dedl/1.0.0"@en ;
                          <http://purl.org/dc/terms/created> "2025-05-01"^^xsd:date ;
                          <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-5970-6954> ,
                                                             <https://orcid.org/0009-0002-5632-5464> ;
                          <http://purl.org/dc/terms/description> "An ontology for describing the technical architecture, processes and API integration of data ecosystems."@en ;
+                         <http://purl.org/dc/terms/issued> "2026-11-08"^^xsd:date ;
                          <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                          <http://purl.org/dc/terms/modified> "2026-11-08"^^xsd:date ;
                          <http://purl.org/dc/terms/publisher> <https://www.mmi.rwth-aachen.de/> ;
@@ -32,6 +34,10 @@
 <http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
 
@@ -42,6 +48,10 @@
 
 ###  http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
