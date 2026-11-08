@@ -23,13 +23,16 @@
                                          <https://orcid.org/0009-0002-5632-5464> ;
                          dcterms:description "An ontology for describing the technical architecture, processes and API integration of data ecosystems."@en ;
                          dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                         dcterms:modified "2026-11-08"^^xsd:date ;
                          dcterms:publisher <https://www.mmi.rwth-aachen.de/> ;
                          dcterms:title "Data Ecosystem Description Language Ontology (DEDL-O)"@en ;
                          vann:preferredNamespacePrefix "dedl" ;
                          vann:preferredNamespaceUri "https://w3id.org/dedl#" ;
                          rdfs:label "DEDL-O"@en ;
                          owl:incompatibleWith <https://w3id.org/dedl/0.1> ;
-                         owl:priorVersion <https://w3id.org/dedl/0.1> .
+                         owl:priorVersion <https://w3id.org/dedl/0.1> ;
+                         owl:versionIRI <https://w3id.org/dedl/1.0.0> ;
+                         owl:versionInfo "1.0.0" .
 
 <https://orcid.org/0000-0001-5970-6954> rdfs:label "Jiahang Chen" ;
                                         schema:affiliation <https://www.mmi.rwth-aachen.de/> ;
@@ -63,6 +66,10 @@ dcterms:description rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/license
 dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/publisher
@@ -488,6 +495,14 @@ dedl:valueEncoding rdf:type owl:ObjectProperty ;
 <http://www.w3.org/ns/dcat#endpointURL> rdf:type owl:DatatypeProperty .
 
 
+###  https://schema.org/description
+schema:description rdf:type owl:DatatypeProperty .
+
+
+###  https://schema.org/name
+schema:name rdf:type owl:DatatypeProperty .
+
+
 ###  https://schema.org/httpMethod
 schema:httpMethod rdf:type owl:DatatypeProperty .
 
@@ -530,14 +545,6 @@ dedl:containerImage rdf:type owl:DatatypeProperty ;
                     rdfs:range xsd:string ;
                     rdfs:comment "Container image reference from which the element is deployed, including registry and tag."@en ;
                     rdfs:label "containerImage"@en .
-
-
-###  https://w3id.org/dedl#gaiaxTaCAccepted
-dedl:gaiaxTaCAccepted rdf:type owl:DatatypeProperty ;
-                      rdfs:domain BBO:DataResource ;
-                      rdfs:range xsd:boolean ;
-                      rdfs:comment "Indicates whether a Participant has accepted the Gaia-X Terms and Conditions."@en ;
-                      rdfs:label "gaiaxTaCAccepted"@en .
 
 
 ###  https://w3id.org/dedl#parameterName
@@ -709,7 +716,11 @@ dedl:Authorizator rdf:type owl:Class ;
 
 ###  https://w3id.org/dedl#Base
 dedl:Base rdf:type owl:Class ;
-          rdfs:comment "Base class defining various properties"@en ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty schema:name ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                          ] ;
+          rdfs:comment "Common superclass of everything a DEDL model describes as a named thing: data ecosystems, their elements (participants and technical elements), entities, policies and processes. Every instance carries a human-readable schema:name and should carry a schema:description. It replaces the attributes id, name and description of the Base class in the DEDL information model; the id is the IRI of the instance."@en ;
           rdfs:label "Base"@en .
 
 
@@ -1008,7 +1019,8 @@ dedl:Publishing rdf:type owl:Class ;
 
 ###  https://w3id.org/dedl#Reference
 dedl:Reference rdf:type owl:Class ;
-               rdfs:comment "Used for referencing between various classes"@en ;
+               rdfs:comment "Deprecated since 1.0.0. In the DEDL information model, Reference is the type of attributes that point to another object by its id, e.g. inDataEcosystem or byDataEcosystem. In RDF, these references are object properties that point directly to the IRI of the target, so the class is no longer needed."@en ;
+               owl:deprecated "true"^^xsd:boolean ;
                rdfs:label "Reference"@en .
 
 
