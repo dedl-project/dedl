@@ -18,6 +18,7 @@ authors:
     given-names: "Jiahang"
     orcid: "https://orcid.org/0000-0001-5970-6954"
     affiliation: "MMI, RWTH Aachen University"
+doi: "10.5281/zenodo.24052637"
 license: CC-BY-4.0
 url: "https://w3id.org/dedl"
 repository-code: "https://github.com/dedl-project/dedl"

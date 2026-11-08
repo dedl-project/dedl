@@ -1,5 +1,7 @@
 # DEDL-O – Data Ecosystem Description Language Ontology
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24052637.svg)](https://doi.org/10.5281/zenodo.24052637)
+
 DEDL-O is an OWL ontology for describing the technical architecture of data ecosystems, their processes and the connection between both. Its integration layer states which process step calls which API endpoint and how data is mapped between them, which neither architecture nor process vocabularies can express on their own.
 
 DEDL-O is the ontology of DEDL, the Data Ecosystem Description Language, whose information model was published at [WorldCIST 2026](https://link.springer.com/chapter/10.1007/978-3-032-32026-1_7).
@@ -11,6 +13,7 @@ DEDL-O is the ontology of DEDL, the Data Ecosystem Description Language, whose i
 | Previous version | 0.1, <https://w3id.org/dedl/0.1> (not compatible with 1.0.0) |
 | Documentation | <https://w3id.org/dedl> |
 | JSON-LD context | <https://w3id.org/dedl/context.jsonld> |
+| DOI | all versions: [10.5281/zenodo.24052637](https://doi.org/10.5281/zenodo.24052637), version 1.0.0: [10.5281/zenodo.24052638](https://doi.org/10.5281/zenodo.24052638) |
 | License | [CC BY 4.0](LICENSE) |
 
 ## Structure
@@ -44,7 +47,7 @@ The documentation is generated with [WIDOCO](https://github.com/dgarijo/Widoco) 
 
 ## Citation
 
-> Lennart Klöpper, Jiahang Chen. Data Ecosystem Description Language Ontology (DEDL-O). Version 1.0.0. https://w3id.org/dedl/1.0.0
+> Lennart Klöpper, Jiahang Chen. Data Ecosystem Description Language Ontology (DEDL-O). Version 1.0.0. https://w3id.org/dedl/1.0.0. DOI: [10.5281/zenodo.24052638](https://doi.org/10.5281/zenodo.24052638)
 
 ## License
 
