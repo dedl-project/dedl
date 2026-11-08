@@ -1,0 +1,3338 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "https://www.w3.org/2019/wot/hypermedia", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/didl", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "http://www.w3.org/2001/XMLSchema", "https://www.w3.org/2019/wot/json-schema", "http://www.w3.org/ns/dcat", "https://www.irit.fr/recherches/MELODI/ontologies/BBO", "https://w3id.org/dedl" ],
+    "title" : {
+      "en" : "Data Ecosystem Description Language Ontology (DEDL-O)"
+    },
+    "iri" : "https://w3id.org/dedl",
+    "version" : "1.0.0",
+    "author" : [ "https://orcid.org/0009-0002-5632-5464", "https://orcid.org/0000-0001-5970-6954" ],
+    "description" : {
+      "en" : "An ontology for describing the technical architecture, processes and API integration of data ecosystems."
+    },
+    "labels" : {
+      "en" : "DEDL-O"
+    },
+    "other" : {
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "https://w3id.org/dedl/0.1",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0001-5970-6954",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0009-0002-5632-5464",
+        "type" : "iri"
+      } ],
+      "incompatibleWith" : [ {
+        "identifier" : "incompatibleWith",
+        "language" : "undefined",
+        "value" : "https://w3id.org/dedl/0.1",
+        "type" : "iri"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-05-01",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "DEDL-O is a reusable ontology for describing the technical architecture of data ecosystems, their processes and the connection between both. This integration layer states which process step calls which API endpoint and how data is mapped between them, which neither architecture nor process vocabularies can express on their own.",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Data Ecosystem Description Language Ontology (DEDL-O)",
+        "type" : "label"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "dedl",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "https://www.mmi.rwth-aachen.de/",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-11-08",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "en",
+        "value" : "Lennart Klöpper, Jiahang Chen. Data Ecosystem Description Language Ontology (DEDL-O). Version 1.0.0. https://w3id.org/dedl/1.0.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/dedl#",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-11-08",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  }, {
+    "id" : "94",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
+    "id" : "106",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "111",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "121",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "16",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "124",
+    "type" : "owl:Class"
+  }, {
+    "id" : "125",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "96",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "145",
+    "type" : "owl:Class"
+  }, {
+    "id" : "146",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "158",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "163",
+    "type" : "owl:Class"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "95",
+    "type" : "owl:Class"
+  }, {
+    "id" : "128",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "154",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "179",
+    "type" : "owl:Class"
+  }, {
+    "id" : "149",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "176",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "181",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "161",
+    "type" : "owl:Class"
+  }, {
+    "id" : "187",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/dedl#Entity",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entity",
+      "en" : "Entity"
+    },
+    "comment" : {
+      "en" : "Any identifiable object of a participant within the data ecosystem, e.g. a device or digital resource."
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#API",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "API",
+      "en" : "API"
+    },
+    "comment" : {
+      "en" : "Application Programming Interface; a subclass of Interface representing a component whose primary role is to be an entry point into the data ecosystem. DEDL deliberately does not apply API to every component that exposes a technical interface, as almost every component does. Where a component has a more specific functional type (e.g. IdentityProvider, Communication, DataStorage), that type is used instead and the component carries its Endpoints directly. API is therefore reserved for components that exist in order to be the interface: typically coordinating several sub-services, or fronting a separate storage component."
+    },
+    "id" : "2",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Endpoint",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Endpoint",
+      "en" : "Endpoint"
+    },
+    "comment" : {
+      "en" : "HTTP(S) endpoint of an API that can be invoked by a process. DEDL 0.1 deliberately covers REST only; protocol-specific Endpoint subclasses are deferred."
+    },
+    "id" : "5",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#DataSpaceConnector",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataSpaceConnector",
+      "en" : "DataSpaceConnector"
+    },
+    "comment" : {
+      "en" : "A subclass of Interface enabling secure and standardized interaction within data spaces (i.e., specialized realizations of data ecosystems)."
+    },
+    "id" : "13",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#ContractOffering",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ContractOffering",
+      "en" : "ContractOffering"
+    },
+    "comment" : {
+      "en" : "A subclass of Negotiating representing the process where data offers are made available to potential consumers."
+    },
+    "id" : "17",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#ParameterEncoding",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ParameterEncoding",
+      "en" : "ParameterEncoding"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/dedl#Base64Url",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "A ParameterEncoding requiring the value to be base64url-encoded without padding, as the Asset Administration Shell API does for identifiers carried in a path."
+      },
+      "labels" : {
+        "IRI-based" : "Base64Url",
+        "en" : "Base64Url"
+      }
+    } ],
+    "comment" : {
+      "en" : "Enumeration of the transformations an endpoint requires before a parameter value is placed into the request. Not reused from jsonschema:contentEncoding, which describes how the content of a StringSchema value is stored, is limited to the RFC values up to base64, and would leave the value itself encoded in the model."
+    },
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/dedl#AuthorizationPattern",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AuthorizationPattern",
+      "en" : "AuthorizationPattern"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/dedl#Poll",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An authorization pattern in which a client periodically checks the server for an access decision."
+      },
+      "labels" : {
+        "IRI-based" : "Poll",
+        "en" : "Poll"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#Negotiate",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An authorization pattern in which the parties negotiate or exchange data before access is decided."
+      },
+      "labels" : {
+        "IRI-based" : "Negotiate",
+        "en" : "Negotiate"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#Push",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An authorization pattern in which the server proactively notifies the client about decisions."
+      },
+      "labels" : {
+        "IRI-based" : "Push",
+        "en" : "Push"
+      }
+    } ],
+    "comment" : {
+      "en" : "Enumeration of interaction patterns for reaching and delivering an access decision. A pattern classifies how an Authorizator works; it is not itself a Process of a data ecosystem."
+    },
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/dedl#AuditAndLogging",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AuditAndLogging",
+      "en" : "AuditAndLogging"
+    },
+    "comment" : {
+      "en" : "A component responsible for documenting activities within a data ecosystem to ensure transparency."
+    },
+    "id" : "23",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#DataEcosystem",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataEcosystem",
+      "en" : "DataEcosystem"
+    },
+    "comment" : {
+      "en" : "A socio-technical system in which participants share and manage data and associated processes."
+    },
+    "id" : "25",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#OfferStorage",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OfferStorage",
+      "en" : "OfferStorage"
+    },
+    "comment" : {
+      "en" : "A subclass of PolicyStorage where data offers are stored, allowing participants in a data ecosystem to publish and manage their available datasets or services."
+    },
+    "id" : "26",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Onboarding",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Onboarding",
+      "en" : "Onboarding"
+    },
+    "comment" : {
+      "en" : "A mandatory process that manages the creation of digital identities, enabling Participants to access a data ecosystem."
+    },
+    "id" : "30",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Status",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Status",
+      "en" : "Status"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/dedl#MAINTENANCE",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "Maintenance status indicating planned or ongoing maintenance."
+      },
+      "labels" : {
+        "IRI-based" : "MAINTENANCE",
+        "en" : "MAINTENANCE"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#ERROR",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "Error status indicating a failure or problem."
+      },
+      "labels" : {
+        "IRI-based" : "ERROR",
+        "en" : "ERROR"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#INACTIVE",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "Inactive status."
+      },
+      "labels" : {
+        "IRI-based" : "INACTIVE",
+        "en" : "INACTIVE"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#ACTIVE",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "Active status."
+      },
+      "labels" : {
+        "IRI-based" : "ACTIVE",
+        "en" : "ACTIVE"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#UPDATE",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "Update status indicating an ongoing update."
+      },
+      "labels" : {
+        "IRI-based" : "UPDATE",
+        "en" : "UPDATE"
+      }
+    } ],
+    "comment" : {
+      "en" : "Enumeration of possible status values for an element."
+    },
+    "id" : "32"
+  }, {
+    "iri" : "https://www.irit.fr/recherches/MELODI/ontologies/BBO#Expression",
+    "baseIri" : "https://www.irit.fr/recherches/MELODI/ontologies/BBO",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.irit.fr/recherches/MELODI/ontologies/BBO",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Expression"
+    },
+    "attributes" : [ "external" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/dedl#Participant",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Participant",
+      "en" : "Participant"
+    },
+    "subClasses" : [ "38", "39" ],
+    "comment" : {
+      "en" : "A stakeholder participating in or operating the data ecosystem (either an Individual or Organization)."
+    },
+    "id" : "36",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#AuthenticationProtocol",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AuthenticationProtocol",
+      "en" : "AuthenticationProtocol"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/dedl#Kerberos",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "A protocol using a trusted third-party ticket-granting service for authentication."
+      },
+      "labels" : {
+        "IRI-based" : "Kerberos",
+        "en" : "Kerberos"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#LDAP",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "Lightweight Directory Access Protocol, often used to manage authentication data in directories."
+      },
+      "labels" : {
+        "IRI-based" : "LDAP",
+        "en" : "LDAP"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#SAML_2.0",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "Security Assertion Markup Language (2.0), exchanging authentication and authorization data."
+      },
+      "labels" : {
+        "IRI-based" : "SAML_2.0",
+        "en" : "SAML2.0"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#WebAuth",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "A web-based authentication protocol, encompassing flows like OAuth, SAML, or WebAuthn."
+      },
+      "labels" : {
+        "IRI-based" : "WebAuth",
+        "en" : "WebAuth"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#Signature",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An authentication protocol relying on digital signatures for verification."
+      },
+      "labels" : {
+        "IRI-based" : "Signature",
+        "en" : "Signature"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#Cryptography",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An authentication protocol leveraging cryptographic techniques to prove identity."
+      },
+      "labels" : {
+        "IRI-based" : "Cryptography",
+        "en" : "Cryptography"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#OIDC",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "OpenID Connect, a simple identity layer built on OAuth 2.0 used for single sign-on."
+      },
+      "labels" : {
+        "IRI-based" : "OIDC",
+        "en" : "OIDC"
+      }
+    } ],
+    "comment" : {
+      "en" : "A specification of the interactions or steps used to perform authentication."
+    },
+    "id" : "47"
+  }, {
+    "iri" : "https://w3id.org/dedl#PolicyStorage",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PolicyStorage",
+      "en" : "PolicyStorage"
+    },
+    "subClasses" : [ "26", "49" ],
+    "comment" : {
+      "en" : "A subclass of storage that stores the conditions under which access to resources in a data ecosystem is granted and how they may be used."
+    },
+    "id" : "27",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#DataStorage",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataStorage",
+      "en" : "DataStorage"
+    },
+    "comment" : {
+      "en" : "A subclass of Storage dedicated to storing data within a data ecosystem."
+    },
+    "id" : "50",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Policy",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Policy",
+      "en" : "Policy"
+    },
+    "comment" : {
+      "en" : "A set of rules or guidelines that govern data usage, sharing, and access."
+    },
+    "id" : "54",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#PolicyLanguage",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PolicyLanguage",
+      "en" : "PolicyLanguage"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/dedl#Ponder",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "A policy specification language for security and management in distributed systems."
+      },
+      "labels" : {
+        "IRI-based" : "Ponder",
+        "en" : "Ponder"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#RightsML",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An ODRL-based language for expressing rights and usage constraints, common in news/media."
+      },
+      "labels" : {
+        "IRI-based" : "RightsML",
+        "en" : "RightsML"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#MPEG-21",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "A digital rights management and usage rights framework which can serve as a policy language."
+      },
+      "labels" : {
+        "IRI-based" : "MPEG-21",
+        "en" : "MPEG-21"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#ODRL",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "Open Digital Rights Language, commonly used to specify rights, constraints, and obligations."
+      },
+      "labels" : {
+        "IRI-based" : "ODRL",
+        "en" : "ODRL"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#ACP",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "Access control policy language (ACP), a particular set of grammar, syntax rules (logical and mathematical), and operators which provides an abstraction-layer for access control policy specifications, see https://solid.github.io/authorization-panel/acp-specification/"
+      },
+      "labels" : {
+        "IRI-based" : "ACP",
+        "en" : "ACP"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#XACMLPolicyLanguage",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An OASIS standard policy language for defining access control rules (XACML framework)."
+      },
+      "labels" : {
+        "IRI-based" : "XACMLPolicyLanguage",
+        "en" : "XACMLPolicyLanguage"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#Rego",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "A declarative policy language used with Open Policy Agent (OPA) to define fine-grained permissions."
+      },
+      "labels" : {
+        "IRI-based" : "Rego",
+        "en" : "Rego"
+      }
+    } ],
+    "comment" : {
+      "en" : "A formal language for defining and expressing policies."
+    },
+    "id" : "55"
+  }, {
+    "iri" : "https://w3id.org/dedl#Transacting",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Transacting",
+      "en" : "Transacting"
+    },
+    "subClasses" : [ "57", "58" ],
+    "comment" : {
+      "en" : "A mandatory process that enables the exchange or transfer of data or other resources between Participants within a data ecosystem."
+    },
+    "id" : "56",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Storage",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Storage",
+      "en" : "Storage"
+    },
+    "subClasses" : [ "50", "27" ],
+    "comment" : {
+      "en" : "A component where various types of information are stored in a data ecosystem."
+    },
+    "id" : "48",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Decision",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Decision",
+      "en" : "Decision"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/dedl#Deny",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "A Decision indicating that access is refused."
+      },
+      "labels" : {
+        "IRI-based" : "Deny",
+        "en" : "Deny"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#Allow",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "A Decision indicating that access is permitted."
+      },
+      "labels" : {
+        "IRI-based" : "Allow",
+        "en" : "Allow"
+      }
+    } ],
+    "comment" : {
+      "en" : "An outcome regarding an authorization request, e.g. Allow or Deny."
+    },
+    "id" : "64"
+  }, {
+    "iri" : "https://w3id.org/dedl#AuthenticationFactor",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AuthenticationFactor",
+      "en" : "AuthenticationFactor"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/dedl#SingleFactor",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An authentication factor using only one method of verification (e.g., a single password)."
+      },
+      "labels" : {
+        "IRI-based" : "SingleFactor",
+        "en" : "SingleFactor"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#MultiFactor",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An authentication factor requiring two or more independent credentials."
+      },
+      "labels" : {
+        "IRI-based" : "MultiFactor",
+        "en" : "MultiFactor"
+      }
+    } ],
+    "comment" : {
+      "en" : "An element used to verify the identity of a user or entity (e.g. password, token, biometrics)."
+    },
+    "id" : "72"
+  }, {
+    "iri" : "https://w3id.org/dedl#Authorization",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Authorization",
+      "en" : "Authorization"
+    },
+    "comment" : {
+      "en" : "A Process of a data ecosystem that determines whether an entity may access a resource. Its members are concrete processes; the general interaction pattern is described by AuthorizationPattern."
+    },
+    "id" : "76",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#HttpResponse",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HttpResponse",
+      "en" : "HttpResponse"
+    },
+    "comment" : {
+      "en" : "One possible response of an endpoint, identified by its status code and optionally carrying a body schema."
+    },
+    "id" : "75"
+  }, {
+    "iri" : "https://w3id.org/dedl#DataEcosystemElement",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataEcosystemElement",
+      "en" : "DataEcosystemElement"
+    },
+    "subClasses" : [ "24", "36" ],
+    "comment" : {
+      "en" : "An element within a data ecosystem that contributes to its functionality and processes."
+    },
+    "id" : "37",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#TechnicalDataEcosystemElement",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TechnicalDataEcosystemElement",
+      "en" : "TechnicalDataEcosystemElement"
+    },
+    "subClasses" : [ "23", "48", "79", "80", "81", "82", "3" ],
+    "comment" : {
+      "en" : "A subclass of DataEcosystemElement focused on technical components necessary for the operation of a data ecosystem."
+    },
+    "id" : "24",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Negotiating",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Negotiating",
+      "en" : "Negotiating"
+    },
+    "subClasses" : [ "87", "17", "88" ],
+    "comment" : {
+      "en" : "An optional process where participants discuss and agree on policies leading to contracts within a data ecosystem."
+    },
+    "id" : "18",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Communication",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Communication",
+      "en" : "Communication"
+    },
+    "comment" : {
+      "en" : "A mechanism through which participants in a data ecosystem exchange information and interact with each other."
+    },
+    "id" : "82",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Publishing",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Publishing",
+      "en" : "Publishing"
+    },
+    "subClasses" : [ "95", "96" ],
+    "comment" : {
+      "en" : "An optional process that makes data discoverable and allows its findability through catalogs or metadata integration."
+    },
+    "id" : "94",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#ParameterMapping",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ParameterMapping",
+      "en" : "ParameterMapping"
+    },
+    "comment" : {
+      "en" : "Connects a value of the process with a field of a message. Referenced from a Task through mapsInput or mapsOutput; the mapping itself is direction-agnostic, which is why source and target carry mirrored meanings depending on which of the two properties points at it."
+    },
+    "id" : "15"
+  }, {
+    "iri" : "https://www.irit.fr/recherches/MELODI/ontologies/BBO#Process",
+    "baseIri" : "https://www.irit.fr/recherches/MELODI/ontologies/BBO",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.irit.fr/recherches/MELODI/ontologies/BBO",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Process"
+    },
+    "subClasses" : [ "31" ],
+    "attributes" : [ "external" ],
+    "id" : "100"
+  }, {
+    "iri" : "https://w3id.org/dedl#AuthorizationArchitecture",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AuthorizationArchitecture",
+      "en" : "AuthorizationArchitecture"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/dedl#HybridArchitecture",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An AuthorizationArchitecture combining policy-based and token-based architecture"
+      },
+      "labels" : {
+        "IRI-based" : "HybridArchitecture",
+        "en" : "HybridArchitecture"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#TokenBasedArchitecture",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An authorization architecture using tokens (e.g., JWT)"
+      },
+      "labels" : {
+        "IRI-based" : "TokenBasedArchitecture",
+        "en" : "TokenBasedArchitecture"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#PolicyBasedArchitecture",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An AuthorizationArchitecture where authorization relies on evaluating formalized policies."
+      },
+      "labels" : {
+        "IRI-based" : "PolicyBasedArchitecture",
+        "en" : "PolicyBasedArchitecture"
+      }
+    } ],
+    "comment" : {
+      "en" : "A subclass of IdentityAndAccessManagement representing a structural framework that defines how authorization decisions are made and enforced."
+    },
+    "id" : "106"
+  }, {
+    "iri" : "https://w3id.org/dedl#RunTimeEnvironment",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RunTimeEnvironment",
+      "en" : "RunTimeEnvironment"
+    },
+    "comment" : {
+      "en" : "An infrastructure required for executing services within a data ecosystem, providing the necessary computing resources."
+    },
+    "id" : "79",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Finding",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Finding",
+      "en" : "Finding"
+    },
+    "comment" : {
+      "en" : "An optional process that enables information or data to be found within a data ecosystem."
+    },
+    "id" : "111",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Service",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Service",
+      "en" : "Service"
+    },
+    "comment" : {
+      "en" : "A service developed to address specific needs within a data ecosystem, often involving data processing or visualization."
+    },
+    "id" : "80",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Reference",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Reference",
+      "en" : "Reference"
+    },
+    "comment" : {
+      "en" : "Deprecated since 1.0.0. In the DEDL information model, Reference is the type of attributes that point to another object by its id, e.g. inDataEcosystem or byDataEcosystem. In RDF, these references are object properties that point directly to the IRI of the target, so the class is no longer needed."
+    },
+    "attributes" : [ "deprecated" ],
+    "id" : "121"
+  }, {
+    "iri" : "https://w3id.org/dedl#ContractRequesting",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ContractRequesting",
+      "en" : "ContractRequesting"
+    },
+    "comment" : {
+      "en" : "A subclass of Negotiating representing the process where potential data consumers request specific conditions for the use or access of data."
+    },
+    "id" : "87",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "99",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "16",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/dedl#IdentityProvider",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IdentityProvider",
+      "en" : "IdentityProvider"
+    },
+    "comment" : {
+      "en" : "A subclass of IdentityAndAccessManagement representing a component responsible for managing digital identities, facilitating onboarding and offboarding processes in a data ecosystem."
+    },
+    "id" : "124",
+    "superClasses" : [ "81" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "125",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/dedl#HttpParameter",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HttpParameter",
+      "en" : "HttpParameter"
+    },
+    "comment" : {
+      "en" : "A single parameter of an HTTP request that is carried outside the body, i.e. in the path or in a header."
+    },
+    "id" : "43"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "126",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/dedl#AuthenticationPattern",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AuthenticationPattern",
+      "en" : "AuthenticationPattern"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/dedl#ThreeWay",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An authentication pattern based on a three-part handshake or three-step verification."
+      },
+      "labels" : {
+        "IRI-based" : "ThreeWay",
+        "en" : "ThreeWay"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#OneWay",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "A one-directional authentication pattern, typically a client proving its identity to a server."
+      },
+      "labels" : {
+        "IRI-based" : "OneWay",
+        "en" : "OneWay"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#TwoWay",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "A mutual authentication pattern in which both parties verify each other's identity."
+      },
+      "labels" : {
+        "IRI-based" : "TwoWay",
+        "en" : "TwoWay"
+      }
+    } ],
+    "comment" : {
+      "en" : "Enumeration of interaction patterns for verifying an identity. A pattern classifies how an Authenticator works; it is not itself a Process of a data ecosystem."
+    },
+    "id" : "85"
+  }, {
+    "iri" : "https://w3id.org/dedl#Organization",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization",
+      "en" : "Organization"
+    },
+    "comment" : {
+      "en" : "A subclass of Participant representing a legal entity."
+    },
+    "id" : "38",
+    "superClasses" : [ "128", "36" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#ContractAgreeing",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ContractAgreeing",
+      "en" : "ContractAgreeing"
+    },
+    "comment" : {
+      "en" : "A subclass of Negotiation representing the concluding process between data providers and consumers  when a policy is accepted by both parties and a contract is formed."
+    },
+    "id" : "88",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#AuthenticationScheme",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AuthenticationScheme",
+      "en" : "AuthenticationScheme"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/dedl#ClientCredentials",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An AuthenticationScheme in which client id and client secret are sent to obtain a token; the credentials are part of the request body rather than a header."
+      },
+      "labels" : {
+        "IRI-based" : "ClientCredentials",
+        "en" : "ClientCredentials"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#Bearer",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An AuthenticationScheme in which a previously obtained access token is sent in the Authorization header."
+      },
+      "labels" : {
+        "IRI-based" : "Bearer",
+        "en" : "Bearer"
+      }
+    } ],
+    "comment" : {
+      "en" : "Enumeration of the ways in which credentials are carried when calling an endpoint."
+    },
+    "id" : "46"
+  }, {
+    "iri" : "https://w3id.org/dedl#DataOffering",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataOffering",
+      "en" : "DataOffering"
+    },
+    "comment" : {
+      "en" : "A sublcass of Publishing representing the process where participants make their data available to others in the data ecosystem."
+    },
+    "id" : "96",
+    "superClasses" : [ "94" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Base",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Base",
+      "en" : "Base"
+    },
+    "subClasses" : [ "0", "54", "31", "25", "37" ],
+    "comment" : {
+      "en" : "Common superclass of everything a DEDL model describes as a named thing: data ecosystems, their elements (participants and technical elements), entities, policies and processes. Every instance carries a human-readable schema:name and should carry a schema:description. It replaces the attributes id, name and description of the Base class in the DEDL information model; the id is the IRI of the instance."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/dedl#GUI",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GUI",
+      "en" : "GUI"
+    },
+    "comment" : {
+      "en" : "Graphical User Interface; a subclass of Interface representing an interface through which users can visually interact with components of a data ecosystem."
+    },
+    "id" : "145",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "https://w3id.org/didl#Identity",
+    "baseIri" : "https://w3id.org/didl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/didl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Identity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "146"
+  }, {
+    "iri" : "https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource",
+    "baseIri" : "https://www.irit.fr/recherches/MELODI/ontologies/BBO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataResource"
+    },
+    "attributes" : [ "external" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Property"
+    },
+    "attributes" : [ "external" ],
+    "id" : "158"
+  }, {
+    "iri" : "https://w3id.org/dedl#Authorizator",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Authorizator",
+      "en" : "Authorizator"
+    },
+    "comment" : {
+      "en" : "A participant or component that assesses permissions and enforces authorization decisions."
+    },
+    "id" : "69",
+    "superClasses" : [ "81" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#HttpLocation",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HttpLocation",
+      "en" : "HttpLocation"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/dedl#Path",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An HttpLocation indicating that the parameter is substituted into a placeholder of the endpoint path."
+      },
+      "labels" : {
+        "IRI-based" : "Path",
+        "en" : "Path"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#Header",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "An HttpLocation indicating that the parameter is carried in an HTTP header."
+      },
+      "labels" : {
+        "IRI-based" : "Header",
+        "en" : "Header"
+      }
+    } ],
+    "comment" : {
+      "en" : "Enumeration of the places in an HTTP request in which a parameter can be carried. The request body is not part of this enumeration; it is described through requestHttpBodySchema."
+    },
+    "id" : "163"
+  }, {
+    "iri" : "https://w3id.org/dedl#Authenticator",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Authenticator",
+      "en" : "Authenticator"
+    },
+    "comment" : {
+      "en" : "An Participant or component responsible for carrying out the authentication process."
+    },
+    "id" : "84",
+    "superClasses" : [ "81" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Process",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Process",
+      "en" : "Process"
+    },
+    "subClasses" : [ "76", "94", "111", "161", "154", "18", "56", "30" ],
+    "comment" : {
+      "en" : "A series of operations or activities performed within the data ecosystem."
+    },
+    "id" : "31",
+    "superClasses" : [ "100", "1" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#IdentityAndAccessManagement",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IdentityAndAccessManagement",
+      "en" : "IdentityAndAccessManagement"
+    },
+    "subClasses" : [ "69", "124", "84" ],
+    "comment" : {
+      "en" : "A framework ensuring that only authorized Participants have access to a data ecosystem."
+    },
+    "id" : "81",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#DataStoring",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataStoring",
+      "en" : "DataStoring"
+    },
+    "comment" : {
+      "en" : "A subclass of Publishing representing the process that ensures datasets are stored securely, either centrally or decentrally, depending on the architecture of the data ecosystem."
+    },
+    "id" : "95",
+    "superClasses" : [ "94" ]
+  }, {
+    "iri" : "https://schema.org/Organization",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization"
+    },
+    "subClasses" : [ "38" ],
+    "attributes" : [ "external" ],
+    "id" : "128"
+  }, {
+    "iri" : "https://schema.org/EntryPoint",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EntryPoint"
+    },
+    "subClasses" : [ "5" ],
+    "attributes" : [ "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/dedl#Authentication",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Authentication",
+      "en" : "Authentication"
+    },
+    "comment" : {
+      "en" : "A Process of a data ecosystem that verifies the identity of a user or entity. Its members are concrete processes; the general interaction pattern is described by AuthenticationPattern."
+    },
+    "id" : "154",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://www.irit.fr/recherches/MELODI/ontologies/BBO#InputSet",
+    "baseIri" : "https://www.irit.fr/recherches/MELODI/ontologies/BBO",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.irit.fr/recherches/MELODI/ontologies/BBO",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "InputSet"
+    },
+    "attributes" : [ "external" ],
+    "id" : "66"
+  }, {
+    "iri" : "https://w3id.org/dedl#DataExchanging",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataExchanging",
+      "en" : "DataExchanging"
+    },
+    "comment" : {
+      "en" : "A subclass of Transaction that represents the process that facilitates the transfer of data within a data ecosystem between Participants."
+    },
+    "id" : "58",
+    "superClasses" : [ "56" ]
+  }, {
+    "iri" : "https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task",
+    "baseIri" : "https://www.irit.fr/recherches/MELODI/ontologies/BBO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Task"
+    },
+    "attributes" : [ "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/dedl#AuthenticationRiskContext",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AuthenticationRiskContext",
+      "en" : "AuthenticationRiskContext"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/dedl#Device",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "A factor in the authentication risk context indicating the device used for login."
+      },
+      "labels" : {
+        "IRI-based" : "Device",
+        "en" : "Device"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#Geolocation",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "A factor in the authentication risk context representing physical or network location."
+      },
+      "labels" : {
+        "IRI-based" : "Geolocation",
+        "en" : "Geolocation"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#Behavior",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "A context factor reflecting user behavioral patterns (e.g., keystroke dynamics)."
+      },
+      "labels" : {
+        "IRI-based" : "Behavior",
+        "en" : "Behavior"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#Time-based",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "A context factor referencing time-sensitive credentials or restrictions (e.g., OTPs)."
+      },
+      "labels" : {
+        "IRI-based" : "Time-based",
+        "en" : "TimeBased"
+      }
+    } ],
+    "comment" : {
+      "en" : "Contextual attributes (time, location, device) that affect authentication risk levels."
+    },
+    "id" : "179"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "149",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "6",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "93",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "90",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://schema.org/Person",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "subClasses" : [ "39" ],
+    "attributes" : [ "external" ],
+    "id" : "176"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "11",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/dedl#Interface",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Interface",
+      "en" : "Interface"
+    },
+    "subClasses" : [ "2", "13", "145" ],
+    "comment" : {
+      "en" : "An access point for participants to join and interact within a data ecosystem."
+    },
+    "id" : "3",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "105",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/dedl#Individual",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Individual",
+      "en" : "Individual"
+    },
+    "comment" : {
+      "en" : "A subclass of Participant representing a natural person."
+    },
+    "id" : "39",
+    "superClasses" : [ "36", "176" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "108",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "https://w3id.org/dedl#ServiceExecuting",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ServiceExecuting",
+      "en" : "ServiceExecuting"
+    },
+    "comment" : {
+      "en" : "A  subclass of Transaction representing the process that enables third-party services execution to generate additional value from the managed data in a data ecosystem."
+    },
+    "id" : "57",
+    "superClasses" : [ "56" ]
+  }, {
+    "iri" : "https://www.w3.org/2019/wot/json-schema#DataSchema",
+    "baseIri" : "https://www.w3.org/2019/wot/json-schema",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/2019/wot/json-schema",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DataSchema"
+    },
+    "attributes" : [ "external" ],
+    "id" : "181"
+  }, {
+    "iri" : "https://w3id.org/dedl#AgreementStorage",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AgreementStorage",
+      "en" : "AgreementStorage"
+    },
+    "comment" : {
+      "en" : "A subclass of PolicyStorage where concluded contracts are stored, ensuring that agreements between Participants are documented and accessible."
+    },
+    "id" : "49",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#Offboarding",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Offboarding",
+      "en" : "Offboarding"
+    },
+    "comment" : {
+      "en" : "A mandatory process for removing participant identities from a data ecosystem ensuring compliance or voluntary exit."
+    },
+    "id" : "161",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/dedl#AccessControlModel",
+    "baseIri" : "https://w3id.org/dedl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AccessControlModel",
+      "en" : "AccessControlModel"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/dedl#OBAC",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "Ontology-based Access Control focusing on contextual policy enforcement"
+      },
+      "labels" : {
+        "IRI-based" : "OBAC",
+        "en" : "OBAC"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#DAC",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "Discretionary Access Control, where resource owners grant or deny permissions."
+      },
+      "labels" : {
+        "IRI-based" : "DAC",
+        "en" : "DAC"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#RBAC",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "Role-based Access Control, assigning permissions to roles which are then assigned to users."
+      },
+      "labels" : {
+        "IRI-based" : "RBAC",
+        "en" : "RBAC"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#ABAC",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "Attribute-based Access Control model, relying on attributes to define permissions."
+      },
+      "labels" : {
+        "IRI-based" : "ABAC",
+        "en" : "ABAC"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#OrBAC",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "Organization-based Access Control, focusing on roles and contexts within an organization."
+      },
+      "labels" : {
+        "IRI-based" : "OrBAC",
+        "en" : "OrBAC"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#CapBAC",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "Capability-based Access Control relying on tokens or 'capabilities' to grant permissions."
+      },
+      "labels" : {
+        "IRI-based" : "CapBAC",
+        "en" : "CapBAC"
+      }
+    }, {
+      "iri" : "https://w3id.org/dedl#MAC",
+      "baseIri" : "https://w3id.org/dedl",
+      "comment" : {
+        "en" : "Mandatory Access Control, where policies are enforced by a central authority."
+      },
+      "labels" : {
+        "IRI-based" : "MAC",
+        "en" : "MAC"
+      }
+    } ],
+    "comment" : {
+      "en" : "A conceptual framework defining how access to resources is managed, granted, and restricted."
+    },
+    "id" : "187"
+  } ],
+  "property" : [ {
+    "id" : "4",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "103",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "115",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "119",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "127",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "129",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "131",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "132",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "133",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "134",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "137",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "138",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "139",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "140",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "141",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "142",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "143",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "144",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "147",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "148",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "150",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "151",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "152",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "153",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "155",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "156",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "157",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "159",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "162",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "164",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "165",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "166",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "167",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "168",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "169",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "170",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "171",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "172",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "130",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "173",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "174",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "175",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "177",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "178",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "180",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "182",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "183",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "184",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "185",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "186",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "188",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "189",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "190",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "191",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "192",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "193",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "194",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/dedl#path",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "path",
+      "en" : "path"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Relative HTTP path of an endpoint."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "4"
+  }, {
+    "iri" : "https://w3id.org/dedl#invokesEndpoint",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "invokesEndpoint",
+      "en" : "invokesEndpoint"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Indicates that a task invokes an API endpoint."
+    },
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://schema.org/description",
+    "baseIri" : "https://schema.org",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "description"
+    },
+    "domain" : "11",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://w3id.org/dedl#target",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "target",
+      "en" : "target"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Where a mapped value is written to. Deliberately without rdfs:range, for the same reason as source: with mapsInput the target is an HttpParameter, a field of the request schema, or the request schema itself when the whole document is the value; with mapsOutput it is a BBO:DataResource."
+    },
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://schema.org/httpMethod",
+    "baseIri" : "https://schema.org",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "httpMethod"
+    },
+    "domain" : "11",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/dedl#endpoint",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "endpoint",
+      "en" : "endpoint"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "Associates a TechnicalDataEcosystemElement with an Endpoint resource that contains connection details (path, method, auth, etc.)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/dedl#mapsOutput",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "mapsOutput",
+      "en" : "mapsOutput"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Associates a Task with a mapping that reads a field of the response into a DataResource of the process."
+    },
+    "attributes" : [ "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://www.w3.org/2019/wot/json-schema#propertyName",
+    "baseIri" : "https://www.w3.org/2019/wot/json-schema",
+    "range" : "34",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/2019/wot/json-schema",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "propertyName"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Used on the DataSchema of a body field to state the JSON key under which it appears, which must match the API exactly."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://w3id.org/dedl#containerImage",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "containerImage",
+      "en" : "containerImage"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "Container image reference from which the element is deployed, including registry and tag."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/dedl#parameterName",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "parameterName",
+      "en" : "parameterName"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "Literal name of an HttpParameter as it appears in the request, i.e. the header field name or the path variable name, which must match the API exactly. Not reused from the W3C HTTP vocabulary because htv:fieldName is restricted to header fields and htv:paramName denotes a parameter inside a deconstructed header value, whereas HttpParameter abstracts over the location. schema:name stays reserved for human-readable labels."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "42"
+  }, {
+    "iri" : "https://w3id.org/dedl#authenticationScheme",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "authenticationScheme",
+      "en" : "authenticationScheme"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Specifies how the credentials are carried when calling the endpoint, e.g. as a bearer token."
+    },
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://w3id.org/dedl#partOf",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "partOf",
+      "en" : "partOf"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "Indicates if the data ecosystem is part of another data ecosystem"
+    },
+    "attributes" : [ "object" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://w3id.org/dedl#byDataEcosystem",
+    "inverse" : "53",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "byDataEcosystem",
+      "en" : "byDataEcosystem"
+    },
+    "domain" : "31",
+    "comment" : {
+      "en" : "Indicates the Process belonging to a DataEcosystem."
+    },
+    "attributes" : [ "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://schema.org/name",
+    "baseIri" : "https://schema.org",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "name"
+    },
+    "minCardinality" : "1",
+    "domain" : "11",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://w3id.org/dedl#inParticipant",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "inParticipant",
+      "en" : "inParticipant"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "Indicates the Entity belonging to a Participant."
+    },
+    "attributes" : [ "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://w3id.org/dedl#operatedBy",
+    "inverse" : "63",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "36",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://w3id.org/idsa/core/maintainer",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "operatedBy",
+      "en" : "operatedBy"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "Indicates the Participant responsible for the technical operation and maintenance of a TechnicalDataEcosystemElement (inverse of operates). Not to be confused with operator, which denotes the governance of the whole DataEcosystem. The infrastructure provider underneath (e.g. a cloud hoster) is not the operator in this sense."
+    },
+    "attributes" : [ "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://w3id.org/dedl#optionalInputRef",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "67",
+    "label" : {
+      "IRI-based" : "optionalInputRef",
+      "en" : "optionalInputRef"
+    },
+    "domain" : "66",
+    "comment" : {
+      "en" : "Marks a DataResource referenced by an InputSet as one that may be omitted. Named after the BPMN attribute optionalInputRefs, which BBO does not carry over. Optionality is stated per InputSet rather than on the resource itself, because the same resource can be mandatory in one context and optional in another. Expressing optionality through several alternative InputSets instead would grow combinatorially."
+    },
+    "attributes" : [ "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://w3id.org/dedl#authorizationPattern",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "authorizationPattern",
+      "en" : "authorizationPattern"
+    },
+    "domain" : "69",
+    "comment" : {
+      "en" : "Indicates the interaction pattern an Authorizator follows to reach and deliver an access decision, e.g. poll or push. Replaces authorizationProcess, whose range mixed patterns with concrete Processes."
+    },
+    "attributes" : [ "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "https://w3id.org/dedl#technicalDataEcosystemElement",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "24",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "composedBy (Oliveira)",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "technicalDataEcosystemElement",
+      "en" : "technicalDataEcosystemElement"
+    },
+    "superproperty" : [ "71" ],
+    "domain" : "25",
+    "comment" : {
+      "en" : "Links a DataEcosystem to a TechnicalDataEcosystemElement belonging to it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://w3id.org/dedl#uses",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "uses",
+      "en" : "uses"
+    },
+    "domain" : "36",
+    "comment" : {
+      "en" : "Links a Participant to a TechnicalDataEcosystemElement it uses (inverse of usedBy)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "73"
+  }, {
+    "iri" : "https://w3id.org/dedl#httpResponse",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "httpResponse",
+      "en" : "httpResponse"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Associates an Endpoint with one of the responses it may return."
+    },
+    "attributes" : [ "object" ],
+    "id" : "74"
+  }, {
+    "iri" : "https://w3id.org/dedl#httpParameter",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "httpParameter",
+      "en" : "httpParameter"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Associates an Endpoint with a parameter carried in the request path or headers."
+    },
+    "attributes" : [ "object" ],
+    "id" : "77"
+  }, {
+    "iri" : "https://w3id.org/dedl#insertsDataResource",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "67",
+    "label" : {
+      "IRI-based" : "insertsDataResource",
+      "en" : "insertsDataResource"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Lists a DataResource whose value is inserted into the valueTemplate of this mapping. Used only together with valueTemplate; the placeholders of the template and the listed resources correspond one to one. Kept apart from source and evaluatesDataResource so that each property has a single meaning."
+    },
+    "attributes" : [ "object" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://w3id.org/dedl#authenticationPattern",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "authenticationPattern",
+      "en" : "authenticationPattern"
+    },
+    "domain" : "84",
+    "comment" : {
+      "en" : "Indicates the interaction pattern an Authenticator uses to verify an identity, e.g. one-way or mutual. Replaces authenticationProcess, whose range mixed patterns with concrete Processes."
+    },
+    "attributes" : [ "object" ],
+    "id" : "83"
+  }, {
+    "iri" : "https://w3id.org/dedl#operates",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "operates",
+      "en" : "operates"
+    },
+    "domain" : "36",
+    "comment" : {
+      "en" : "Links a Participant to a TechnicalDataEcosystemElement it operates (inverse of operatedBy)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://w3id.org/dedl#valueEncoding",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "valueEncoding",
+      "en" : "valueEncoding"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "States that the endpoint requires the value of this parameter to be transformed before it is placed into the request, e.g. base64url-encoded in a path. The transformation belongs to the endpoint, not to the mapping: a mapping states which value is meant, this property how it is carried."
+    },
+    "attributes" : [ "object" ],
+    "id" : "86"
+  }, {
+    "iri" : "https://w3id.org/dedl#valueTemplate",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "90",
+    "label" : {
+      "IRI-based" : "valueTemplate",
+      "en" : "valueTemplate"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Builds the mapped value from fixed text and inserted values instead of reading it from a source; used with mapsInput. A template contains at least one placeholder; values without any are expressed by constantValue. A placeholder {id} names the @id of a BBO:DataResource in an InputSet of the mapping Task and listed via insertsDataResource; its value is inserted as is, without any encoding, and the result is always a string. Not reused from URI Templates (RFC 6570), because their expansion percent-encodes, which is correct for URIs but wrong for message bodies. Computations beyond insertion are deliberately out of scope."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "89"
+  }, {
+    "iri" : "https://w3id.org/dedl#authenticationFactor",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "authenticationFactor",
+      "en" : "authenticationFactor"
+    },
+    "domain" : "84",
+    "comment" : {
+      "en" : "Indicates the AuthenticationFactor that an Authenticator uses."
+    },
+    "attributes" : [ "object" ],
+    "id" : "91"
+  }, {
+    "iri" : "https://w3id.org/dedl#statusCode",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "93",
+    "label" : {
+      "IRI-based" : "statusCode",
+      "en" : "statusCode"
+    },
+    "domain" : "75",
+    "comment" : {
+      "en" : "HTTP status code of a response, e.g. 201 or 404."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://w3id.org/dedl#dependsOn",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "dependsOn",
+      "en" : "dependsOn"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "Indicates that a TechnicalDataEcosystemElement needs or uses another one to fulfil its function, e.g. by calling its API, storing data in it or delegating authentication to it. Directed from the dependent element to the one it depends on; only direct dependencies are stated. What the dependency is for mostly follows from the type of the target (e.g. DataStorage, IdentityProvider). How it is realised, and in which direction data travels, belongs to the integration layer (invokesEndpoint, exposedBy). This allows the system architecture to be described coarsely before any Process is modelled in detail."
+    },
+    "attributes" : [ "object" ],
+    "id" : "97"
+  }, {
+    "iri" : "https://w3id.org/dedl#correspondsToThing",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "99",
+    "label" : {
+      "IRI-based" : "correspondsToThing",
+      "en" : "correspondsToThing"
+    },
+    "domain" : "67",
+    "comment" : {
+      "en" : "Associates a BBO:DataResource with an expected Thing/Class in another vocabulary (e.g. vc:VerifiableCredential)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://w3id.org/dedl#policyLanguage",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "policyLanguage",
+      "en" : "policyLanguage"
+    },
+    "domain" : "54",
+    "comment" : {
+      "en" : "Specifies the PolicyLanguage used to express or encode a Policy."
+    },
+    "attributes" : [ "object" ],
+    "id" : "101"
+  }, {
+    "range" : "48",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://w3id.org/dedl#inDataEcosystem",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "inDataEcosystem",
+      "en" : "inDataEcosystem"
+    },
+    "domain" : "37",
+    "comment" : {
+      "en" : "Indicates the DataEcosystem a DataEcosystemElement belongs to (inverse of dataEcosystemElement)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "103"
+  }, {
+    "iri" : "https://schema.org/urlTemplate",
+    "baseIri" : "https://schema.org",
+    "range" : "105",
+    "label" : {
+      "IRI-based" : "urlTemplate"
+    },
+    "domain" : "11",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "104"
+  }, {
+    "iri" : "https://w3id.org/dedl#authenticationRequired",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "108",
+    "label" : {
+      "IRI-based" : "authenticationRequired",
+      "en" : "authenticationRequired"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Indicates whether authentication is required to call the endpoint."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "107"
+  }, {
+    "range" : "48",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "109"
+  }, {
+    "range" : "56",
+    "domain" : "58",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "110"
+  }, {
+    "range" : "27",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "112"
+  }, {
+    "range" : "36",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "113"
+  }, {
+    "range" : "56",
+    "domain" : "57",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "114"
+  }, {
+    "iri" : "https://w3id.org/dedl#authorizationArchitecture",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "106",
+    "label" : {
+      "IRI-based" : "authorizationArchitecture",
+      "en" : "authorizationArchitecture"
+    },
+    "domain" : "69",
+    "comment" : {
+      "en" : "Specifies the AuthorizationArchitecture used by an Authorizator."
+    },
+    "attributes" : [ "object" ],
+    "id" : "115"
+  }, {
+    "range" : "27",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "116"
+  }, {
+    "range" : "1",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "117"
+  }, {
+    "range" : "1",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "118"
+  }, {
+    "range" : "36",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "119"
+  }, {
+    "range" : "1",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "120"
+  }, {
+    "iri" : "https://w3id.org/dedl#process",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "process",
+      "en" : "process"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "Associates a DataEcosystem with a particular Process."
+    },
+    "attributes" : [ "object" ],
+    "id" : "53"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "122"
+  }, {
+    "range" : "1",
+    "domain" : "54",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "123"
+  }, {
+    "range" : "24",
+    "domain" : "81",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "127"
+  }, {
+    "range" : "24",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "129"
+  }, {
+    "iri" : "https://w3id.org/dedl#dataEcosystemElement",
+    "inverse" : "103",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "dataEcosystemElement",
+      "en" : "dataEcosystemElement"
+    },
+    "domain" : "25",
+    "subproperty" : [ "70", "130" ],
+    "comment" : {
+      "en" : "Links a DataEcosystem to an element belonging to it (inverse of inDataEcosystem). Specialised by participant and technicalDataEcosystemElement, so that membership needs to be stated in one direction only."
+    },
+    "attributes" : [ "object" ],
+    "id" : "71"
+  }, {
+    "range" : "24",
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "131"
+  }, {
+    "iri" : "https://w3id.org/dedl#usedBy",
+    "inverse" : "73",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "usedBy",
+      "en" : "usedBy"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "Indicates the Participant using a TechnicalDataEcosystemElement (inverse of uses)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "132"
+  }, {
+    "iri" : "https://w3id.org/dedl#memberOf",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "memberOf",
+      "en" : "memberOf"
+    },
+    "domain" : "39",
+    "comment" : {
+      "en" : "Links an Individual to an Organization."
+    },
+    "attributes" : [ "object" ],
+    "id" : "133"
+  }, {
+    "iri" : "https://w3id.org/dedl#mapsInput",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "mapsInput",
+      "en" : "mapsInput"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Associates a Task with a mapping that fills a field of the request it sends. BBO has no DataAssociations, so the wiring between process data and message fields has no equivalent there."
+    },
+    "attributes" : [ "object" ],
+    "id" : "134"
+  }, {
+    "range" : "24",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "135"
+  }, {
+    "range" : "24",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "136"
+  }, {
+    "range" : "24",
+    "domain" : "80",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "137"
+  }, {
+    "range" : "24",
+    "domain" : "79",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "138"
+  }, {
+    "range" : "7",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "139"
+  }, {
+    "range" : "128",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "140"
+  }, {
+    "range" : "37",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "141"
+  }, {
+    "range" : "37",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "142"
+  }, {
+    "range" : "81",
+    "domain" : "84",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "143"
+  }, {
+    "range" : "81",
+    "domain" : "124",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "144"
+  }, {
+    "iri" : "https://w3id.org/dedl#evaluatesDataResource",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "67",
+    "label" : {
+      "IRI-based" : "evaluatesDataResource",
+      "en" : "evaluatesDataResource"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "Associates an Expression with a DataResource it evaluates. BBO offers no such link: conditions are opaque text in BBO:body, and the only DataResource-valued properties are bound to Throw- and CatchEvents. Identifiers used inside the body are the @id of the referenced resources, which makes the pair body/evaluatesDataResource machine-checkable."
+    },
+    "attributes" : [ "object" ],
+    "id" : "147"
+  }, {
+    "iri" : "https://w3id.org/dedl#constantValue",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "149",
+    "label" : {
+      "IRI-based" : "constantValue",
+      "en" : "constantValue"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "A fixed value written to the target of the mapping instead of a value read from a source; used with mapsInput. The literal keeps its datatype, e.g. string, number or boolean. Not reused from schema:value, which is defined for QuantitativeValue and PropertyValue nodes."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "148"
+  }, {
+    "iri" : "https://w3id.org/dedl#composedOf",
+    "inverse" : "51",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "composedOf",
+      "en" : "composedOf"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "Indicates if the data ecosystem consists of multiple data ecosystem"
+    },
+    "attributes" : [ "object" ],
+    "id" : "150"
+  }, {
+    "range" : "81",
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "151"
+  }, {
+    "range" : "31",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "152"
+  }, {
+    "range" : "31",
+    "domain" : "154",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "153"
+  }, {
+    "range" : "31",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "155"
+  }, {
+    "range" : "31",
+    "domain" : "56",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "156"
+  }, {
+    "range" : "31",
+    "domain" : "94",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "157"
+  }, {
+    "range" : "31",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "159"
+  }, {
+    "range" : "31",
+    "domain" : "161",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "160"
+  }, {
+    "range" : "31",
+    "domain" : "111",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "162"
+  }, {
+    "iri" : "https://w3id.org/dedl#authenticationProtocol",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "authenticationProtocol",
+      "en" : "authenticationProtocol"
+    },
+    "domain" : "84",
+    "comment" : {
+      "en" : "Specifies the AuthenticationProtocol an Authenticator follows."
+    },
+    "attributes" : [ "object" ],
+    "id" : "164"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#endpointURL",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "126",
+    "label" : {
+      "IRI-based" : "endpointURL"
+    },
+    "domain" : "11",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "165"
+  }, {
+    "iri" : "https://w3id.org/dedl#operator",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "operator",
+      "en" : "operator"
+    },
+    "superproperty" : [ "130" ],
+    "domain" : "25",
+    "comment" : {
+      "en" : "Specifies a Participant responsible for governing the DataEcosystem as a whole, e.g. setting its rules and admitting participants. Every operator is also a participant. Not to be confused with operatedBy, which denotes the technical operation of a single TechnicalDataEcosystemElement."
+    },
+    "attributes" : [ "object" ],
+    "id" : "166"
+  }, {
+    "range" : "94",
+    "domain" : "96",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "167"
+  }, {
+    "range" : "94",
+    "domain" : "95",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "168"
+  }, {
+    "range" : "100",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "169"
+  }, {
+    "range" : "3",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "170"
+  }, {
+    "range" : "3",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "171"
+  }, {
+    "range" : "3",
+    "domain" : "145",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "172"
+  }, {
+    "iri" : "https://w3id.org/dedl#participant",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "participant",
+      "en" : "participant"
+    },
+    "superproperty" : [ "71" ],
+    "domain" : "25",
+    "subproperty" : [ "166" ],
+    "comment" : {
+      "en" : "Specifies a participant within a DataEcosystem."
+    },
+    "attributes" : [ "object" ],
+    "id" : "130"
+  }, {
+    "range" : "18",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "173"
+  }, {
+    "range" : "18",
+    "domain" : "87",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "174"
+  }, {
+    "range" : "176",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "175"
+  }, {
+    "range" : "18",
+    "domain" : "88",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "177"
+  }, {
+    "iri" : "https://www.w3.org/2019/wot/hypermedia#forContentType",
+    "baseIri" : "https://www.w3.org/2019/wot/hypermedia",
+    "range" : "125",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/2019/wot/hypermedia",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "forContentType"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Used on Endpoint to state the media type of the request body, e.g. application/x-www-form-urlencoded. Reused from the W3C WoT hypermedia vocabulary instead of defining a DEDL term."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "178"
+  }, {
+    "iri" : "https://w3id.org/dedl#responseHttpBodySchema",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "181",
+    "label" : {
+      "IRI-based" : "responseHttpBodySchema",
+      "en" : "responseHttpBodySchema"
+    },
+    "domain" : "75",
+    "comment" : {
+      "en" : "Describes the structure of the body returned with a response."
+    },
+    "attributes" : [ "object" ],
+    "id" : "180"
+  }, {
+    "iri" : "https://w3id.org/dedl#requestHttpBodySchema",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "181",
+    "label" : {
+      "IRI-based" : "requestHttpBodySchema",
+      "en" : "requestHttpBodySchema"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Describes the structure of the request body of an endpoint. The encoding of that body is stated separately via hctl:forContentType."
+    },
+    "attributes" : [ "object" ],
+    "id" : "182"
+  }, {
+    "iri" : "https://w3id.org/dedl#entity",
+    "inverse" : "61",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "entity",
+      "en" : "entity"
+    },
+    "domain" : "36",
+    "comment" : {
+      "en" : "Associates a Participant with a particular Entity in the data ecosystem."
+    },
+    "attributes" : [ "object" ],
+    "id" : "183"
+  }, {
+    "iri" : "https://w3id.org/dedl#policy",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "policy",
+      "en" : "policy"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "Links an Entity to a Policy governing its usage or access rights."
+    },
+    "attributes" : [ "object" ],
+    "id" : "184"
+  }, {
+    "iri" : "https://w3id.org/dedl#httpLocation",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "163",
+    "label" : {
+      "IRI-based" : "httpLocation",
+      "en" : "httpLocation"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "Indicates where in the HTTP request a parameter is placed. Body content is not covered here; it is described through requestHttpBodySchema."
+    },
+    "attributes" : [ "object" ],
+    "id" : "185"
+  }, {
+    "iri" : "https://w3id.org/dedl#accessControlModel",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "187",
+    "label" : {
+      "IRI-based" : "accessControlModel",
+      "en" : "accessControlModel"
+    },
+    "domain" : "54",
+    "comment" : {
+      "en" : "Associates a Policy with its AccessControlModel to define and enforce resource access rules."
+    },
+    "attributes" : [ "object" ],
+    "id" : "186"
+  }, {
+    "range" : "38",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "188"
+  }, {
+    "iri" : "https://w3id.org/dedl#correspondsToDataProperty",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "158",
+    "label" : {
+      "IRI-based" : "correspondsToDataProperty",
+      "en" : "correspondsToDataProperty"
+    },
+    "domain" : "67",
+    "comment" : {
+      "en" : "Associates a BBO:DataResource with an expected Property in another vocabulary (e.g. schema:legalName)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "189"
+  }, {
+    "iri" : "https://w3id.org/dedl#exposedBy",
+    "inverse" : "28",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "exposedBy",
+      "en" : "exposedBy"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Indicates the TechnicalDataEcosystemElement exposing this endpoint. The range is not restricted to API, because components with a more specific functional type (e.g. an IdentityProvider) carry their own endpoints directly."
+    },
+    "attributes" : [ "object" ],
+    "id" : "190"
+  }, {
+    "iri" : "https://w3id.org/dedl#status",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "status",
+      "en" : "status"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "Associates TechnicalDataEcosystemElement with their current state-"
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "191"
+  }, {
+    "iri" : "https://w3id.org/dedl#identity",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "146",
+    "label" : {
+      "IRI-based" : "identity",
+      "en" : "identity"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "Indicates the Identity belonging to an Entity."
+    },
+    "attributes" : [ "object" ],
+    "id" : "192"
+  }, {
+    "iri" : "https://w3id.org/dedl#source",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "source",
+      "en" : "source"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Where a mapped value is taken from; alternatively the value is fixed by constantValue or built by valueTemplate. Deliberately without rdfs:range: with mapsInput the source is a BBO:DataResource, with mapsOutput it is a field of the response schema. Since rdfs:range is an inference rule rather than a constraint, a union would only add uninformative type assertions, and the actual rule is conditional on the direction of the mapping. That rule belongs in SHACL."
+    },
+    "attributes" : [ "object" ],
+    "id" : "193"
+  }, {
+    "iri" : "https://w3id.org/dedl#authenticationRiskContext",
+    "baseIri" : "https://w3id.org/dedl",
+    "range" : "179",
+    "label" : {
+      "IRI-based" : "authenticationRiskContext",
+      "en" : "authenticationRiskContext"
+    },
+    "domain" : "84",
+    "comment" : {
+      "en" : "Associates an Authenticator with contextual factors that influence authentication risk."
+    },
+    "attributes" : [ "object" ],
+    "id" : "194"
+  } ]
+}

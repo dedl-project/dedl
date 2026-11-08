@@ -1,47 +1,61 @@
 <h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div>
-    <p>
-        In the era of digitalization, data ecosystems (DEs) are evolving to enable data sharing across networks
-        of distributed organizations. They bring together autonomous actors that share data and services
-        across organisational boundaries. While numerous initiatives (e.g., data spaces, data trustees, IoT
-        platforms) describe the business or governance aspects of DEs, there is currently no generic,
-        technology-agnostic language that captures both the system behaviour (the processes
-        that occur in a DE) and the system architecture (the software components that realise
-        those processes). This lack of an abstract, technical description hampers development, comparability
-        and interoperability of DE solutions.
-    </p>
-
-    <p>
-        To address this problem, we propose DEDL, a description language to
-        syntactically and semantically represent diverse DE concepts, ensuring technical and
-        semantic interoperability across different DEs.
-    </p>
-
-    <p>
-        Figure 1 depicts the core information model underlying the description language. DEDL is structured
-        around six core elements: dedl:DataEcosystem, dedl:Process, dedl:DataEcosystemElement, dedl:Participant, dedl:TechnicalDataEcosystemElement, and
-        dedl:Entity, each enriched with metadata that describes an ecosystem and supports extensibility. The
-        basic class, Base, is associated with key attributes such as id, name, and description. Mandatory
-        processes such as Transacting, Onboarding, and Offboarding are modelled to capture essential
-        ecosystem interactions. Optional processes like Publishing, Finding, and Negotiating enable
-        additional capabilities. Technical elements cover the essential building blocks of a DE, including
-        Identity and Access Management, Audit and Logging, Storage, Communication, Interfaces (API, GUI,
-        connector) and Run Time Environments. Together, these core elements and their relationships enable
-        comprehensive descriptions of both the behavioural and architectural dimensions of DEs
-        in a single, extensible ontology, supporting systematic engineering, comparison and integration of
-        DE solutions &mdash; whether they are fully centralised, federated, or hybrid.
-    </p>
-
-    
-    <!-- ----- INFORMATION MODEL FIGURE ----- -->
-    <figure style="text-align:center; margin:2rem 0;">
-        <img src="resources/dedl-core-model.svg"
-             alt="Core information model of DEDL (UML diagram)"
-             style="max-width:100%; height:auto;">
-        <figcaption>
-            Figure 1: The Data Ecosystem Description Language (DEDL) core information model,
-            presented in UML format
-        </figcaption>
-    </figure>
-    <!-- ------------------------------------ -->
+<p>
+DEDL, the Data Ecosystem Description Language, was introduced together with its information model at
+<a href="https://link.springer.com/chapter/10.1007/978-3-032-32026-1_7">WorldCIST 2026</a>. DEDL-O is the OWL ontology of DEDL. It keeps the core concepts of the
+information model (data ecosystems, participants, technical elements, processes) and adds an integration layer that
+connects process steps to the API endpoints they call. The first ontology version, a direct formalisation of the
+information model, remains available at <a href="https://w3id.org/dedl/0.1">https://w3id.org/dedl/0.1</a>.
+</p>
+<p>
+Data ecosystems bring together autonomous participants that exchange data and services across organisational
+boundaries. Building and operating them requires knowing three things at once: which technical components exist
+and how they depend on each other, which processes the ecosystem runs, and which process step calls which API
+endpoint with which data. Architecture vocabularies cover the first, process vocabularies the second, and API
+descriptions such as OpenAPI cover single interfaces. None of them states the connection between a process and
+the components that realise it.
+</p>
+<p>
+DEDL-O, the Data Ecosystem Description Language Ontology, describes all three as layers of one graph:
+</p>
+<ul>
+<li><b>Architecture layer:</b> the technical elements of an ecosystem (<code>dedl:TechnicalDataEcosystemElement</code>
+with subclasses such as <code>dedl:API</code>, <code>dedl:IdentityProvider</code> or <code>dedl:Storage</code>),
+their directed dependencies (<code>dedl:dependsOn</code>) and who operates them (<code>dedl:operatedBy</code>).</li>
+<li><b>Process layer:</b> processes, service tasks, gateways and sequence flows, reused from the BPMN-based ontology BBO
+(<code>dedl:Process</code> is a subclass of <code>BBO:Process</code>), with declared input and output sets.</li>
+<li><b>Integration layer:</b> which service task invokes which endpoint (<code>dedl:invokesEndpoint</code>) and how
+each request parameter is filled (<code>dedl:ParameterMapping</code>, with exactly one of a source value, a constant or a
+template).</li>
+</ul>
+<p>
+The integration layer is constrained by the architecture layer: whoever executes a process must depend on every
+component the process invokes. Validation rules that connect the layers in this way are part of the resource.
+</p>
+<p>
+DEDL-O 1.0.0 is not backward compatible with version 0.1; see the change log below. Terms that are no longer
+needed are marked as deprecated before they are removed.
+</p>
+<h3 id="infomodel" class="list">Relation to the DEDL information model</h3>
+<p>
+Figure 1 shows the DEDL information model as published at <a href="https://link.springer.com/chapter/10.1007/978-3-032-32026-1_7">WorldCIST 2026</a>. It is the conceptual
+basis of DEDL-O, but it is not the schema of DEDL-O: the information model is written as UML classes with attributes,
+whereas DEDL-O expresses the same concepts in RDF and OWL. The table below shows how the elements of the information
+model are realised in DEDL-O.
+</p>
+<p style="text-align:center"><a href="resources/dedl-core-model.svg" title="Open in full size"><img src="resources/dedl-core-model.svg" alt="Core information model of DEDL (UML diagram)" style="width:60%; height:auto;"></a></p>
+<p><em>Figure 1: The DEDL core information model in UML, as published at WorldCIST 2026. Not the schema of DEDL-O. Click to enlarge.</em></p>
+<table>
+<caption>Table 1: Elements of the DEDL information model and their realisation in DEDL-O</caption>
+<thead><tr><th>Information model</th><th>DEDL-O</th></tr></thead>
+<tbody>
+<tr><td>attribute <code>id</code></td><td>the IRI of the instance</td></tr>
+<tr><td><code>Base</code> with <code>id</code>, <code>name</code>, <code>description</code></td><td><code>dedl:Base</code>; every instance has a <code>schema:name</code> and should have a <code>schema:description</code></td></tr>
+<tr><td><code>Reference</code> (pointer to another object by its id), e.g. <code>inDataEcosystem: Reference</code></td><td>object properties that point directly to the IRI, e.g. <code>dedl:inDataEcosystem</code>; <code>dedl:Reference</code> is deprecated</td></tr>
+<tr><td>core elements <code>DataEcosystem</code>, <code>DataEcosystemElement</code>, <code>Participant</code>, <code>TechnicalDataEcosystemElement</code>, <code>Entity</code>, <code>Process</code></td><td>classes of the same name in the <code>dedl:</code> namespace</td></tr>
+<tr><td><code>Process</code> and its subtypes (Onboarding, Transacting, Offboarding, ...)</td><td><code>dedl:Process</code> as a subclass of <code>BBO:Process</code>, so that processes can be modelled as BPMN flows</td></tr>
+<tr><td>enumeration <code>Status</code></td><td>class <code>dedl:Status</code> with the property <code>dedl:status</code></td></tr>
+<tr><td>&mdash; (not part of the information model)</td><td>integration layer: <code>dedl:invokesEndpoint</code>, <code>dedl:ParameterMapping</code>, directed dependencies with <code>dedl:dependsOn</code>, operation with <code>dedl:operatedBy</code></td></tr>
+</tbody>
+</table>
 </div>

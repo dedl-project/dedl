@@ -7,36 +7,35 @@
 @base <https://w3id.org/dedl#> .
 
 <https://w3id.org/dedl> rdf:type owl:Ontology ;
-                         <http://purl.org/dc/elements/1.1/creator> "Lennart Klöpper"@en,
-                                                                   "Jiahang Chen"@en;
-                         <http://purl.org/dc/elements/1.1/title> "DEDL Vocabulary & Expression 0.1"@en ;
-                         <http://purl.org/dc/terms/abstract> "The Data Ecosystem Description Language (DEDL) is an abstract language to describe concepts of data ecosystems, in which different participants (i.e., organizations and individuals) share data and generate value as the primary aim."@en ;
-                         <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by/4.0/" ;
-                         rdfs:comment "This is a vocabulary for DEDL version 0.1"@en ;
-                         rdfs:label "DEDL"@en ;
-                         owl:versionInfo 0.1 ;
-                         <https://schema.org/affiliation> "MMI, RWTH Aachen University" ;
-                         <https://schema.org/email> "kloepper@mmi.rwth-aachen.de",
-                                                    "chen@mmi.rwth-aachen.de" .
+                         owl:versionIRI <https://w3id.org/dedl/1.0.0> ;
+                         <http://purl.org/dc/terms/abstract> "DEDL-O is a reusable ontology for describing the technical architecture of data ecosystems, their processes and the connection between both. This integration layer states which process step calls which API endpoint and how data is mapped between them, which neither architecture nor process vocabularies can express on their own."@en ;
+                         <http://purl.org/dc/terms/bibliographicCitation> "Lennart Klöpper, Jiahang Chen. Data Ecosystem Description Language Ontology (DEDL-O). Version 1.0.0. https://w3id.org/dedl/1.0.0"@en ;
+                         <http://purl.org/dc/terms/created> "2025-05-01"^^xsd:date ;
+                         <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-5970-6954> ,
+                                                            <https://orcid.org/0009-0002-5632-5464> ;
+                         <http://purl.org/dc/terms/description> "An ontology for describing the technical architecture, processes and API integration of data ecosystems."@en ;
+                         <http://purl.org/dc/terms/issued> "2026-11-08"^^xsd:date ;
+                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                         <http://purl.org/dc/terms/modified> "2026-11-08"^^xsd:date ;
+                         <http://purl.org/dc/terms/publisher> <https://www.mmi.rwth-aachen.de/> ;
+                         <http://purl.org/dc/terms/title> "Data Ecosystem Description Language Ontology (DEDL-O)"@en ;
+                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "dedl" ;
+                         <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/dedl#" ;
+                         rdfs:label "DEDL-O"@en ;
+                         owl:incompatibleWith <https://w3id.org/dedl/0.1> ;
+                         owl:priorVersion <https://w3id.org/dedl/0.1> ;
+                         owl:versionInfo "1.0.0" .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
-###  http://purl.org/dc/elements/1.1/creator
-<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/description
-<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/abstract
 <http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/created
@@ -47,8 +46,36 @@
 <http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
 ###  https://schema.org/affiliation
@@ -57,6 +84,14 @@
 
 ###  https://schema.org/email
 <https://schema.org/email> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
 
 
 #################################################################
@@ -79,12 +114,12 @@
                       rdfs:label "authenticationFactor"@en .
 
 
-###  https://w3id.org/dedl#authenticationProcess
-:authenticationProcess rdf:type owl:ObjectProperty ;
+###  https://w3id.org/dedl#authenticationPattern
+:authenticationPattern rdf:type owl:ObjectProperty ;
                        rdfs:domain :Authenticator ;
-                       rdfs:range :Authentication ;
-                       rdfs:comment "Links an Authenticator to the authentication process used for identity verification."@en ;
-                       rdfs:label "authenticationProcess"@en .
+                       rdfs:range :AuthenticationPattern ;
+                       rdfs:comment "Indicates the interaction pattern an Authenticator uses to verify an identity, e.g. one-way or mutual. Replaces authenticationProcess, whose range mixed patterns with concrete Processes."@en ;
+                       rdfs:label "authenticationPattern"@en .
 
 
 ###  https://w3id.org/dedl#authenticationProtocol
@@ -103,6 +138,14 @@
                            rdfs:label "authenticationRiskContext"@en .
 
 
+###  https://w3id.org/dedl#authenticationScheme
+:authenticationScheme rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Endpoint ;
+                      rdfs:range :AuthenticationScheme ;
+                      rdfs:comment "Specifies how the credentials are carried when calling the endpoint, e.g. as a bearer token."@en ;
+                      rdfs:label "authenticationScheme"@en .
+
+
 ###  https://w3id.org/dedl#authorizationArchitecture
 :authorizationArchitecture rdf:type owl:ObjectProperty ;
                            rdfs:domain :Authorizator ;
@@ -111,12 +154,12 @@
                            rdfs:label "authorizationArchitecture"@en .
 
 
-###  https://w3id.org/dedl#authorizationProcess
-:authorizationProcess rdf:type owl:ObjectProperty ;
+###  https://w3id.org/dedl#authorizationPattern
+:authorizationPattern rdf:type owl:ObjectProperty ;
                       rdfs:domain :Authorizator ;
-                      rdfs:range :Authorization ;
-                      rdfs:comment "Indicates the authorization process followed by an Authorizator."@en ;
-                      rdfs:label "authorizationProcess"@en .
+                      rdfs:range :AuthorizationPattern ;
+                      rdfs:comment "Indicates the interaction pattern an Authorizator follows to reach and deliver an access decision, e.g. poll or push. Replaces authorizationProcess, whose range mixed patterns with concrete Processes."@en ;
+                      rdfs:label "authorizationPattern"@en .
 
 
 ###  https://w3id.org/dedl#byDataEcosystem
@@ -153,21 +196,29 @@
                     rdfs:label "correspondsToThing"@en .
 
 
-###  https://w3id.org/dedl#dataFlowIn
-:dataFlowIn rdf:type owl:ObjectProperty ;
-            owl:inverseOf :dataFlowOut ;
-            rdfs:domain :DataEcosystemElement ;
-            rdfs:range :DataEcosystemElement ;
-            rdfs:comment "Links elements by specifying where data is sent."@en ;
-            rdfs:label "dataFlowIn"@en .
+###  https://w3id.org/dedl#dataEcosystemElement
+:dataEcosystemElement rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :inDataEcosystem ;
+                      rdfs:domain :DataEcosystem ;
+                      rdfs:range :DataEcosystemElement ;
+                      rdfs:comment "Links a DataEcosystem to an element belonging to it (inverse of inDataEcosystem). Specialised by participant and technicalDataEcosystemElement, so that membership needs to be stated in one direction only."@en ;
+                      rdfs:label "dataEcosystemElement"@en .
 
 
-###  https://w3id.org/dedl#dataFlowOut
-:dataFlowOut rdf:type owl:ObjectProperty ;
-             rdfs:domain :DataEcosystemElement ;
-             rdfs:range :DataEcosystemElement ;
-             rdfs:comment "Links elements by specifying where data is received from."@en ;
-             rdfs:label "dataFlowOut"@en .
+###  https://w3id.org/dedl#dependsOn
+:dependsOn rdf:type owl:ObjectProperty ;
+           rdfs:domain :TechnicalDataEcosystemElement ;
+           rdfs:range :TechnicalDataEcosystemElement ;
+           rdfs:comment "Indicates that a TechnicalDataEcosystemElement needs or uses another one to fulfil its function, e.g. by calling its API, storing data in it or delegating authentication to it. Directed from the dependent element to the one it depends on; only direct dependencies are stated. What the dependency is for mostly follows from the type of the target (e.g. DataStorage, IdentityProvider). How it is realised, and in which direction data travels, belongs to the integration layer (invokesEndpoint, exposedBy). This allows the system architecture to be described coarsely before any Process is modelled in detail."@en ;
+           rdfs:label "dependsOn"@en .
+
+
+###  https://w3id.org/dedl#endpoint
+:endpoint rdf:type owl:ObjectProperty ;
+          rdfs:domain :TechnicalDataEcosystemElement ;
+          rdfs:range :Endpoint ;
+          rdfs:comment "Associates a TechnicalDataEcosystemElement with an Endpoint resource that contains connection details (path, method, auth, etc.)."@en ;
+          rdfs:label "endpoint"@en .
 
 
 ###  https://w3id.org/dedl#entity
@@ -179,12 +230,45 @@
         rdfs:label "entity"@en .
 
 
-###  https://w3id.org/dedl#hasEndpoint
-:hasEndpoint rdf:type owl:ObjectProperty ;
-             rdfs:domain :Service ;
-             rdfs:range :Endpoint ;
-             rdfs:comment "Associates a Service with an Endpoint resource that contains connection details (URL, method, auth, etc.)."@en ;
-             rdfs:label "hasEndpoint"@en .
+###  https://w3id.org/dedl#evaluatesDataResource
+:evaluatesDataResource rdf:type owl:ObjectProperty ;
+                       rdfs:domain <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Expression> ;
+                       rdfs:range <https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource> ;
+                       rdfs:comment "Associates an Expression with a DataResource it evaluates. BBO offers no such link: conditions are opaque text in BBO:body, and the only DataResource-valued properties are bound to Throw- and CatchEvents. Identifiers used inside the body are the @id of the referenced resources, which makes the pair body/evaluatesDataResource machine-checkable."@en ;
+                       rdfs:label "evaluatesDataResource"@en .
+
+
+###  https://w3id.org/dedl#exposedBy
+:exposedBy rdf:type owl:ObjectProperty ;
+           owl:inverseOf :endpoint ;
+           rdfs:domain :Endpoint ;
+           rdfs:range :TechnicalDataEcosystemElement ;
+           rdfs:comment "Indicates the TechnicalDataEcosystemElement exposing this endpoint. The range is not restricted to API, because components with a more specific functional type (e.g. an IdentityProvider) carry their own endpoints directly."@en ;
+           rdfs:label "exposedBy"@en .
+
+
+###  https://w3id.org/dedl#httpLocation
+:httpLocation rdf:type owl:ObjectProperty ;
+              rdfs:domain :HttpParameter ;
+              rdfs:range :HttpLocation ;
+              rdfs:comment "Indicates where in the HTTP request a parameter is placed. Body content is not covered here; it is described through requestHttpBodySchema."@en ;
+              rdfs:label "httpLocation"@en .
+
+
+###  https://w3id.org/dedl#httpParameter
+:httpParameter rdf:type owl:ObjectProperty ;
+               rdfs:domain :Endpoint ;
+               rdfs:range :HttpParameter ;
+               rdfs:comment "Associates an Endpoint with a parameter carried in the request path or headers."@en ;
+               rdfs:label "httpParameter"@en .
+
+
+###  https://w3id.org/dedl#httpResponse
+:httpResponse rdf:type owl:ObjectProperty ;
+              rdfs:domain :Endpoint ;
+              rdfs:range :HttpResponse ;
+              rdfs:comment "Associates an Endpoint with one of the responses it may return."@en ;
+              rdfs:label "httpResponse"@en .
 
 
 ###  https://w3id.org/dedl#identity
@@ -199,7 +283,7 @@
 :inDataEcosystem rdf:type owl:ObjectProperty ;
                  rdfs:domain :DataEcosystemElement ;
                  rdfs:range :DataEcosystem ;
-                 rdfs:comment "Indicates the DataEcosystemElement belonging to a DataEcosystem."@en ;
+                 rdfs:comment "Indicates the DataEcosystem a DataEcosystemElement belongs to (inverse of dataEcosystemElement)."@en ;
                  rdfs:label "inDataEcosystem"@en .
 
 
@@ -209,6 +293,38 @@
                rdfs:range :Participant ;
                rdfs:comment "Indicates the Entity belonging to a Participant."@en ;
                rdfs:label "inParticipant"@en .
+
+
+###  https://w3id.org/dedl#insertsDataResource
+:insertsDataResource rdf:type owl:ObjectProperty ;
+                     rdfs:domain :ParameterMapping ;
+                     rdfs:range <https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource> ;
+                     rdfs:comment "Lists a DataResource whose value is inserted into the valueTemplate of this mapping. Used only together with valueTemplate; the placeholders of the template and the listed resources correspond one to one. Kept apart from source and evaluatesDataResource so that each property has a single meaning."@en ;
+                     rdfs:label "insertsDataResource"@en .
+
+
+###  https://w3id.org/dedl#invokesEndpoint
+:invokesEndpoint rdf:type owl:ObjectProperty ;
+                 rdfs:domain <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task> ;
+                 rdfs:range :Endpoint ;
+                 rdfs:comment "Indicates that a task invokes an API endpoint."@en ;
+                 rdfs:label "invokesEndpoint"@en .
+
+
+###  https://w3id.org/dedl#mapsInput
+:mapsInput rdf:type owl:ObjectProperty ;
+           rdfs:domain <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task> ;
+           rdfs:range :ParameterMapping ;
+           rdfs:comment "Associates a Task with a mapping that fills a field of the request it sends. BBO has no DataAssociations, so the wiring between process data and message fields has no equivalent there."@en ;
+           rdfs:label "mapsInput"@en .
+
+
+###  https://w3id.org/dedl#mapsOutput
+:mapsOutput rdf:type owl:ObjectProperty ;
+            rdfs:domain <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task> ;
+            rdfs:range :ParameterMapping ;
+            rdfs:comment "Associates a Task with a mapping that reads a field of the response into a DataResource of the process."@en ;
+            rdfs:label "mapsOutput"@en .
 
 
 ###  https://w3id.org/dedl#memberOf
@@ -224,24 +340,34 @@
             owl:inverseOf :operates ;
             rdfs:domain :TechnicalDataEcosystemElement ;
             rdfs:range :Participant ;
-            rdfs:comment "Indicates the Participant operating a TechnicalDataEcosystemElement (inverse of operates)."@en ;
-            rdfs:label "operatedBy"@en .
+            rdfs:comment "Indicates the Participant responsible for the technical operation and maintenance of a TechnicalDataEcosystemElement (inverse of operates). Not to be confused with operator, which denotes the governance of the whole DataEcosystem. The infrastructure provider underneath (e.g. a cloud hoster) is not the operator in this sense."@en ;
+            rdfs:label "operatedBy"@en ;
+            rdfs:seeAlso <https://w3id.org/idsa/core/maintainer> .
 
 
 ###  https://w3id.org/dedl#operates
 :operates rdf:type owl:ObjectProperty ;
           rdfs:domain :Participant ;
           rdfs:range :TechnicalDataEcosystemElement ;
-          rdfs:comment "Specifies an operator of a TechnicalDataEcosystemElement."@en ;
+          rdfs:comment "Links a Participant to a TechnicalDataEcosystemElement it operates (inverse of operatedBy)."@en ;
           rdfs:label "operates"@en .
 
 
 ###  https://w3id.org/dedl#operator
 :operator rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :participant ;
           rdfs:domain :DataEcosystem ;
           rdfs:range :Participant ;
-          rdfs:comment "Specifies an operator of a DataEcosystem."@en ;
+          rdfs:comment "Specifies a Participant responsible for governing the DataEcosystem as a whole, e.g. setting its rules and admitting participants. Every operator is also a participant. Not to be confused with operatedBy, which denotes the technical operation of a single TechnicalDataEcosystemElement."@en ;
           rdfs:label "operator"@en .
+
+
+###  https://w3id.org/dedl#optionalInputRef
+:optionalInputRef rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://www.irit.fr/recherches/MELODI/ontologies/BBO#InputSet> ;
+                  rdfs:range <https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource> ;
+                  rdfs:comment "Marks a DataResource referenced by an InputSet as one that may be omitted. Named after the BPMN attribute optionalInputRefs, which BBO does not carry over. Optionality is stated per InputSet rather than on the resource itself, because the same resource can be mandatory in one context and optional in another. Expressing optionality through several alternative InputSets instead would grow combinatorially."@en ;
+                  rdfs:label "optionalInputRef"@en .
 
 
 ###  https://w3id.org/dedl#partOf
@@ -254,6 +380,7 @@
 
 ###  https://w3id.org/dedl#participant
 :participant rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :dataEcosystemElement ;
              rdfs:domain :DataEcosystem ;
              rdfs:range :Participant ;
              rdfs:comment "Specifies a participant within a DataEcosystem."@en ;
@@ -284,6 +411,29 @@
          rdfs:label "process"@en .
 
 
+###  https://w3id.org/dedl#requestHttpBodySchema
+:requestHttpBodySchema rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Endpoint ;
+                       rdfs:range <https://www.w3.org/2019/wot/json-schema#DataSchema> ;
+                       rdfs:comment "Describes the structure of the request body of an endpoint. The encoding of that body is stated separately via hctl:forContentType."@en ;
+                       rdfs:label "requestHttpBodySchema"@en .
+
+
+###  https://w3id.org/dedl#responseHttpBodySchema
+:responseHttpBodySchema rdf:type owl:ObjectProperty ;
+                        rdfs:domain :HttpResponse ;
+                        rdfs:range <https://www.w3.org/2019/wot/json-schema#DataSchema> ;
+                        rdfs:comment "Describes the structure of the body returned with a response."@en ;
+                        rdfs:label "responseHttpBodySchema"@en .
+
+
+###  https://w3id.org/dedl#source
+:source rdf:type owl:ObjectProperty ;
+        rdfs:domain :ParameterMapping ;
+        rdfs:comment "Where a mapped value is taken from; alternatively the value is fixed by constantValue or built by valueTemplate. Deliberately without rdfs:range: with mapsInput the source is a BBO:DataResource, with mapsOutput it is a field of the response schema. Since rdfs:range is an inference rule rather than a constraint, a union would only add uninformative type assertions, and the actual rule is conditional on the direction of the mapping. That rule belongs in SHACL."@en ;
+        rdfs:label "source"@en .
+
+
 ###  https://w3id.org/dedl#status
 :status rdf:type owl:ObjectProperty ,
                  owl:FunctionalProperty ;
@@ -293,11 +443,19 @@
         rdfs:label "status"@en .
 
 
+###  https://w3id.org/dedl#target
+:target rdf:type owl:ObjectProperty ;
+        rdfs:domain :ParameterMapping ;
+        rdfs:comment "Where a mapped value is written to. Deliberately without rdfs:range, for the same reason as source: with mapsInput the target is an HttpParameter, a field of the request schema, or the request schema itself when the whole document is the value; with mapsOutput it is a BBO:DataResource."@en ;
+        rdfs:label "target"@en .
+
+
 ###  https://w3id.org/dedl#technicalDataEcosystemElement
 :technicalDataEcosystemElement rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :dataEcosystemElement ;
                                rdfs:domain :DataEcosystem ;
                                rdfs:range :TechnicalDataEcosystemElement ;
-                               rdfs:comment ""@en ;
+                               rdfs:comment "Links a DataEcosystem to a TechnicalDataEcosystemElement belonging to it."@en ;
                                rdfs:label "technicalDataEcosystemElement"@en ;
                                rdfs:seeAlso "composedBy (Oliveira)"@en .
 
@@ -315,44 +473,109 @@
 :uses rdf:type owl:ObjectProperty ;
       rdfs:domain :Participant ;
       rdfs:range :TechnicalDataEcosystemElement ;
-      rdfs:comment "Specifies a user of a TechnicalDataEcosystemElement."@en ;
+      rdfs:comment "Links a Participant to a TechnicalDataEcosystemElement it uses (inverse of usedBy)."@en ;
       rdfs:label "uses"@en .
+
+
+###  https://w3id.org/dedl#valueEncoding
+:valueEncoding rdf:type owl:ObjectProperty ;
+               rdfs:domain :HttpParameter ;
+               rdfs:range :ParameterEncoding ;
+               rdfs:comment "States that the endpoint requires the value of this parameter to be transformed before it is placed into the request, e.g. base64url-encoded in a path. The transformation belongs to the endpoint, not to the mapping: a mapping states which value is meant, this property how it is carried."@en ;
+               rdfs:label "valueEncoding"@en .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  https://w3id.org/dedl#authMethod
-:authMethod rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Endpoint ;
-            rdfs:range xsd:string ;
-            rdfs:comment "Authentication method or scheme (e.g., OAuth2, APIKey)."@en ;
-            rdfs:label "authMethod"@en .
+###  http://www.w3.org/ns/dcat#endpointURL
+<http://www.w3.org/ns/dcat#endpointURL> rdf:type owl:DatatypeProperty .
 
 
-###  https://w3id.org/dedl#authRequired
-:authRequired rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Endpoint ;
-              rdfs:range xsd:boolean ;
-              rdfs:comment "Indicates whether authentication is required to call the endpoint."@en ;
-              rdfs:label "authRequired"@en .
+###  https://schema.org/description
+<https://schema.org/description> rdf:type owl:DatatypeProperty .
 
 
-###  https://w3id.org/dedl#gaiaxTaCAccepted
-:gaiaxTaCAccepted rdf:type owl:DatatypeProperty ;
-                  rdfs:domain <https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource> ;
-                  rdfs:range xsd:boolean ;
-                  rdfs:comment "Indicates whether a Participant has accepted the Gaia-X Terms and Conditions."@en ;
-                  rdfs:label "gaiaxTaCAccepted"@en .
+###  https://schema.org/httpMethod
+<https://schema.org/httpMethod> rdf:type owl:DatatypeProperty .
 
 
-###  https://w3id.org/dedl#httpMethod
-:httpMethod rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Endpoint ;
-            rdfs:range xsd:string ;
-            rdfs:comment "HTTP method used to call the endpoint (e.g., GET, POST)."@en ;
-            rdfs:label "httpMethod"@en .
+###  https://schema.org/name
+<https://schema.org/name> rdf:type owl:DatatypeProperty .
+
+
+###  https://schema.org/urlTemplate
+<https://schema.org/urlTemplate> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/dedl#authenticationRequired
+:authenticationRequired rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :Endpoint ;
+                        rdfs:range xsd:boolean ;
+                        rdfs:comment "Indicates whether authentication is required to call the endpoint."@en ;
+                        rdfs:label "authenticationRequired"@en .
+
+
+###  https://w3id.org/dedl#constantValue
+:constantValue rdf:type owl:DatatypeProperty ;
+               rdfs:domain :ParameterMapping ;
+               rdfs:range rdfs:Literal ;
+               rdfs:comment "A fixed value written to the target of the mapping instead of a value read from a source; used with mapsInput. The literal keeps its datatype, e.g. string, number or boolean. Not reused from schema:value, which is defined for QuantitativeValue and PropertyValue nodes."@en ;
+               rdfs:label "constantValue"@en .
+
+
+###  https://w3id.org/dedl#containerImage
+:containerImage rdf:type owl:DatatypeProperty ;
+                rdfs:domain :TechnicalDataEcosystemElement ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Container image reference from which the element is deployed, including registry and tag."@en ;
+                rdfs:label "containerImage"@en .
+
+
+###  https://w3id.org/dedl#parameterName
+:parameterName rdf:type owl:DatatypeProperty ;
+               rdfs:domain :HttpParameter ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Literal name of an HttpParameter as it appears in the request, i.e. the header field name or the path variable name, which must match the API exactly. Not reused from the W3C HTTP vocabulary because htv:fieldName is restricted to header fields and htv:paramName denotes a parameter inside a deconstructed header value, whereas HttpParameter abstracts over the location. schema:name stays reserved for human-readable labels."@en ;
+               rdfs:label "parameterName"@en .
+
+
+###  https://w3id.org/dedl#path
+:path rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf <https://schema.org/urlTemplate> ;
+      rdfs:domain :Endpoint ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Relative HTTP path of an endpoint."@en ;
+      rdfs:label "path"@en .
+
+
+###  https://w3id.org/dedl#statusCode
+:statusCode rdf:type owl:DatatypeProperty ;
+            rdfs:domain :HttpResponse ;
+            rdfs:range xsd:integer ;
+            rdfs:comment "HTTP status code of a response, e.g. 201 or 404."@en ;
+            rdfs:label "statusCode"@en .
+
+
+###  https://w3id.org/dedl#valueTemplate
+:valueTemplate rdf:type owl:DatatypeProperty ;
+               rdfs:domain :ParameterMapping ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Builds the mapped value from fixed text and inserted values instead of reading it from a source; used with mapsInput. A template contains at least one placeholder; values without any are expressed by constantValue. A placeholder {id} names the @id of a BBO:DataResource in an InputSet of the mapping Task and listed via insertsDataResource; its value is inserted as is, without any encoding, and the result is always a string. Not reused from URI Templates (RFC 6570), because their expansion percent-encodes, which is correct for URIs but wrong for message bodies. Computations beyond insertion are deliberately out of scope."@en ;
+               rdfs:label "valueTemplate"@en .
+
+
+###  https://www.w3.org/2019/wot/hypermedia#forContentType
+<https://www.w3.org/2019/wot/hypermedia#forContentType> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:comment "Used on Endpoint to state the media type of the request body, e.g. application/x-www-form-urlencoded. Reused from the W3C WoT hypermedia vocabulary instead of defining a DEDL term."@en ;
+                                                        rdfs:isDefinedBy <https://www.w3.org/2019/wot/hypermedia> .
+
+
+###  https://www.w3.org/2019/wot/json-schema#propertyName
+<https://www.w3.org/2019/wot/json-schema#propertyName> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:comment "Used on the DataSchema of a body field to state the JSON key under which it appears, which must match the API exactly."@en ;
+                                                       rdfs:isDefinedBy <https://www.w3.org/2019/wot/json-schema> .
 
 
 #################################################################
@@ -363,14 +586,22 @@
 rdf:Property rdf:type owl:Class .
 
 
-###  http://www.w3.org/2002/07/owl#Class
-owl:Class rdf:type owl:Class .
+###  https://schema.org/EntryPoint
+<https://schema.org/EntryPoint> rdf:type owl:Class .
+
+
+###  https://schema.org/Organization
+<https://schema.org/Organization> rdf:type owl:Class .
+
+
+###  https://schema.org/Person
+<https://schema.org/Person> rdf:type owl:Class .
 
 
 ###  https://w3id.org/dedl#API
 :API rdf:type owl:Class ;
      rdfs:subClassOf :Interface ;
-     rdfs:comment "Application Programming Interface; a subclass of Interface representing a set of protocols allowing different software entities to communicate within a data ecosystem."@en ;
+     rdfs:comment "Application Programming Interface; a subclass of Interface representing a component whose primary role is to be an entry point into the data ecosystem. DEDL deliberately does not apply API to every component that exposes a technical interface, as almost every component does. Where a component has a more specific functional type (e.g. IdentityProvider, Communication, DataStorage), that type is used instead and the component carries its Endpoints directly. API is therefore reserved for components that exist in order to be the interface: typically coordinating several sub-services, or fronting a separate storage component."@en ;
      rdfs:label "API"@en .
 
 
@@ -397,7 +628,7 @@ owl:Class rdf:type owl:Class .
 ###  https://w3id.org/dedl#Authentication
 :Authentication rdf:type owl:Class ;
                 rdfs:subClassOf :Process ;
-                rdfs:comment "A procedure or sequence of steps that verify the identity of a user or entity."@en ;
+                rdfs:comment "A Process of a data ecosystem that verifies the identity of a user or entity. Its members are concrete processes; the general interaction pattern is described by AuthenticationPattern."@en ;
                 rdfs:label "Authentication"@en .
 
 
@@ -405,6 +636,18 @@ owl:Class rdf:type owl:Class .
 :AuthenticationFactor rdf:type owl:Class ;
                       rdfs:comment "An element used to verify the identity of a user or entity (e.g. password, token, biometrics)."@en ;
                       rdfs:label "AuthenticationFactor"@en .
+
+
+###  https://w3id.org/dedl#AuthenticationPattern
+:AuthenticationPattern rdf:type owl:Class ;
+                       owl:equivalentClass [ rdf:type owl:Class ;
+                                             owl:oneOf ( :OneWay
+                                                         :ThreeWay
+                                                         :TwoWay
+                                                       )
+                                           ] ;
+                       rdfs:comment "Enumeration of interaction patterns for verifying an identity. A pattern classifies how an Authenticator works; it is not itself a Process of a data ecosystem."@en ;
+                       rdfs:label "AuthenticationPattern"@en .
 
 
 ###  https://w3id.org/dedl#AuthenticationProtocol
@@ -419,6 +662,17 @@ owl:Class rdf:type owl:Class .
                            rdfs:label "AuthenticationRiskContext"@en .
 
 
+###  https://w3id.org/dedl#AuthenticationScheme
+:AuthenticationScheme rdf:type owl:Class ;
+                      owl:equivalentClass [ rdf:type owl:Class ;
+                                            owl:oneOf ( :Bearer
+                                                        :ClientCredentials
+                                                      )
+                                          ] ;
+                      rdfs:comment "Enumeration of the ways in which credentials are carried when calling an endpoint."@en ;
+                      rdfs:label "AuthenticationScheme"@en .
+
+
 ###  https://w3id.org/dedl#Authenticator
 :Authenticator rdf:type owl:Class ;
                rdfs:subClassOf :IdentityAndAccessManagement ;
@@ -429,7 +683,7 @@ owl:Class rdf:type owl:Class .
 ###  https://w3id.org/dedl#Authorization
 :Authorization rdf:type owl:Class ;
                rdfs:subClassOf :Process ;
-               rdfs:comment "A method or set of steps determining if an entity may access a resource."@en ;
+               rdfs:comment "A Process of a data ecosystem that determines whether an entity may access a resource. Its members are concrete processes; the general interaction pattern is described by AuthorizationPattern."@en ;
                rdfs:label "Authorization"@en .
 
 
@@ -437,6 +691,18 @@ owl:Class rdf:type owl:Class .
 :AuthorizationArchitecture rdf:type owl:Class ;
                            rdfs:comment "A subclass of IdentityAndAccessManagement representing a structural framework that defines how authorization decisions are made and enforced."@en ;
                            rdfs:label "AuthorizationArchitecture"@en .
+
+
+###  https://w3id.org/dedl#AuthorizationPattern
+:AuthorizationPattern rdf:type owl:Class ;
+                      owl:equivalentClass [ rdf:type owl:Class ;
+                                            owl:oneOf ( :Negotiate
+                                                        :Poll
+                                                        :Push
+                                                      )
+                                          ] ;
+                      rdfs:comment "Enumeration of interaction patterns for reaching and delivering an access decision. A pattern classifies how an Authorizator works; it is not itself a Process of a data ecosystem."@en ;
+                      rdfs:label "AuthorizationPattern"@en .
 
 
 ###  https://w3id.org/dedl#Authorizator
@@ -448,7 +714,11 @@ owl:Class rdf:type owl:Class .
 
 ###  https://w3id.org/dedl#Base
 :Base rdf:type owl:Class ;
-      rdfs:comment "Base class defining various properties"@en ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty <https://schema.org/name> ;
+                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                      ] ;
+      rdfs:comment "Common superclass of everything a DEDL model describes as a named thing: data ecosystems, their elements (participants and technical elements), entities, policies and processes. Every instance carries a human-readable schema:name and should carry a schema:description. It replaces the attributes id, name and description of the Base class in the DEDL information model; the id is the IRI of the instance."@en ;
       rdfs:label "Base"@en .
 
 
@@ -538,7 +808,7 @@ owl:Class rdf:type owl:Class .
 ###  https://w3id.org/dedl#DataStorage
 :DataStorage rdf:type owl:Class ;
              rdfs:subClassOf :Storage ;
-             rdfs:comment "A subclass of Storage dedicated to string data within a data ecosystem."@en ;
+             rdfs:comment "A subclass of Storage dedicated to storing data within a data ecosystem."@en ;
              rdfs:label "DataStorage"@en .
 
 
@@ -557,7 +827,8 @@ owl:Class rdf:type owl:Class .
 
 ###  https://w3id.org/dedl#Endpoint
 :Endpoint rdf:type owl:Class ;
-          rdfs:comment "Represents a network endpoint (URL) and its operational metadata for a Service."@en ;
+          rdfs:subClassOf <https://schema.org/EntryPoint> ;
+          rdfs:comment "HTTP(S) endpoint of an API that can be invoked by a process. DEDL 0.1 deliberately covers REST only; protocol-specific Endpoint subclasses are deferred."@en ;
           rdfs:label "Endpoint"@en .
 
 
@@ -592,6 +863,29 @@ owl:Class rdf:type owl:Class .
      rdfs:label "GUI"@en .
 
 
+###  https://w3id.org/dedl#HttpLocation
+:HttpLocation rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:oneOf ( :Header
+                                                :Path
+                                              )
+                                  ] ;
+              rdfs:comment "Enumeration of the places in an HTTP request in which a parameter can be carried. The request body is not part of this enumeration; it is described through requestHttpBodySchema."@en ;
+              rdfs:label "HttpLocation"@en .
+
+
+###  https://w3id.org/dedl#HttpParameter
+:HttpParameter rdf:type owl:Class ;
+               rdfs:comment "A single parameter of an HTTP request that is carried outside the body, i.e. in the path or in a header."@en ;
+               rdfs:label "HttpParameter"@en .
+
+
+###  https://w3id.org/dedl#HttpResponse
+:HttpResponse rdf:type owl:Class ;
+              rdfs:comment "One possible response of an endpoint, identified by its status code and optionally carrying a body schema."@en ;
+              rdfs:label "HttpResponse"@en .
+
+
 ###  https://w3id.org/dedl#IdentityAndAccessManagement
 :IdentityAndAccessManagement rdf:type owl:Class ;
                              rdfs:subClassOf :TechnicalDataEcosystemElement ;
@@ -608,9 +902,10 @@ owl:Class rdf:type owl:Class .
 
 ###  https://w3id.org/dedl#Individual
 :Individual rdf:type owl:Class ;
-            rdfs:subClassOf :Participant ;
+            rdfs:subClassOf <https://schema.org/Person> ,
+                            :Participant ;
             owl:disjointWith :Organization ;
-            rdfs:comment "A subclass of Participant representing a legal person."@en ;
+            rdfs:comment "A subclass of Participant representing a natural person."@en ;
             rdfs:label "Individual"@en .
 
 
@@ -651,19 +946,31 @@ owl:Class rdf:type owl:Class .
 
 ###  https://w3id.org/dedl#Organization
 :Organization rdf:type owl:Class ;
-              rdfs:subClassOf :Participant ;
+              rdfs:subClassOf <https://schema.org/Organization> ,
+                              :Participant ;
               rdfs:comment "A subclass of Participant representing a legal entity."@en ;
               rdfs:label "Organization"@en .
 
 
+###  https://w3id.org/dedl#ParameterEncoding
+:ParameterEncoding rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Class ;
+                                         owl:oneOf ( :Base64Url
+                                                   )
+                                       ] ;
+                   rdfs:comment "Enumeration of the transformations an endpoint requires before a parameter value is placed into the request. Not reused from jsonschema:contentEncoding, which describes how the content of a StringSchema value is stored, is limited to the RFC values up to base64, and would leave the value itself encoded in the model."@en ;
+                   rdfs:label "ParameterEncoding"@en .
+
+
+###  https://w3id.org/dedl#ParameterMapping
+:ParameterMapping rdf:type owl:Class ;
+                  rdfs:comment "Connects a value of the process with a field of a message. Referenced from a Task through mapsInput or mapsOutput; the mapping itself is direction-agnostic, which is why source and target carry mirrored meanings depending on which of the two properties points at it."@en ;
+                  rdfs:label "ParameterMapping"@en .
+
+
 ###  https://w3id.org/dedl#Participant
 :Participant rdf:type owl:Class ;
-             rdfs:subClassOf :DataEcosystemElement ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :entity ;
-                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                               owl:onClass :Entity
-                             ] ;
+             rdfs:subClassOf :DataEcosystemElement ;
              rdfs:comment "A stakeholder participating in or operating the data ecosystem (either an Individual or Organization)."@en ;
              rdfs:label "Participant"@en .
 
@@ -691,11 +998,11 @@ owl:Class rdf:type owl:Class .
 ###  https://w3id.org/dedl#Process
 :Process rdf:type owl:Class ;
          rdfs:subClassOf :Base ,
-                         <https://www.irit.fr/recherches/MELODI/ontologies/BBO#FlowElementsContainer> ,
+                         <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Process> ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :byDataEcosystem ;
                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                           owl:onClass :Process
+                           owl:onClass :DataEcosystem
                          ] ;
          rdfs:comment "A series of operations or activities performed within the data ecosystem."@en ;
          rdfs:label "Process"@en .
@@ -710,8 +1017,9 @@ owl:Class rdf:type owl:Class .
 
 ###  https://w3id.org/dedl#Reference
 :Reference rdf:type owl:Class ;
-           rdfs:comment "Used for referencing between various classes"@en ;
-           rdfs:label "Reference"@en .
+           rdfs:comment "Deprecated since 1.0.0. In the DEDL information model, Reference is the type of attributes that point to another object by its id, e.g. inDataEcosystem or byDataEcosystem. In RDF, these references are object properties that point directly to the IRI of the target, so the class is no longer needed."@en ;
+           rdfs:label "Reference"@en ;
+           owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://w3id.org/dedl#RunTimeEnvironment
@@ -760,11 +1068,6 @@ owl:Class rdf:type owl:Class .
 :TechnicalDataEcosystemElement rdf:type owl:Class ;
                                rdfs:subClassOf :DataEcosystemElement ,
                                                [ rdf:type owl:Restriction ;
-                                                 owl:onProperty :usedBy ;
-                                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                 owl:onClass :Participant
-                                               ] ,
-                                               [ rdf:type owl:Restriction ;
                                                  owl:onProperty :operatedBy ;
                                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                  owl:onClass :Participant
@@ -782,17 +1085,35 @@ owl:Class rdf:type owl:Class .
 
 ###  https://w3id.org/didl#Identity
 <https://w3id.org/didl#Identity> rdf:type owl:Class ;
-                                 rdfs:subClassOf :Base ;
-                                 rdfs:comment "A unique collection of attributes, credentials, or characteristics of an entity."@en ;
-                                 rdfs:label "Identity"@en .
+                                 rdfs:isDefinedBy <https://w3id.org/didl> .
 
 
 ###  https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource
 <https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource> rdf:type owl:Class .
 
 
-###  https://www.irit.fr/recherches/MELODI/ontologies/BBO#FlowElementsContainer
-<https://www.irit.fr/recherches/MELODI/ontologies/BBO#FlowElementsContainer> rdf:type owl:Class .
+###  https://www.irit.fr/recherches/MELODI/ontologies/BBO#Expression
+<https://www.irit.fr/recherches/MELODI/ontologies/BBO#Expression> rdf:type owl:Class ;
+                                                                  rdfs:isDefinedBy <https://www.irit.fr/recherches/MELODI/ontologies/BBO> .
+
+
+###  https://www.irit.fr/recherches/MELODI/ontologies/BBO#InputSet
+<https://www.irit.fr/recherches/MELODI/ontologies/BBO#InputSet> rdf:type owl:Class ;
+                                                                rdfs:isDefinedBy <https://www.irit.fr/recherches/MELODI/ontologies/BBO> .
+
+
+###  https://www.irit.fr/recherches/MELODI/ontologies/BBO#Process
+<https://www.irit.fr/recherches/MELODI/ontologies/BBO#Process> rdf:type owl:Class ;
+                                                               rdfs:isDefinedBy <https://www.irit.fr/recherches/MELODI/ontologies/BBO> .
+
+
+###  https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task
+<https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task> rdf:type owl:Class .
+
+
+###  https://www.w3.org/2019/wot/json-schema#DataSchema
+<https://www.w3.org/2019/wot/json-schema#DataSchema> rdf:type owl:Class ;
+                                                     rdfs:isDefinedBy <https://www.w3.org/2019/wot/json-schema> .
 
 
 #################################################################
@@ -827,6 +1148,20 @@ owl:Class rdf:type owl:Class .
        rdfs:label "Allow"@en .
 
 
+###  https://w3id.org/dedl#Base64Url
+:Base64Url rdf:type owl:NamedIndividual ,
+                    :ParameterEncoding ;
+           rdfs:comment "A ParameterEncoding requiring the value to be base64url-encoded without padding, as the Asset Administration Shell API does for identifiers carried in a path."@en ;
+           rdfs:label "Base64Url"@en .
+
+
+###  https://w3id.org/dedl#Bearer
+:Bearer rdf:type owl:NamedIndividual ,
+                 :AuthenticationScheme ;
+        rdfs:comment "An AuthenticationScheme in which a previously obtained access token is sent in the Authorization header."@en ;
+        rdfs:label "Bearer"@en .
+
+
 ###  https://w3id.org/dedl#Behavior
 :Behavior rdf:type owl:NamedIndividual ,
                    :AuthenticationRiskContext ;
@@ -839,6 +1174,13 @@ owl:Class rdf:type owl:Class .
                  :AccessControlModel ;
         rdfs:comment "Capability-based Access Control relying on tokens or 'capabilities' to grant permissions."@en ;
         rdfs:label "CapBAC"@en .
+
+
+###  https://w3id.org/dedl#ClientCredentials
+:ClientCredentials rdf:type owl:NamedIndividual ,
+                            :AuthenticationScheme ;
+                   rdfs:comment "An AuthenticationScheme in which client id and client secret are sent to obtain a token; the credentials are part of the request body rather than a header."@en ;
+                   rdfs:label "ClientCredentials"@en .
 
 
 ###  https://w3id.org/dedl#Cryptography
@@ -881,6 +1223,13 @@ owl:Class rdf:type owl:Class .
                       :AuthenticationRiskContext ;
              rdfs:comment "A factor in the authentication risk context representing physical or network location."@en ;
              rdfs:label "Geolocation"@en .
+
+
+###  https://w3id.org/dedl#Header
+:Header rdf:type owl:NamedIndividual ,
+                 :HttpLocation ;
+        rdfs:comment "An HttpLocation indicating that the parameter is carried in an HTTP header."@en ;
+        rdfs:label "Header"@en .
 
 
 ###  https://w3id.org/dedl#HybridArchitecture
@@ -941,8 +1290,8 @@ owl:Class rdf:type owl:Class .
 
 ###  https://w3id.org/dedl#Negotiate
 :Negotiate rdf:type owl:NamedIndividual ,
-                    :Authorization ;
-           rdfs:comment "An authorization process involving negotiation or exchange of data before deciding access."@en ;
+                    :AuthorizationPattern ;
+           rdfs:comment "An authorization pattern in which the parties negotiate or exchange data before access is decided."@en ;
            rdfs:label "Negotiate"@en .
 
 
@@ -969,8 +1318,8 @@ owl:Class rdf:type owl:Class .
 
 ###  https://w3id.org/dedl#OneWay
 :OneWay rdf:type owl:NamedIndividual ,
-                 :Authentication ;
-        rdfs:comment "A one-direction authentication process, typically from a client to a server."@en ;
+                 :AuthenticationPattern ;
+        rdfs:comment "A one-directional authentication pattern, typically a client proving its identity to a server."@en ;
         rdfs:label "OneWay"@en .
 
 
@@ -979,6 +1328,13 @@ owl:Class rdf:type owl:Class .
                 :AccessControlModel ;
        rdfs:comment "Organization-based Access Control, focusing on roles and contexts within an organization."@en ;
        rdfs:label "OrBAC"@en .
+
+
+###  https://w3id.org/dedl#Path
+:Path rdf:type owl:NamedIndividual ,
+               :HttpLocation ;
+      rdfs:comment "An HttpLocation indicating that the parameter is substituted into a placeholder of the endpoint path."@en ;
+      rdfs:label "Path"@en .
 
 
 ###  https://w3id.org/dedl#PolicyBasedArchitecture
@@ -990,8 +1346,8 @@ owl:Class rdf:type owl:Class .
 
 ###  https://w3id.org/dedl#Poll
 :Poll rdf:type owl:NamedIndividual ,
-               :Authorization ;
-      rdfs:comment "An authorization process where a client periodically checks the server for an access decision."@en ;
+               :AuthorizationPattern ;
+      rdfs:comment "An authorization pattern in which a client periodically checks the server for an access decision."@en ;
       rdfs:label "Poll"@en .
 
 
@@ -1004,8 +1360,8 @@ owl:Class rdf:type owl:Class .
 
 ###  https://w3id.org/dedl#Push
 :Push rdf:type owl:NamedIndividual ,
-               :Authorization ;
-      rdfs:comment "An authorization process where the server proactively notifies the client about decisions."@en ;
+               :AuthorizationPattern ;
+      rdfs:comment "An authorization pattern in which the server proactively notifies the client about decisions."@en ;
       rdfs:label "Push"@en .
 
 
@@ -1053,8 +1409,8 @@ owl:Class rdf:type owl:Class .
 
 ###  https://w3id.org/dedl#ThreeWay
 :ThreeWay rdf:type owl:NamedIndividual ,
-                   :Authentication ;
-          rdfs:comment "An authentication process involving a three-part handshake or three-step verification."@en ;
+                   :AuthenticationPattern ;
+          rdfs:comment "An authentication pattern based on a three-part handshake or three-step verification."@en ;
           rdfs:label "ThreeWay"@en .
 
 
@@ -1074,8 +1430,8 @@ owl:Class rdf:type owl:Class .
 
 ###  https://w3id.org/dedl#TwoWay
 :TwoWay rdf:type owl:NamedIndividual ,
-                 :Authentication ;
-        rdfs:comment "A mutual authentication process where both parties verify each other's identity."@en ;
+                 :AuthenticationPattern ;
+        rdfs:comment "A mutual authentication pattern in which both parties verify each other's identity."@en ;
         rdfs:label "TwoWay"@en .
 
 
@@ -1098,6 +1454,23 @@ owl:Class rdf:type owl:Class .
                               :PolicyLanguage ;
                      rdfs:comment "An OASIS standard policy language for defining access control rules (XACML framework)."@en ;
                      rdfs:label "XACMLPolicyLanguage"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://orcid.org/0000-0001-5970-6954> rdfs:label "Jiahang Chen" ;
+                                        <https://schema.org/affiliation> <https://www.mmi.rwth-aachen.de/> ;
+                                        <https://schema.org/email> "chen@mmi.rwth-aachen.de" .
+
+
+<https://orcid.org/0009-0002-5632-5464> rdfs:label "Lennart Klöpper" ;
+                                        <https://schema.org/affiliation> <https://www.mmi.rwth-aachen.de/> ;
+                                        <https://schema.org/email> "kloepper@mmi.rwth-aachen.de" .
+
+
+<https://www.mmi.rwth-aachen.de/> rdfs:label "MMI, RWTH Aachen University" .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

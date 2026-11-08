@@ -1,0 +1,14 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://w3id.org/dedl/1.0.0> a prov:Entity;
+	 dc:title "Data Ecosystem Description Language Ontology (DEDL-O)";
+	 prov:wasAttributedTo <https://orcid.org/0000-0001-5970-6954>;
+	 dc:creator <https://orcid.org/0000-0001-5970-6954>;
+	 prov:wasAttributedTo <https://orcid.org/0009-0002-5632-5464>;
+	 dc:creator <https://orcid.org/0009-0002-5632-5464>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasRevisionOf <https://w3id.org/dedl/0.1>;
+	 prov:wasGeneratedAt "2025-05-01";
+.
