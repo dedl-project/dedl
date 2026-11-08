@@ -1,0 +1,32 @@
+<h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div>
+<p>
+Data ecosystems bring together autonomous participants that exchange data and services across organisational
+boundaries. Building and operating them requires knowing three things at once: which technical components exist
+and how they depend on each other, which processes the ecosystem runs, and which process step calls which API
+endpoint with which data. Architecture vocabularies cover the first, process vocabularies the second, and API
+descriptions such as OpenAPI cover single interfaces. None of them states the connection between a process and
+the components that realise it.
+</p>
+<p>
+DEDL-O, the Data Ecosystem Description Language Ontology, describes all three as layers of one graph:
+</p>
+<ul>
+<li><b>Architecture layer:</b> the technical elements of an ecosystem (<code>dedl:TechnicalDataEcosystemElement</code>
+with subclasses such as <code>dedl:API</code>, <code>dedl:IdentityProvider</code> or <code>dedl:Storage</code>),
+their directed dependencies (<code>dedl:dependsOn</code>) and who operates them (<code>dedl:operatedBy</code>).</li>
+<li><b>Process layer:</b> processes, service tasks, gateways and sequence flows, reused from the BPMN-based ontology BBO
+(<code>dedl:Process</code> is a subclass of <code>BBO:Process</code>), with declared input and output sets.</li>
+<li><b>Integration layer:</b> which service task invokes which endpoint (<code>dedl:invokesEndpoint</code>) and how
+each request parameter is filled (<code>dedl:ParameterMapping</code>, with exactly one of a source value, a constant or a
+template).</li>
+</ul>
+<p>
+The integration layer is constrained by the architecture layer: whoever executes a process must depend on every
+component the process invokes. Validation rules that connect the layers in this way are part of the resource.
+</p>
+<p>
+DEDL-O 1.0.0 replaces version 0.1, which formalised the DEDL information model. It is not backward compatible;
+see the change log below. Terms that are no longer needed are marked as deprecated before they are removed.
+</p>
+</div>

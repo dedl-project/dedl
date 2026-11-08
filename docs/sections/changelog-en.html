@@ -1,0 +1,422 @@
+<div id="changelog">
+<h2 id="changes" class="list">Changes from last version</h2>
+<h3 id="changeClass" class="list">Classes</h3>
+<details><summary><u>Modified classes</u></summary>
+<ul><li><a href="#API">https://w3id.org/dedl#API</a>
+<ul>
+<li>Added: rdfs:comment "Application Programming Interface; a subclass of Interface representing a component whose primary role is to be an entry point into the data ecosystem. DEDL deliberately does not apply API to every component that exposes a technical interface, as almost every component does. Where a component has a more specific functional type (e.g. IdentityProvider, Communication, DataStorage), that type is used instead and the component carries its Endpoints directly. API is therefore reserved for components that exist in order to be the interface: typically coordinating several sub-services, or fronting a separate storage component."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Application Programming Interface; a subclass of Interface representing a set of protocols allowing different software entities to communicate within a data ecosystem."@en</li>
+</ul>
+</li>
+<li><a href="#Authentication">https://w3id.org/dedl#Authentication</a>
+<ul>
+<li>Added: rdfs:comment "A Process of a data ecosystem that verifies the identity of a user or entity. Its members are concrete processes; the general interaction pattern is described by AuthenticationPattern."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A procedure or sequence of steps that verify the identity of a user or entity."@en</li>
+</ul>
+</li>
+<li><a href="#Authorization">https://w3id.org/dedl#Authorization</a>
+<ul>
+<li>Added: rdfs:comment "A Process of a data ecosystem that determines whether an entity may access a resource. Its members are concrete processes; the general interaction pattern is described by AuthorizationPattern."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A method or set of steps determining if an entity may access a resource."@en</li>
+</ul>
+</li>
+<li><a href="#Base">https://w3id.org/dedl#Base</a>
+<ul>
+<li><li>Added: rdfs:comment "Common superclass of everything a DEDL model describes as a named thing: data ecosystems, their elements (participants and technical elements), entities, policies and processes. Every instance carries a human-readable schema:name and should carry a schema:description. It replaces the attributes id, name and description of the Base class in the DEDL information model; the id is the IRI of the instance."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Base class defining various properties"@en</li>
+</ul>
+</li>
+<li><a href="#DataStorage">https://w3id.org/dedl#DataStorage</a>
+<ul>
+<li>Added: rdfs:comment "A subclass of Storage dedicated to storing data within a data ecosystem."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A subclass of Storage dedicated to string data within a data ecosystem."@en</li>
+</ul>
+</li>
+<li><a href="#Endpoint">https://w3id.org/dedl#Endpoint</a>
+<ul>
+<li>Added: rdfs:comment "HTTP(S) endpoint of an API that can be invoked by a process. DEDL 0.1 deliberately covers REST only; protocol-specific Endpoint subclasses are deferred."@en</li>
+<li>Added: SubClass of https://schema.org/EntryPoint</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Represents a network endpoint (URL) and its operational metadata for a Service."@en</li>
+</ul>
+</li>
+<li><a href="#Individual">https://w3id.org/dedl#Individual</a>
+<ul>
+<li>Added: SubClass of https://schema.org/Person</li>
+<li>Added: rdfs:comment "A subclass of Participant representing a natural person."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A subclass of Participant representing a legal person."@en</li>
+</ul>
+</li>
+<li><a href="#Organization">https://w3id.org/dedl#Organization</a>
+<ul>
+<li>Added: SubClass of https://schema.org/Organization</li>
+</ul>
+</li>
+<li><a href="#Participant">https://w3id.org/dedl#Participant</a>
+<ul>
+<li></ul>
+</li>
+<li><a href="#Process">https://w3id.org/dedl#Process</a>
+<ul>
+<li>Added: SubClass of https://www.irit.fr/recherches/MELODI/ontologies/BBO#Process</li>
+<li></ul>
+<ul>
+<li>Deleted: SubClass of https://www.irit.fr/recherches/MELODI/ontologies/BBO#FlowElementsContainer</li>
+<li></ul>
+</li>
+<li><a href="#Reference">https://w3id.org/dedl#Reference</a>
+<ul>
+<li>Added: owl:deprecated "true"^^xsd:boolean</li>
+<li>Added: rdfs:comment "Deprecated since 1.0.0. In the DEDL information model, Reference is the type of attributes that point to another object by its id, e.g. inDataEcosystem or byDataEcosystem. In RDF, these references are object properties that point directly to the IRI of the target, so the class is no longer needed."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Used for referencing between various classes"@en</li>
+</ul>
+</li>
+<li><a href="#TechnicalDataEcosystemElement">https://w3id.org/dedl#TechnicalDataEcosystemElement</a>
+<ul>
+<li></ul>
+</li>
+<li><a href="#https://w3id.org/didl#Identity">https://w3id.org/didl#Identity</a>
+<ul>
+<li>Added: rdfs:isDefinedBy https://w3id.org/didl</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A unique collection of attributes, credentials, or characteristics of an entity."@en</li>
+<li>Deleted: SubClass of https://w3id.org/dedl#Base</li>
+<li>Deleted: rdfs:label "Identity"@en</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added classes</u></summary>
+<ul><li><a href="#https://schema.org/EntryPoint">https://schema.org/EntryPoint</a>
+</li>
+<li><a href="#https://schema.org/Organization">https://schema.org/Organization</a>
+</li>
+<li><a href="#https://schema.org/Person">https://schema.org/Person</a>
+</li>
+<li><a href="#AuthenticationPattern">https://w3id.org/dedl#AuthenticationPattern</a>
+<ul>
+<li>Added: EquivalentClasses EquivalentClasses(&lt;https://w3id.org/dedl#AuthenticationPattern&gt; ObjectOneOf(&lt;https://w3id.org/dedl#OneWay&gt; &lt;https://w3id.org/dedl#ThreeWay&gt; &lt;https://w3id.org/dedl#TwoWay&gt;))</li>
+</ul>
+</li>
+<li><a href="#AuthenticationScheme">https://w3id.org/dedl#AuthenticationScheme</a>
+<ul>
+<li>Added: EquivalentClasses EquivalentClasses(&lt;https://w3id.org/dedl#AuthenticationScheme&gt; ObjectOneOf(&lt;https://w3id.org/dedl#Bearer&gt; &lt;https://w3id.org/dedl#ClientCredentials&gt;))</li>
+</ul>
+</li>
+<li><a href="#AuthorizationPattern">https://w3id.org/dedl#AuthorizationPattern</a>
+<ul>
+<li>Added: EquivalentClasses EquivalentClasses(&lt;https://w3id.org/dedl#AuthorizationPattern&gt; ObjectOneOf(&lt;https://w3id.org/dedl#Negotiate&gt; &lt;https://w3id.org/dedl#Poll&gt; &lt;https://w3id.org/dedl#Push&gt;))</li>
+</ul>
+</li>
+<li><a href="#HttpLocation">https://w3id.org/dedl#HttpLocation</a>
+<ul>
+<li>Added: EquivalentClasses EquivalentClasses(&lt;https://w3id.org/dedl#HttpLocation&gt; ObjectOneOf(&lt;https://w3id.org/dedl#Header&gt; &lt;https://w3id.org/dedl#Path&gt;))</li>
+</ul>
+</li>
+<li><a href="#HttpParameter">https://w3id.org/dedl#HttpParameter</a>
+</li>
+<li><a href="#HttpResponse">https://w3id.org/dedl#HttpResponse</a>
+</li>
+<li><a href="#ParameterEncoding">https://w3id.org/dedl#ParameterEncoding</a>
+<ul>
+<li>Added: EquivalentClasses EquivalentClasses(&lt;https://w3id.org/dedl#ParameterEncoding&gt; ObjectOneOf(&lt;https://w3id.org/dedl#Base64Url&gt;))</li>
+</ul>
+</li>
+<li><a href="#ParameterMapping">https://w3id.org/dedl#ParameterMapping</a>
+</li>
+<li><a href="#https://www.irit.fr/recherches/MELODI/ontologies/BBO#Expression">https://www.irit.fr/recherches/MELODI/ontologies/BBO#Expression</a>
+</li>
+<li><a href="#https://www.irit.fr/recherches/MELODI/ontologies/BBO#InputSet">https://www.irit.fr/recherches/MELODI/ontologies/BBO#InputSet</a>
+</li>
+<li><a href="#https://www.irit.fr/recherches/MELODI/ontologies/BBO#Process">https://www.irit.fr/recherches/MELODI/ontologies/BBO#Process</a>
+</li>
+<li><a href="#https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task">https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task</a>
+</li>
+<li><a href="#https://www.w3.org/2019/wot/json-schema#DataSchema">https://www.w3.org/2019/wot/json-schema#DataSchema</a>
+</li>
+</ul></details><details><summary><u>Deleted classes</u></summary>
+<ul><li><a href="#http://www.w3.org/2002/07/owl#Class">http://www.w3.org/2002/07/owl#Class</a>
+</li>
+<li><a href="#https://www.irit.fr/recherches/MELODI/ontologies/BBO#FlowElementsContainer">https://www.irit.fr/recherches/MELODI/ontologies/BBO#FlowElementsContainer</a>
+</li>
+</ul></details><h3 id="changeProp" class="list">Object Properties</h3>
+<details><summary><u>Modified object properties</u></summary>
+<ul><li><a href="#inDataEcosystem">https://w3id.org/dedl#inDataEcosystem</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/dedl#dataEcosystemElement&gt; &lt;https://w3id.org/dedl#inDataEcosystem&gt;)</li>
+<li>Added: rdfs:comment "Indicates the DataEcosystem a DataEcosystemElement belongs to (inverse of dataEcosystemElement)."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Indicates the DataEcosystemElement belonging to a DataEcosystem."@en</li>
+</ul>
+</li>
+<li><a href="#operatedBy">https://w3id.org/dedl#operatedBy</a>
+<ul>
+<li>Added: rdfs:comment "Indicates the Participant responsible for the technical operation and maintenance of a TechnicalDataEcosystemElement (inverse of operates). Not to be confused with operator, which denotes the governance of the whole DataEcosystem. The infrastructure provider underneath (e.g. a cloud hoster) is not the operator in this sense."@en</li>
+<li>Added: rdfs:seeAlso https://w3id.org/idsa/core/maintainer</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Indicates the Participant operating a TechnicalDataEcosystemElement (inverse of operates)."@en</li>
+</ul>
+</li>
+<li><a href="#operates">https://w3id.org/dedl#operates</a>
+<ul>
+<li>Added: rdfs:comment "Links a Participant to a TechnicalDataEcosystemElement it operates (inverse of operatedBy)."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Specifies an operator of a TechnicalDataEcosystemElement."@en</li>
+</ul>
+</li>
+<li><a href="#operator">https://w3id.org/dedl#operator</a>
+<ul>
+<li>Added: SubProperty of https://w3id.org/dedl#participant</li>
+<li>Added: rdfs:comment "Specifies a Participant responsible for governing the DataEcosystem as a whole, e.g. setting its rules and admitting participants. Every operator is also a participant. Not to be confused with operatedBy, which denotes the technical operation of a single TechnicalDataEcosystemElement."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Specifies an operator of a DataEcosystem."@en</li>
+</ul>
+</li>
+<li><a href="#participant">https://w3id.org/dedl#participant</a>
+<ul>
+<li>Added: SubProperty of https://w3id.org/dedl#dataEcosystemElement</li>
+</ul>
+</li>
+<li><a href="#technicalDataEcosystemElement">https://w3id.org/dedl#technicalDataEcosystemElement</a>
+<ul>
+<li>Added: rdfs:comment "Links a DataEcosystem to a TechnicalDataEcosystemElement belonging to it."@en</li>
+<li>Added: SubProperty of https://w3id.org/dedl#dataEcosystemElement</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment ""@en</li>
+</ul>
+</li>
+<li><a href="#uses">https://w3id.org/dedl#uses</a>
+<ul>
+<li>Added: rdfs:comment "Links a Participant to a TechnicalDataEcosystemElement it uses (inverse of usedBy)."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Specifies a user of a TechnicalDataEcosystemElement."@en</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added object properties</u></summary>
+<ul><li><a href="#authenticationPattern">https://w3id.org/dedl#authenticationPattern</a>
+<ul>
+<li>Added: domain https://w3id.org/dedl#Authenticator</li>
+<li>Added: Range https://w3id.org/dedl#AuthenticationPattern</li>
+</ul>
+</li>
+<li><a href="#authenticationScheme">https://w3id.org/dedl#authenticationScheme</a>
+<ul>
+<li>Added: Range https://w3id.org/dedl#AuthenticationScheme</li>
+<li>Added: domain https://w3id.org/dedl#Endpoint</li>
+</ul>
+</li>
+<li><a href="#authorizationPattern">https://w3id.org/dedl#authorizationPattern</a>
+<ul>
+<li>Added: domain https://w3id.org/dedl#Authorizator</li>
+<li>Added: Range https://w3id.org/dedl#AuthorizationPattern</li>
+</ul>
+</li>
+<li><a href="#dataEcosystemElement">https://w3id.org/dedl#dataEcosystemElement</a>
+<ul>
+<li>Added: domain https://w3id.org/dedl#DataEcosystem</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/dedl#dataEcosystemElement&gt; &lt;https://w3id.org/dedl#inDataEcosystem&gt;)</li>
+<li>Added: Range https://w3id.org/dedl#DataEcosystemElement</li>
+</ul>
+</li>
+<li><a href="#dependsOn">https://w3id.org/dedl#dependsOn</a>
+<ul>
+<li>Added: domain https://w3id.org/dedl#TechnicalDataEcosystemElement</li>
+<li>Added: Range https://w3id.org/dedl#TechnicalDataEcosystemElement</li>
+</ul>
+</li>
+<li><a href="#endpoint">https://w3id.org/dedl#endpoint</a>
+<ul>
+<li>Added: domain https://w3id.org/dedl#TechnicalDataEcosystemElement</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/dedl#exposedBy&gt; &lt;https://w3id.org/dedl#endpoint&gt;)</li>
+<li>Added: Range https://w3id.org/dedl#Endpoint</li>
+</ul>
+</li>
+<li><a href="#evaluatesDataResource">https://w3id.org/dedl#evaluatesDataResource</a>
+<ul>
+<li>Added: Range https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource</li>
+<li>Added: domain https://www.irit.fr/recherches/MELODI/ontologies/BBO#Expression</li>
+</ul>
+</li>
+<li><a href="#exposedBy">https://w3id.org/dedl#exposedBy</a>
+<ul>
+<li>Added: domain https://w3id.org/dedl#Endpoint</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/dedl#exposedBy&gt; &lt;https://w3id.org/dedl#endpoint&gt;)</li>
+<li>Added: Range https://w3id.org/dedl#TechnicalDataEcosystemElement</li>
+</ul>
+</li>
+<li><a href="#httpLocation">https://w3id.org/dedl#httpLocation</a>
+<ul>
+<li>Added: Range https://w3id.org/dedl#HttpLocation</li>
+<li>Added: domain https://w3id.org/dedl#HttpParameter</li>
+</ul>
+</li>
+<li><a href="#httpParameter">https://w3id.org/dedl#httpParameter</a>
+<ul>
+<li>Added: domain https://w3id.org/dedl#Endpoint</li>
+<li>Added: Range https://w3id.org/dedl#HttpParameter</li>
+</ul>
+</li>
+<li><a href="#httpResponse">https://w3id.org/dedl#httpResponse</a>
+<ul>
+<li>Added: domain https://w3id.org/dedl#Endpoint</li>
+<li>Added: Range https://w3id.org/dedl#HttpResponse</li>
+</ul>
+</li>
+<li><a href="#insertsDataResource">https://w3id.org/dedl#insertsDataResource</a>
+<ul>
+<li>Added: domain https://w3id.org/dedl#ParameterMapping</li>
+<li>Added: Range https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource</li>
+</ul>
+</li>
+<li><a href="#invokesEndpoint">https://w3id.org/dedl#invokesEndpoint</a>
+<ul>
+<li>Added: Range https://w3id.org/dedl#Endpoint</li>
+<li>Added: domain https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task</li>
+</ul>
+</li>
+<li><a href="#mapsInput">https://w3id.org/dedl#mapsInput</a>
+<ul>
+<li>Added: domain https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task</li>
+<li>Added: Range https://w3id.org/dedl#ParameterMapping</li>
+</ul>
+</li>
+<li><a href="#mapsOutput">https://w3id.org/dedl#mapsOutput</a>
+<ul>
+<li>Added: Range https://w3id.org/dedl#ParameterMapping</li>
+<li>Added: domain https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task</li>
+</ul>
+</li>
+<li><a href="#optionalInputRef">https://w3id.org/dedl#optionalInputRef</a>
+<ul>
+<li>Added: domain https://www.irit.fr/recherches/MELODI/ontologies/BBO#InputSet</li>
+<li>Added: Range https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource</li>
+</ul>
+</li>
+<li><a href="#requestHttpBodySchema">https://w3id.org/dedl#requestHttpBodySchema</a>
+<ul>
+<li>Added: domain https://w3id.org/dedl#Endpoint</li>
+<li>Added: Range https://www.w3.org/2019/wot/json-schema#DataSchema</li>
+</ul>
+</li>
+<li><a href="#responseHttpBodySchema">https://w3id.org/dedl#responseHttpBodySchema</a>
+<ul>
+<li>Added: Range https://www.w3.org/2019/wot/json-schema#DataSchema</li>
+<li>Added: domain https://w3id.org/dedl#HttpResponse</li>
+</ul>
+</li>
+<li><a href="#source">https://w3id.org/dedl#source</a>
+<ul>
+<li>Added: domain https://w3id.org/dedl#ParameterMapping</li>
+</ul>
+</li>
+<li><a href="#target">https://w3id.org/dedl#target</a>
+<ul>
+<li>Added: domain https://w3id.org/dedl#ParameterMapping</li>
+</ul>
+</li>
+<li><a href="#valueEncoding">https://w3id.org/dedl#valueEncoding</a>
+<ul>
+<li>Added: domain https://w3id.org/dedl#HttpParameter</li>
+<li>Added: Range https://w3id.org/dedl#ParameterEncoding</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted object properties</u></summary>
+<ul><li><a href="#authenticationProcess">https://w3id.org/dedl#authenticationProcess</a>
+</li>
+<li><a href="#authorizationProcess">https://w3id.org/dedl#authorizationProcess</a>
+</li>
+<li><a href="#dataFlowIn">https://w3id.org/dedl#dataFlowIn</a>
+</li>
+<li><a href="#dataFlowOut">https://w3id.org/dedl#dataFlowOut</a>
+</li>
+<li><a href="#hasEndpoint">https://w3id.org/dedl#hasEndpoint</a>
+</li>
+</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
+<details><summary><u>Added data properties</u></summary>
+<ul><li><a href="#http://www.w3.org/ns/dcat#endpointURL">http://www.w3.org/ns/dcat#endpointURL</a>
+</li>
+<li><a href="#https://schema.org/description">https://schema.org/description</a>
+</li>
+<li><a href="#https://schema.org/httpMethod">https://schema.org/httpMethod</a>
+</li>
+<li><a href="#https://schema.org/name">https://schema.org/name</a>
+</li>
+<li><a href="#https://schema.org/urlTemplate">https://schema.org/urlTemplate</a>
+</li>
+<li><a href="#authenticationRequired">https://w3id.org/dedl#authenticationRequired</a>
+<ul>
+<li>Added: Domain https://w3id.org/dedl#Endpoint</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#boolean</li>
+</ul>
+</li>
+<li><a href="#constantValue">https://w3id.org/dedl#constantValue</a>
+<ul>
+<li>Added: Domain https://w3id.org/dedl#ParameterMapping</li>
+<li>Added: Range http://www.w3.org/2000/01/rdf-schema#Literal</li>
+</ul>
+</li>
+<li><a href="#containerImage">https://w3id.org/dedl#containerImage</a>
+<ul>
+<li>Added: Domain https://w3id.org/dedl#TechnicalDataEcosystemElement</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#parameterName">https://w3id.org/dedl#parameterName</a>
+<ul>
+<li>Added: Domain https://w3id.org/dedl#HttpParameter</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#path">https://w3id.org/dedl#path</a>
+<ul>
+<li>Added: SubProperty of https://schema.org/urlTemplate</li>
+<li>Added: Domain https://w3id.org/dedl#Endpoint</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#statusCode">https://w3id.org/dedl#statusCode</a>
+<ul>
+<li>Added: Domain https://w3id.org/dedl#HttpResponse</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#integer</li>
+</ul>
+</li>
+<li><a href="#valueTemplate">https://w3id.org/dedl#valueTemplate</a>
+<ul>
+<li>Added: Domain https://w3id.org/dedl#ParameterMapping</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#https://www.w3.org/2019/wot/hypermedia#forContentType">https://www.w3.org/2019/wot/hypermedia#forContentType</a>
+</li>
+<li><a href="#https://www.w3.org/2019/wot/json-schema#propertyName">https://www.w3.org/2019/wot/json-schema#propertyName</a>
+</li>
+</ul></details><details><summary><u>Deleted data properties</u></summary>
+<ul><li><a href="#authMethod">https://w3id.org/dedl#authMethod</a>
+</li>
+<li><a href="#authRequired">https://w3id.org/dedl#authRequired</a>
+</li>
+<li><a href="#gaiaxTaCAccepted">https://w3id.org/dedl#gaiaxTaCAccepted</a>
+</li>
+<li><a href="#httpMethod">https://w3id.org/dedl#httpMethod</a>
+</li>
+</ul></details></div>

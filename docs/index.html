@@ -13,11 +13,11 @@
 <script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
 	<dark-mode-toggle class="slider"></dark-mode-toggle>
 </div>
-<link rel="icon" type="image/png" href="resources/rdf.icon"/> <title>DEDL Vocabulary & Expression 0.1</title>
+<link rel="icon" type="image/png" href="resources/rdf.icon"/> <title>Data Ecosystem Description Language Ontology (DEDL-O)</title>
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/dedl","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/dedl","name":"DEDL Vocabulary & Expression 0.1", "headline":"The Data Ecosystem Description Language (DEDL) is an abstract language to describe concepts of data ecosystems, in which different participants (i.e., organizations and individuals) share data and generate value as the primary aim.", "dateReleased":"Thu Jan 15 16:42:21 CET 2026", "version":"0.1", "license":"http://creativecommons.org/licenses/by/4.0/", {"@type":"Person","name":"Lennart Klöpper"}, "author":[{"@type":"Person","name":"Jiahang Chen"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/dedl#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/dedl#","name":"Data Ecosystem Description Language Ontology (DEDL-O)", "headline":"DEDL-O is a reusable ontology for describing the technical architecture of data ecosystems, their processes and the connection between both. This integration layer states which process step calls which API endpoint and how data is mapped between them, which neither architecture nor process vocabularies can express on their own.", "dateReleased":"2025-05-01", "dateModified":"2026-11-08", "version":"1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Jiahang Chen","url":"https://orcid.org/0000-0001-5970-6954"},{"@type":"Person","name":"Lennart Klöpper","url":"https://orcid.org/0009-0002-5632-5464"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -62,6 +62,7 @@ function loadTOC(){
       $("#overview").load("sections/overview-en.html"); 
       $("#description").load("sections/description-en.html"); 
       $("#references").load("sections/references-en.html"); 
+      $("#changelog").load("sections/changelog-en.html"); 
       $("#crossref").load("sections/crossref-en.html", null, loadHash); 
     });
     </script> 
@@ -71,24 +72,32 @@ function loadTOC(){
 <div class="container">
 <div class="head">
 <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
-<h1>Data Ecosystem Description Language (DEDL) Information Model, Vocabulary, and Expression v0.1</h1>
+<h1>Data Ecosystem Description Language Ontology (DEDL-O)</h1>
+<h2>Release: 2025-05-01</h2>
 
 
 <dl>
-<dt>Latest version:</dt>
-<dd><a href="https://w3id.org/dedl">https://w3id.org/dedl</a></dd>
+<dt>Modified on: 2026-11-08</dt>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/dedl/1.0.0">https://w3id.org/dedl/1.0.0</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="https://w3id.org/dedl/0.1">https://w3id.org/dedl/0.1</a></dd>
 <dt>Revision:</dt>
-<dd>0.1</dd>
+<dd>1.0.0</dd>
 <dt>Authors:</dt>
-<dd>Lennart Klöpper</dd><dd>Jiahang Chen</dd>
+<dd><a href="https://orcid.org/0000-0001-5970-6954">Jiahang Chen</a>, <a href="https://www.mmi.rwth-aachen.de/">MMI, RWTH Aachen University</a><a href="mailto:chen@mmi.rwth-aachen.de">&#9993;</a></dd><dd><a href="https://orcid.org/0009-0002-5632-5464">Lennart Klöpper</a>, <a href="https://www.mmi.rwth-aachen.de/">MMI, RWTH Aachen University</a><a href="mailto:kloepper@mmi.rwth-aachen.de">&#9993;</a></dd>
 
-<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by/4.0/-blue.svg" alt="http://creativecommons.org/licenses/by/4.0/" /></a>
+<dt>Publisher:</dt>
+<dd><a href="https://www.mmi.rwth-aachen.de/">MMI, RWTH Aachen University</a></dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Lennart Klöpper, Jiahang Chen. DEDL Vocabulary & Expression 0.1. Revision: 0.1.</dd>
+<dd>Jiahang Chen, Lennart Klöpper. Data Ecosystem Description Language Ontology (DEDL-O). Revision: 1.0.0. Retrieved from: https://w3id.org/dedl/1.0.0</dd>
+<dt>Incompatible with:</dt>
+<dd><a href="https://w3id.org/dedl/0.1">https://w3id.org/dedl/0.1</a></dd>
 </dl>
 
-<hr/>
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
 </div>
 <div class="status">
 <div>
@@ -101,6 +110,7 @@ function loadTOC(){
      <div id="description"></div>
      <div id="crossref"></div>
      <div id="references"></div>
+     <div id="changelog"></div>
 <div id="acknowledgments">
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>

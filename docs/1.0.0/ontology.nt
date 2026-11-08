@@ -1,0 +1,1328 @@
+<https://w3id.org/dedl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/dedl> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/dedl/1.0.0> .
+<https://w3id.org/dedl> <http://purl.org/dc/terms/abstract> "DEDL-O is a reusable ontology for describing the technical architecture of data ecosystems, their processes and the connection between both. This integration layer states which process step calls which API endpoint and how data is mapped between them, which neither architecture nor process vocabularies can express on their own."@en .
+<https://w3id.org/dedl> <http://purl.org/dc/terms/created> "2025-05-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/dedl> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-5970-6954> .
+<https://w3id.org/dedl> <http://purl.org/dc/terms/creator> <https://orcid.org/0009-0002-5632-5464> .
+<https://w3id.org/dedl> <http://purl.org/dc/terms/description> "An ontology for describing the technical architecture, processes and API integration of data ecosystems."@en .
+<https://w3id.org/dedl> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/dedl> <http://purl.org/dc/terms/modified> "2026-11-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/dedl> <http://purl.org/dc/terms/publisher> <https://www.mmi.rwth-aachen.de/> .
+<https://w3id.org/dedl> <http://purl.org/dc/terms/title> "Data Ecosystem Description Language Ontology (DEDL-O)"@en .
+<https://w3id.org/dedl> <http://purl.org/vocab/vann/preferredNamespacePrefix> "dedl" .
+<https://w3id.org/dedl> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/dedl#" .
+<https://w3id.org/dedl> <http://www.w3.org/2000/01/rdf-schema#label> "DEDL-O"@en .
+<https://w3id.org/dedl> <http://www.w3.org/2002/07/owl#incompatibleWith> <https://w3id.org/dedl/0.1> .
+<https://w3id.org/dedl> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/dedl/0.1> .
+<https://w3id.org/dedl> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/affiliation
+<https://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/email
+<https://schema.org/email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/dedl#accessControlModel
+<https://w3id.org/dedl#accessControlModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#accessControlModel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Policy> .
+<https://w3id.org/dedl#accessControlModel> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#AccessControlModel> .
+<https://w3id.org/dedl#accessControlModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a Policy with its AccessControlModel to define and enforce resource access rules."@en .
+<https://w3id.org/dedl#accessControlModel> <http://www.w3.org/2000/01/rdf-schema#label> "accessControlModel"@en .
+# 
+# https://w3id.org/dedl#authenticationFactor
+<https://w3id.org/dedl#authenticationFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#authenticationFactor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Authenticator> .
+<https://w3id.org/dedl#authenticationFactor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#AuthenticationFactor> .
+<https://w3id.org/dedl#authenticationFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the AuthenticationFactor that an Authenticator uses."@en .
+<https://w3id.org/dedl#authenticationFactor> <http://www.w3.org/2000/01/rdf-schema#label> "authenticationFactor"@en .
+# 
+# https://w3id.org/dedl#authenticationPattern
+<https://w3id.org/dedl#authenticationPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#authenticationPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Authenticator> .
+<https://w3id.org/dedl#authenticationPattern> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#AuthenticationPattern> .
+<https://w3id.org/dedl#authenticationPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the interaction pattern an Authenticator uses to verify an identity, e.g. one-way or mutual. Replaces authenticationProcess, whose range mixed patterns with concrete Processes."@en .
+<https://w3id.org/dedl#authenticationPattern> <http://www.w3.org/2000/01/rdf-schema#label> "authenticationPattern"@en .
+# 
+# https://w3id.org/dedl#authenticationProtocol
+<https://w3id.org/dedl#authenticationProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#authenticationProtocol> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Authenticator> .
+<https://w3id.org/dedl#authenticationProtocol> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#AuthenticationProtocol> .
+<https://w3id.org/dedl#authenticationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the AuthenticationProtocol an Authenticator follows."@en .
+<https://w3id.org/dedl#authenticationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "authenticationProtocol"@en .
+# 
+# https://w3id.org/dedl#authenticationRiskContext
+<https://w3id.org/dedl#authenticationRiskContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#authenticationRiskContext> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Authenticator> .
+<https://w3id.org/dedl#authenticationRiskContext> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#AuthenticationRiskContext> .
+<https://w3id.org/dedl#authenticationRiskContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates an Authenticator with contextual factors that influence authentication risk."@en .
+<https://w3id.org/dedl#authenticationRiskContext> <http://www.w3.org/2000/01/rdf-schema#label> "authenticationRiskContext"@en .
+# 
+# https://w3id.org/dedl#authenticationScheme
+<https://w3id.org/dedl#authenticationScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#authenticationScheme> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Endpoint> .
+<https://w3id.org/dedl#authenticationScheme> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#AuthenticationScheme> .
+<https://w3id.org/dedl#authenticationScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies how the credentials are carried when calling the endpoint, e.g. as a bearer token."@en .
+<https://w3id.org/dedl#authenticationScheme> <http://www.w3.org/2000/01/rdf-schema#label> "authenticationScheme"@en .
+# 
+# https://w3id.org/dedl#authorizationArchitecture
+<https://w3id.org/dedl#authorizationArchitecture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#authorizationArchitecture> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Authorizator> .
+<https://w3id.org/dedl#authorizationArchitecture> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#AuthorizationArchitecture> .
+<https://w3id.org/dedl#authorizationArchitecture> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the AuthorizationArchitecture used by an Authorizator."@en .
+<https://w3id.org/dedl#authorizationArchitecture> <http://www.w3.org/2000/01/rdf-schema#label> "authorizationArchitecture"@en .
+# 
+# https://w3id.org/dedl#authorizationPattern
+<https://w3id.org/dedl#authorizationPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#authorizationPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Authorizator> .
+<https://w3id.org/dedl#authorizationPattern> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#AuthorizationPattern> .
+<https://w3id.org/dedl#authorizationPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the interaction pattern an Authorizator follows to reach and deliver an access decision, e.g. poll or push. Replaces authorizationProcess, whose range mixed patterns with concrete Processes."@en .
+<https://w3id.org/dedl#authorizationPattern> <http://www.w3.org/2000/01/rdf-schema#label> "authorizationPattern"@en .
+# 
+# https://w3id.org/dedl#byDataEcosystem
+<https://w3id.org/dedl#byDataEcosystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#byDataEcosystem> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/dedl#process> .
+<https://w3id.org/dedl#byDataEcosystem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Process> .
+<https://w3id.org/dedl#byDataEcosystem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#DataEcosystem> .
+<https://w3id.org/dedl#byDataEcosystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the Process belonging to a DataEcosystem."@en .
+<https://w3id.org/dedl#byDataEcosystem> <http://www.w3.org/2000/01/rdf-schema#label> "byDataEcosystem"@en .
+# 
+# https://w3id.org/dedl#composedOf
+<https://w3id.org/dedl#composedOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#composedOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/dedl#partOf> .
+<https://w3id.org/dedl#composedOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#DataEcosystem> .
+<https://w3id.org/dedl#composedOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#DataEcosystem> .
+<https://w3id.org/dedl#composedOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates if the data ecosystem consists of multiple data ecosystem"@en .
+<https://w3id.org/dedl#composedOf> <http://www.w3.org/2000/01/rdf-schema#label> "composedOf"@en .
+# 
+# https://w3id.org/dedl#correspondsToDataProperty
+<https://w3id.org/dedl#correspondsToDataProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#correspondsToDataProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource> .
+<https://w3id.org/dedl#correspondsToDataProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/dedl#correspondsToDataProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a BBO:DataResource with an expected Property in another vocabulary (e.g. schema:legalName)."@en .
+<https://w3id.org/dedl#correspondsToDataProperty> <http://www.w3.org/2000/01/rdf-schema#label> "correspondsToDataProperty"@en .
+# 
+# https://w3id.org/dedl#correspondsToThing
+<https://w3id.org/dedl#correspondsToThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#correspondsToThing> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource> .
+<https://w3id.org/dedl#correspondsToThing> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/dedl#correspondsToThing> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a BBO:DataResource with an expected Thing/Class in another vocabulary (e.g. vc:VerifiableCredential)."@en .
+<https://w3id.org/dedl#correspondsToThing> <http://www.w3.org/2000/01/rdf-schema#label> "correspondsToThing"@en .
+# 
+# https://w3id.org/dedl#dataEcosystemElement
+<https://w3id.org/dedl#dataEcosystemElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#dataEcosystemElement> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/dedl#inDataEcosystem> .
+<https://w3id.org/dedl#dataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#DataEcosystem> .
+<https://w3id.org/dedl#dataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#DataEcosystemElement> .
+<https://w3id.org/dedl#dataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a DataEcosystem to an element belonging to it (inverse of inDataEcosystem). Specialised by participant and technicalDataEcosystemElement, so that membership needs to be stated in one direction only."@en .
+<https://w3id.org/dedl#dataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#label> "dataEcosystemElement"@en .
+# 
+# https://w3id.org/dedl#dependsOn
+<https://w3id.org/dedl#dependsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#dependsOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#dependsOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#dependsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a TechnicalDataEcosystemElement needs or uses another one to fulfil its function, e.g. by calling its API, storing data in it or delegating authentication to it. Directed from the dependent element to the one it depends on; only direct dependencies are stated. What the dependency is for mostly follows from the type of the target (e.g. DataStorage, IdentityProvider). How it is realised, and in which direction data travels, belongs to the integration layer (invokesEndpoint, exposedBy). This allows the system architecture to be described coarsely before any Process is modelled in detail."@en .
+<https://w3id.org/dedl#dependsOn> <http://www.w3.org/2000/01/rdf-schema#label> "dependsOn"@en .
+# 
+# https://w3id.org/dedl#endpoint
+<https://w3id.org/dedl#endpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#endpoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#endpoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#Endpoint> .
+<https://w3id.org/dedl#endpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a TechnicalDataEcosystemElement with an Endpoint resource that contains connection details (path, method, auth, etc.)."@en .
+<https://w3id.org/dedl#endpoint> <http://www.w3.org/2000/01/rdf-schema#label> "endpoint"@en .
+# 
+# https://w3id.org/dedl#entity
+<https://w3id.org/dedl#entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#entity> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/dedl#inParticipant> .
+<https://w3id.org/dedl#entity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Participant> .
+<https://w3id.org/dedl#entity> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#Entity> .
+<https://w3id.org/dedl#entity> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a Participant with a particular Entity in the data ecosystem."@en .
+<https://w3id.org/dedl#entity> <http://www.w3.org/2000/01/rdf-schema#label> "entity"@en .
+# 
+# https://w3id.org/dedl#evaluatesDataResource
+<https://w3id.org/dedl#evaluatesDataResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#evaluatesDataResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Expression> .
+<https://w3id.org/dedl#evaluatesDataResource> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource> .
+<https://w3id.org/dedl#evaluatesDataResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates an Expression with a DataResource it evaluates. BBO offers no such link: conditions are opaque text in BBO:body, and the only DataResource-valued properties are bound to Throw- and CatchEvents. Identifiers used inside the body are the @id of the referenced resources, which makes the pair body/evaluatesDataResource machine-checkable."@en .
+<https://w3id.org/dedl#evaluatesDataResource> <http://www.w3.org/2000/01/rdf-schema#label> "evaluatesDataResource"@en .
+# 
+# https://w3id.org/dedl#exposedBy
+<https://w3id.org/dedl#exposedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#exposedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/dedl#endpoint> .
+<https://w3id.org/dedl#exposedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Endpoint> .
+<https://w3id.org/dedl#exposedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#exposedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the TechnicalDataEcosystemElement exposing this endpoint. The range is not restricted to API, because components with a more specific functional type (e.g. an IdentityProvider) carry their own endpoints directly."@en .
+<https://w3id.org/dedl#exposedBy> <http://www.w3.org/2000/01/rdf-schema#label> "exposedBy"@en .
+# 
+# https://w3id.org/dedl#httpLocation
+<https://w3id.org/dedl#httpLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#httpLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#HttpParameter> .
+<https://w3id.org/dedl#httpLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#HttpLocation> .
+<https://w3id.org/dedl#httpLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates where in the HTTP request a parameter is placed. Body content is not covered here; it is described through requestHttpBodySchema."@en .
+<https://w3id.org/dedl#httpLocation> <http://www.w3.org/2000/01/rdf-schema#label> "httpLocation"@en .
+# 
+# https://w3id.org/dedl#httpParameter
+<https://w3id.org/dedl#httpParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#httpParameter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Endpoint> .
+<https://w3id.org/dedl#httpParameter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#HttpParameter> .
+<https://w3id.org/dedl#httpParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates an Endpoint with a parameter carried in the request path or headers."@en .
+<https://w3id.org/dedl#httpParameter> <http://www.w3.org/2000/01/rdf-schema#label> "httpParameter"@en .
+# 
+# https://w3id.org/dedl#httpResponse
+<https://w3id.org/dedl#httpResponse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#httpResponse> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Endpoint> .
+<https://w3id.org/dedl#httpResponse> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#HttpResponse> .
+<https://w3id.org/dedl#httpResponse> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates an Endpoint with one of the responses it may return."@en .
+<https://w3id.org/dedl#httpResponse> <http://www.w3.org/2000/01/rdf-schema#label> "httpResponse"@en .
+# 
+# https://w3id.org/dedl#identity
+<https://w3id.org/dedl#identity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#identity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Entity> .
+<https://w3id.org/dedl#identity> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/didl#Identity> .
+<https://w3id.org/dedl#identity> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the Identity belonging to an Entity."@en .
+<https://w3id.org/dedl#identity> <http://www.w3.org/2000/01/rdf-schema#label> "identity"@en .
+# 
+# https://w3id.org/dedl#inDataEcosystem
+<https://w3id.org/dedl#inDataEcosystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#inDataEcosystem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#DataEcosystemElement> .
+<https://w3id.org/dedl#inDataEcosystem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#DataEcosystem> .
+<https://w3id.org/dedl#inDataEcosystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the DataEcosystem a DataEcosystemElement belongs to (inverse of dataEcosystemElement)."@en .
+<https://w3id.org/dedl#inDataEcosystem> <http://www.w3.org/2000/01/rdf-schema#label> "inDataEcosystem"@en .
+# 
+# https://w3id.org/dedl#inParticipant
+<https://w3id.org/dedl#inParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#inParticipant> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Entity> .
+<https://w3id.org/dedl#inParticipant> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#Participant> .
+<https://w3id.org/dedl#inParticipant> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the Entity belonging to a Participant."@en .
+<https://w3id.org/dedl#inParticipant> <http://www.w3.org/2000/01/rdf-schema#label> "inParticipant"@en .
+# 
+# https://w3id.org/dedl#insertsDataResource
+<https://w3id.org/dedl#insertsDataResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#insertsDataResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#ParameterMapping> .
+<https://w3id.org/dedl#insertsDataResource> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource> .
+<https://w3id.org/dedl#insertsDataResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Lists a DataResource whose value is inserted into the valueTemplate of this mapping. Used only together with valueTemplate; the placeholders of the template and the listed resources correspond one to one. Kept apart from source and evaluatesDataResource so that each property has a single meaning."@en .
+<https://w3id.org/dedl#insertsDataResource> <http://www.w3.org/2000/01/rdf-schema#label> "insertsDataResource"@en .
+# 
+# https://w3id.org/dedl#invokesEndpoint
+<https://w3id.org/dedl#invokesEndpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#invokesEndpoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task> .
+<https://w3id.org/dedl#invokesEndpoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#Endpoint> .
+<https://w3id.org/dedl#invokesEndpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a task invokes an API endpoint."@en .
+<https://w3id.org/dedl#invokesEndpoint> <http://www.w3.org/2000/01/rdf-schema#label> "invokesEndpoint"@en .
+# 
+# https://w3id.org/dedl#mapsInput
+<https://w3id.org/dedl#mapsInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#mapsInput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task> .
+<https://w3id.org/dedl#mapsInput> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#ParameterMapping> .
+<https://w3id.org/dedl#mapsInput> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a Task with a mapping that fills a field of the request it sends. BBO has no DataAssociations, so the wiring between process data and message fields has no equivalent there."@en .
+<https://w3id.org/dedl#mapsInput> <http://www.w3.org/2000/01/rdf-schema#label> "mapsInput"@en .
+# 
+# https://w3id.org/dedl#mapsOutput
+<https://w3id.org/dedl#mapsOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#mapsOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task> .
+<https://w3id.org/dedl#mapsOutput> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#ParameterMapping> .
+<https://w3id.org/dedl#mapsOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a Task with a mapping that reads a field of the response into a DataResource of the process."@en .
+<https://w3id.org/dedl#mapsOutput> <http://www.w3.org/2000/01/rdf-schema#label> "mapsOutput"@en .
+# 
+# https://w3id.org/dedl#memberOf
+<https://w3id.org/dedl#memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#memberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Individual> .
+<https://w3id.org/dedl#memberOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#Organization> .
+<https://w3id.org/dedl#memberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an Individual to an Organization."@en .
+<https://w3id.org/dedl#memberOf> <http://www.w3.org/2000/01/rdf-schema#label> "memberOf"@en .
+# 
+# https://w3id.org/dedl#operatedBy
+<https://w3id.org/dedl#operatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#operatedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/dedl#operates> .
+<https://w3id.org/dedl#operatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#operatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#Participant> .
+<https://w3id.org/dedl#operatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the Participant responsible for the technical operation and maintenance of a TechnicalDataEcosystemElement (inverse of operates). Not to be confused with operator, which denotes the governance of the whole DataEcosystem. The infrastructure provider underneath (e.g. a cloud hoster) is not the operator in this sense."@en .
+<https://w3id.org/dedl#operatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "operatedBy"@en .
+<https://w3id.org/dedl#operatedBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/idsa/core/maintainer> .
+# 
+# https://w3id.org/dedl#operates
+<https://w3id.org/dedl#operates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#operates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Participant> .
+<https://w3id.org/dedl#operates> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#operates> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Participant to a TechnicalDataEcosystemElement it operates (inverse of operatedBy)."@en .
+<https://w3id.org/dedl#operates> <http://www.w3.org/2000/01/rdf-schema#label> "operates"@en .
+# 
+# https://w3id.org/dedl#operator
+<https://w3id.org/dedl#operator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#operator> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/dedl#participant> .
+<https://w3id.org/dedl#operator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#DataEcosystem> .
+<https://w3id.org/dedl#operator> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#Participant> .
+<https://w3id.org/dedl#operator> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies a Participant responsible for governing the DataEcosystem as a whole, e.g. setting its rules and admitting participants. Every operator is also a participant. Not to be confused with operatedBy, which denotes the technical operation of a single TechnicalDataEcosystemElement."@en .
+<https://w3id.org/dedl#operator> <http://www.w3.org/2000/01/rdf-schema#label> "operator"@en .
+# 
+# https://w3id.org/dedl#optionalInputRef
+<https://w3id.org/dedl#optionalInputRef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#optionalInputRef> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#InputSet> .
+<https://w3id.org/dedl#optionalInputRef> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource> .
+<https://w3id.org/dedl#optionalInputRef> <http://www.w3.org/2000/01/rdf-schema#comment> "Marks a DataResource referenced by an InputSet as one that may be omitted. Named after the BPMN attribute optionalInputRefs, which BBO does not carry over. Optionality is stated per InputSet rather than on the resource itself, because the same resource can be mandatory in one context and optional in another. Expressing optionality through several alternative InputSets instead would grow combinatorially."@en .
+<https://w3id.org/dedl#optionalInputRef> <http://www.w3.org/2000/01/rdf-schema#label> "optionalInputRef"@en .
+# 
+# https://w3id.org/dedl#partOf
+<https://w3id.org/dedl#partOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#partOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#DataEcosystem> .
+<https://w3id.org/dedl#partOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#DataEcosystem> .
+<https://w3id.org/dedl#partOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates if the data ecosystem is part of another data ecosystem"@en .
+<https://w3id.org/dedl#partOf> <http://www.w3.org/2000/01/rdf-schema#label> "partOf"@en .
+# 
+# https://w3id.org/dedl#participant
+<https://w3id.org/dedl#participant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#participant> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/dedl#dataEcosystemElement> .
+<https://w3id.org/dedl#participant> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#DataEcosystem> .
+<https://w3id.org/dedl#participant> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#Participant> .
+<https://w3id.org/dedl#participant> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies a participant within a DataEcosystem."@en .
+<https://w3id.org/dedl#participant> <http://www.w3.org/2000/01/rdf-schema#label> "participant"@en .
+# 
+# https://w3id.org/dedl#policy
+<https://w3id.org/dedl#policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#policy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Entity> .
+<https://w3id.org/dedl#policy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#Policy> .
+<https://w3id.org/dedl#policy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an Entity to a Policy governing its usage or access rights."@en .
+<https://w3id.org/dedl#policy> <http://www.w3.org/2000/01/rdf-schema#label> "policy"@en .
+# 
+# https://w3id.org/dedl#policyLanguage
+<https://w3id.org/dedl#policyLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#policyLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Policy> .
+<https://w3id.org/dedl#policyLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#PolicyLanguage> .
+<https://w3id.org/dedl#policyLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the PolicyLanguage used to express or encode a Policy."@en .
+<https://w3id.org/dedl#policyLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "policyLanguage"@en .
+# 
+# https://w3id.org/dedl#process
+<https://w3id.org/dedl#process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#process> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#DataEcosystem> .
+<https://w3id.org/dedl#process> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#Process> .
+<https://w3id.org/dedl#process> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a DataEcosystem with a particular Process."@en .
+<https://w3id.org/dedl#process> <http://www.w3.org/2000/01/rdf-schema#label> "process"@en .
+# 
+# https://w3id.org/dedl#requestHttpBodySchema
+<https://w3id.org/dedl#requestHttpBodySchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#requestHttpBodySchema> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Endpoint> .
+<https://w3id.org/dedl#requestHttpBodySchema> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/2019/wot/json-schema#DataSchema> .
+<https://w3id.org/dedl#requestHttpBodySchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the structure of the request body of an endpoint. The encoding of that body is stated separately via hctl:forContentType."@en .
+<https://w3id.org/dedl#requestHttpBodySchema> <http://www.w3.org/2000/01/rdf-schema#label> "requestHttpBodySchema"@en .
+# 
+# https://w3id.org/dedl#responseHttpBodySchema
+<https://w3id.org/dedl#responseHttpBodySchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#responseHttpBodySchema> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#HttpResponse> .
+<https://w3id.org/dedl#responseHttpBodySchema> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/2019/wot/json-schema#DataSchema> .
+<https://w3id.org/dedl#responseHttpBodySchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the structure of the body returned with a response."@en .
+<https://w3id.org/dedl#responseHttpBodySchema> <http://www.w3.org/2000/01/rdf-schema#label> "responseHttpBodySchema"@en .
+# 
+# https://w3id.org/dedl#source
+<https://w3id.org/dedl#source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#source> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#ParameterMapping> .
+<https://w3id.org/dedl#source> <http://www.w3.org/2000/01/rdf-schema#comment> "Where a mapped value is taken from; alternatively the value is fixed by constantValue or built by valueTemplate. Deliberately without rdfs:range: with mapsInput the source is a BBO:DataResource, with mapsOutput it is a field of the response schema. Since rdfs:range is an inference rule rather than a constraint, a union would only add uninformative type assertions, and the actual rule is conditional on the direction of the mapping. That rule belongs in SHACL."@en .
+<https://w3id.org/dedl#source> <http://www.w3.org/2000/01/rdf-schema#label> "source"@en .
+# 
+# https://w3id.org/dedl#status
+<https://w3id.org/dedl#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/dedl#status> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#status> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#Status> .
+<https://w3id.org/dedl#status> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates TechnicalDataEcosystemElement with their current state-"@en .
+<https://w3id.org/dedl#status> <http://www.w3.org/2000/01/rdf-schema#label> "status"@en .
+# 
+# https://w3id.org/dedl#target
+<https://w3id.org/dedl#target> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#target> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#ParameterMapping> .
+<https://w3id.org/dedl#target> <http://www.w3.org/2000/01/rdf-schema#comment> "Where a mapped value is written to. Deliberately without rdfs:range, for the same reason as source: with mapsInput the target is an HttpParameter, a field of the request schema, or the request schema itself when the whole document is the value; with mapsOutput it is a BBO:DataResource."@en .
+<https://w3id.org/dedl#target> <http://www.w3.org/2000/01/rdf-schema#label> "target"@en .
+# 
+# https://w3id.org/dedl#technicalDataEcosystemElement
+<https://w3id.org/dedl#technicalDataEcosystemElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#technicalDataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/dedl#dataEcosystemElement> .
+<https://w3id.org/dedl#technicalDataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#DataEcosystem> .
+<https://w3id.org/dedl#technicalDataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#technicalDataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a DataEcosystem to a TechnicalDataEcosystemElement belonging to it."@en .
+<https://w3id.org/dedl#technicalDataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#label> "technicalDataEcosystemElement"@en .
+<https://w3id.org/dedl#technicalDataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "composedBy (Oliveira)"@en .
+# 
+# https://w3id.org/dedl#usedBy
+<https://w3id.org/dedl#usedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#usedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/dedl#uses> .
+<https://w3id.org/dedl#usedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#usedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#Participant> .
+<https://w3id.org/dedl#usedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the Participant using a TechnicalDataEcosystemElement (inverse of uses)."@en .
+<https://w3id.org/dedl#usedBy> <http://www.w3.org/2000/01/rdf-schema#label> "usedBy"@en .
+# 
+# https://w3id.org/dedl#uses
+<https://w3id.org/dedl#uses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#uses> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Participant> .
+<https://w3id.org/dedl#uses> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#uses> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Participant to a TechnicalDataEcosystemElement it uses (inverse of usedBy)."@en .
+<https://w3id.org/dedl#uses> <http://www.w3.org/2000/01/rdf-schema#label> "uses"@en .
+# 
+# https://w3id.org/dedl#valueEncoding
+<https://w3id.org/dedl#valueEncoding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dedl#valueEncoding> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#HttpParameter> .
+<https://w3id.org/dedl#valueEncoding> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dedl#ParameterEncoding> .
+<https://w3id.org/dedl#valueEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "States that the endpoint requires the value of this parameter to be transformed before it is placed into the request, e.g. base64url-encoded in a path. The transformation belongs to the endpoint, not to the mapping: a mapping states which value is meant, this property how it is carried."@en .
+<https://w3id.org/dedl#valueEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "valueEncoding"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/dcat#endpointURL
+<http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://schema.org/description
+<https://schema.org/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://schema.org/httpMethod
+<https://schema.org/httpMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://schema.org/name
+<https://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://schema.org/urlTemplate
+<https://schema.org/urlTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://w3id.org/dedl#authenticationRequired
+<https://w3id.org/dedl#authenticationRequired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/dedl#authenticationRequired> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Endpoint> .
+<https://w3id.org/dedl#authenticationRequired> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/dedl#authenticationRequired> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether authentication is required to call the endpoint."@en .
+<https://w3id.org/dedl#authenticationRequired> <http://www.w3.org/2000/01/rdf-schema#label> "authenticationRequired"@en .
+# 
+# https://w3id.org/dedl#constantValue
+<https://w3id.org/dedl#constantValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/dedl#constantValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#ParameterMapping> .
+<https://w3id.org/dedl#constantValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/dedl#constantValue> <http://www.w3.org/2000/01/rdf-schema#comment> "A fixed value written to the target of the mapping instead of a value read from a source; used with mapsInput. The literal keeps its datatype, e.g. string, number or boolean. Not reused from schema:value, which is defined for QuantitativeValue and PropertyValue nodes."@en .
+<https://w3id.org/dedl#constantValue> <http://www.w3.org/2000/01/rdf-schema#label> "constantValue"@en .
+# 
+# https://w3id.org/dedl#containerImage
+<https://w3id.org/dedl#containerImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/dedl#containerImage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#containerImage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/dedl#containerImage> <http://www.w3.org/2000/01/rdf-schema#comment> "Container image reference from which the element is deployed, including registry and tag."@en .
+<https://w3id.org/dedl#containerImage> <http://www.w3.org/2000/01/rdf-schema#label> "containerImage"@en .
+# 
+# https://w3id.org/dedl#parameterName
+<https://w3id.org/dedl#parameterName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/dedl#parameterName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#HttpParameter> .
+<https://w3id.org/dedl#parameterName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/dedl#parameterName> <http://www.w3.org/2000/01/rdf-schema#comment> "Literal name of an HttpParameter as it appears in the request, i.e. the header field name or the path variable name, which must match the API exactly. Not reused from the W3C HTTP vocabulary because htv:fieldName is restricted to header fields and htv:paramName denotes a parameter inside a deconstructed header value, whereas HttpParameter abstracts over the location. schema:name stays reserved for human-readable labels."@en .
+<https://w3id.org/dedl#parameterName> <http://www.w3.org/2000/01/rdf-schema#label> "parameterName"@en .
+# 
+# https://w3id.org/dedl#path
+<https://w3id.org/dedl#path> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/dedl#path> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://schema.org/urlTemplate> .
+<https://w3id.org/dedl#path> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#Endpoint> .
+<https://w3id.org/dedl#path> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/dedl#path> <http://www.w3.org/2000/01/rdf-schema#comment> "Relative HTTP path of an endpoint."@en .
+<https://w3id.org/dedl#path> <http://www.w3.org/2000/01/rdf-schema#label> "path"@en .
+# 
+# https://w3id.org/dedl#statusCode
+<https://w3id.org/dedl#statusCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/dedl#statusCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#HttpResponse> .
+<https://w3id.org/dedl#statusCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/dedl#statusCode> <http://www.w3.org/2000/01/rdf-schema#comment> "HTTP status code of a response, e.g. 201 or 404."@en .
+<https://w3id.org/dedl#statusCode> <http://www.w3.org/2000/01/rdf-schema#label> "statusCode"@en .
+# 
+# https://w3id.org/dedl#valueTemplate
+<https://w3id.org/dedl#valueTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/dedl#valueTemplate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dedl#ParameterMapping> .
+<https://w3id.org/dedl#valueTemplate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/dedl#valueTemplate> <http://www.w3.org/2000/01/rdf-schema#comment> "Builds the mapped value from fixed text and inserted values instead of reading it from a source; used with mapsInput. A template contains at least one placeholder; values without any are expressed by constantValue. A placeholder {id} names the @id of a BBO:DataResource in an InputSet of the mapping Task and listed via insertsDataResource; its value is inserted as is, without any encoding, and the result is always a string. Not reused from URI Templates (RFC 6570), because their expansion percent-encodes, which is correct for URIs but wrong for message bodies. Computations beyond insertion are deliberately out of scope."@en .
+<https://w3id.org/dedl#valueTemplate> <http://www.w3.org/2000/01/rdf-schema#label> "valueTemplate"@en .
+# 
+# https://www.w3.org/2019/wot/hypermedia#forContentType
+<https://www.w3.org/2019/wot/hypermedia#forContentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3.org/2019/wot/hypermedia#forContentType> <http://www.w3.org/2000/01/rdf-schema#comment> "Used on Endpoint to state the media type of the request body, e.g. application/x-www-form-urlencoded. Reused from the W3C WoT hypermedia vocabulary instead of defining a DEDL term."@en .
+<https://www.w3.org/2019/wot/hypermedia#forContentType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/2019/wot/hypermedia> .
+# 
+# https://www.w3.org/2019/wot/json-schema#propertyName
+<https://www.w3.org/2019/wot/json-schema#propertyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3.org/2019/wot/json-schema#propertyName> <http://www.w3.org/2000/01/rdf-schema#comment> "Used on the DataSchema of a body field to state the JSON key under which it appears, which must match the API exactly."@en .
+<https://www.w3.org/2019/wot/json-schema#propertyName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/2019/wot/json-schema> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://schema.org/EntryPoint
+<https://schema.org/EntryPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://schema.org/Organization
+<https://schema.org/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://schema.org/Person
+<https://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/dedl#API
+<https://w3id.org/dedl#API> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#API> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Interface> .
+<https://w3id.org/dedl#API> <http://www.w3.org/2000/01/rdf-schema#comment> "Application Programming Interface; a subclass of Interface representing a component whose primary role is to be an entry point into the data ecosystem. DEDL deliberately does not apply API to every component that exposes a technical interface, as almost every component does. Where a component has a more specific functional type (e.g. IdentityProvider, Communication, DataStorage), that type is used instead and the component carries its Endpoints directly. API is therefore reserved for components that exist in order to be the interface: typically coordinating several sub-services, or fronting a separate storage component."@en .
+<https://w3id.org/dedl#API> <http://www.w3.org/2000/01/rdf-schema#label> "API"@en .
+# 
+# https://w3id.org/dedl#AccessControlModel
+<https://w3id.org/dedl#AccessControlModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#AccessControlModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A conceptual framework defining how access to resources is managed, granted, and restricted."@en .
+<https://w3id.org/dedl#AccessControlModel> <http://www.w3.org/2000/01/rdf-schema#label> "AccessControlModel"@en .
+# 
+# https://w3id.org/dedl#AgreementStorage
+<https://w3id.org/dedl#AgreementStorage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#AgreementStorage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#PolicyStorage> .
+<https://w3id.org/dedl#AgreementStorage> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of PolicyStorage where concluded contracts are stored, ensuring that agreements between Participants are documented and accessible."@en .
+<https://w3id.org/dedl#AgreementStorage> <http://www.w3.org/2000/01/rdf-schema#label> "AgreementStorage"@en .
+# 
+# https://w3id.org/dedl#AuditAndLogging
+<https://w3id.org/dedl#AuditAndLogging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#AuditAndLogging> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#AuditAndLogging> <http://www.w3.org/2000/01/rdf-schema#comment> "A component responsible for documenting activities within a data ecosystem to ensure transparency."@en .
+<https://w3id.org/dedl#AuditAndLogging> <http://www.w3.org/2000/01/rdf-schema#label> "AuditAndLogging"@en .
+# 
+# https://w3id.org/dedl#Authentication
+<https://w3id.org/dedl#Authentication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Authentication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Process> .
+<https://w3id.org/dedl#Authentication> <http://www.w3.org/2000/01/rdf-schema#comment> "A Process of a data ecosystem that verifies the identity of a user or entity. Its members are concrete processes; the general interaction pattern is described by AuthenticationPattern."@en .
+<https://w3id.org/dedl#Authentication> <http://www.w3.org/2000/01/rdf-schema#label> "Authentication"@en .
+# 
+# https://w3id.org/dedl#AuthenticationFactor
+<https://w3id.org/dedl#AuthenticationFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#AuthenticationFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "An element used to verify the identity of a user or entity (e.g. password, token, biometrics)."@en .
+<https://w3id.org/dedl#AuthenticationFactor> <http://www.w3.org/2000/01/rdf-schema#label> "AuthenticationFactor"@en .
+# 
+# https://w3id.org/dedl#AuthenticationPattern
+<https://w3id.org/dedl#AuthenticationPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#AuthenticationPattern> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#oneOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/dedl#TwoWay> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/dedl#ThreeWay> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/dedl#OneWay> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#AuthenticationPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Enumeration of interaction patterns for verifying an identity. A pattern classifies how an Authenticator works; it is not itself a Process of a data ecosystem."@en .
+<https://w3id.org/dedl#AuthenticationPattern> <http://www.w3.org/2000/01/rdf-schema#label> "AuthenticationPattern"@en .
+# 
+# https://w3id.org/dedl#AuthenticationProtocol
+<https://w3id.org/dedl#AuthenticationProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#AuthenticationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "A specification of the interactions or steps used to perform authentication."@en .
+<https://w3id.org/dedl#AuthenticationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "AuthenticationProtocol"@en .
+# 
+# https://w3id.org/dedl#AuthenticationRiskContext
+<https://w3id.org/dedl#AuthenticationRiskContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#AuthenticationRiskContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Contextual attributes (time, location, device) that affect authentication risk levels."@en .
+<https://w3id.org/dedl#AuthenticationRiskContext> <http://www.w3.org/2000/01/rdf-schema#label> "AuthenticationRiskContext"@en .
+# 
+# https://w3id.org/dedl#AuthenticationScheme
+<https://w3id.org/dedl#AuthenticationScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#AuthenticationScheme> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#oneOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/dedl#ClientCredentials> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/dedl#Bearer> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#AuthenticationScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Enumeration of the ways in which credentials are carried when calling an endpoint."@en .
+<https://w3id.org/dedl#AuthenticationScheme> <http://www.w3.org/2000/01/rdf-schema#label> "AuthenticationScheme"@en .
+# 
+# https://w3id.org/dedl#Authenticator
+<https://w3id.org/dedl#Authenticator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Authenticator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#IdentityAndAccessManagement> .
+<https://w3id.org/dedl#Authenticator> <http://www.w3.org/2000/01/rdf-schema#comment> "An Participant or component responsible for carrying out the authentication process."@en .
+<https://w3id.org/dedl#Authenticator> <http://www.w3.org/2000/01/rdf-schema#label> "Authenticator"@en .
+# 
+# https://w3id.org/dedl#Authorization
+<https://w3id.org/dedl#Authorization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Authorization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Process> .
+<https://w3id.org/dedl#Authorization> <http://www.w3.org/2000/01/rdf-schema#comment> "A Process of a data ecosystem that determines whether an entity may access a resource. Its members are concrete processes; the general interaction pattern is described by AuthorizationPattern."@en .
+<https://w3id.org/dedl#Authorization> <http://www.w3.org/2000/01/rdf-schema#label> "Authorization"@en .
+# 
+# https://w3id.org/dedl#AuthorizationArchitecture
+<https://w3id.org/dedl#AuthorizationArchitecture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#AuthorizationArchitecture> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of IdentityAndAccessManagement representing a structural framework that defines how authorization decisions are made and enforced."@en .
+<https://w3id.org/dedl#AuthorizationArchitecture> <http://www.w3.org/2000/01/rdf-schema#label> "AuthorizationArchitecture"@en .
+# 
+# https://w3id.org/dedl#AuthorizationPattern
+<https://w3id.org/dedl#AuthorizationPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#AuthorizationPattern> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#oneOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/dedl#Push> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/dedl#Poll> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/dedl#Negotiate> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#AuthorizationPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Enumeration of interaction patterns for reaching and delivering an access decision. A pattern classifies how an Authorizator works; it is not itself a Process of a data ecosystem."@en .
+<https://w3id.org/dedl#AuthorizationPattern> <http://www.w3.org/2000/01/rdf-schema#label> "AuthorizationPattern"@en .
+# 
+# https://w3id.org/dedl#Authorizator
+<https://w3id.org/dedl#Authorizator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Authorizator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#IdentityAndAccessManagement> .
+<https://w3id.org/dedl#Authorizator> <http://www.w3.org/2000/01/rdf-schema#comment> "A participant or component that assesses permissions and enforces authorization decisions."@en .
+<https://w3id.org/dedl#Authorizator> <http://www.w3.org/2000/01/rdf-schema#label> "Authorizator"@en .
+# 
+# https://w3id.org/dedl#Base
+<https://w3id.org/dedl#Base> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Base> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/name> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/dedl#Base> <http://www.w3.org/2000/01/rdf-schema#comment> "Common superclass of everything a DEDL model describes as a named thing: data ecosystems, their elements (participants and technical elements), entities, policies and processes. Every instance carries a human-readable schema:name and should carry a schema:description. It replaces the attributes id, name and description of the Base class in the DEDL information model; the id is the IRI of the instance."@en .
+<https://w3id.org/dedl#Base> <http://www.w3.org/2000/01/rdf-schema#label> "Base"@en .
+# 
+# https://w3id.org/dedl#Communication
+<https://w3id.org/dedl#Communication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Communication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#Communication> <http://www.w3.org/2000/01/rdf-schema#comment> "A mechanism through which participants in a data ecosystem exchange information and interact with each other."@en .
+<https://w3id.org/dedl#Communication> <http://www.w3.org/2000/01/rdf-schema#label> "Communication"@en .
+# 
+# https://w3id.org/dedl#ContractAgreeing
+<https://w3id.org/dedl#ContractAgreeing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#ContractAgreeing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Negotiating> .
+<https://w3id.org/dedl#ContractAgreeing> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of Negotiation representing the concluding process between data providers and consumers  when a policy is accepted by both parties and a contract is formed."@en .
+<https://w3id.org/dedl#ContractAgreeing> <http://www.w3.org/2000/01/rdf-schema#label> "ContractAgreeing"@en .
+# 
+# https://w3id.org/dedl#ContractOffering
+<https://w3id.org/dedl#ContractOffering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#ContractOffering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Negotiating> .
+<https://w3id.org/dedl#ContractOffering> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of Negotiating representing the process where data offers are made available to potential consumers."@en .
+<https://w3id.org/dedl#ContractOffering> <http://www.w3.org/2000/01/rdf-schema#label> "ContractOffering"@en .
+# 
+# https://w3id.org/dedl#ContractRequesting
+<https://w3id.org/dedl#ContractRequesting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#ContractRequesting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Negotiating> .
+<https://w3id.org/dedl#ContractRequesting> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of Negotiating representing the process where potential data consumers request specific conditions for the use or access of data."@en .
+<https://w3id.org/dedl#ContractRequesting> <http://www.w3.org/2000/01/rdf-schema#label> "ContractRequesting"@en .
+# 
+# https://w3id.org/dedl#DataEcosystem
+<https://w3id.org/dedl#DataEcosystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#DataEcosystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Base> .
+<https://w3id.org/dedl#DataEcosystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/dedl#Participant> .
+_:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/dedl#participant> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/dedl#DataEcosystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/dedl#Process> .
+_:genid14 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/dedl#process> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/dedl#DataEcosystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+_:genid15 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/dedl#technicalDataEcosystemElement> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/dedl#DataEcosystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A socio-technical system in which participants share and manage data and associated processes."@en .
+<https://w3id.org/dedl#DataEcosystem> <http://www.w3.org/2000/01/rdf-schema#label> "DataEcosystem"@en .
+# 
+# https://w3id.org/dedl#DataEcosystemElement
+<https://w3id.org/dedl#DataEcosystemElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#DataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Base> .
+<https://w3id.org/dedl#DataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/dedl#DataEcosystem> .
+_:genid16 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/dedl#inDataEcosystem> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/dedl#DataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#comment> "An element within a data ecosystem that contributes to its functionality and processes."@en .
+<https://w3id.org/dedl#DataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#label> "DataEcosystemElement"@en .
+# 
+# https://w3id.org/dedl#DataExchanging
+<https://w3id.org/dedl#DataExchanging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#DataExchanging> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Transacting> .
+<https://w3id.org/dedl#DataExchanging> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of Transaction that represents the process that facilitates the transfer of data within a data ecosystem between Participants."@en .
+<https://w3id.org/dedl#DataExchanging> <http://www.w3.org/2000/01/rdf-schema#label> "DataExchanging"@en .
+# 
+# https://w3id.org/dedl#DataOffering
+<https://w3id.org/dedl#DataOffering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#DataOffering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Publishing> .
+<https://w3id.org/dedl#DataOffering> <http://www.w3.org/2000/01/rdf-schema#comment> "A sublcass of Publishing representing the process where participants make their data available to others in the data ecosystem."@en .
+<https://w3id.org/dedl#DataOffering> <http://www.w3.org/2000/01/rdf-schema#label> "DataOffering"@en .
+# 
+# https://w3id.org/dedl#DataSpaceConnector
+<https://w3id.org/dedl#DataSpaceConnector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#DataSpaceConnector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Interface> .
+<https://w3id.org/dedl#DataSpaceConnector> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of Interface enabling secure and standardized interaction within data spaces (i.e., specialized realizations of data ecosystems)."@en .
+<https://w3id.org/dedl#DataSpaceConnector> <http://www.w3.org/2000/01/rdf-schema#label> "DataSpaceConnector"@en .
+# 
+# https://w3id.org/dedl#DataStorage
+<https://w3id.org/dedl#DataStorage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#DataStorage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Storage> .
+<https://w3id.org/dedl#DataStorage> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of Storage dedicated to storing data within a data ecosystem."@en .
+<https://w3id.org/dedl#DataStorage> <http://www.w3.org/2000/01/rdf-schema#label> "DataStorage"@en .
+# 
+# https://w3id.org/dedl#DataStoring
+<https://w3id.org/dedl#DataStoring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#DataStoring> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Publishing> .
+<https://w3id.org/dedl#DataStoring> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of Publishing representing the process that ensures datasets are stored securely, either centrally or decentrally, depending on the architecture of the data ecosystem."@en .
+<https://w3id.org/dedl#DataStoring> <http://www.w3.org/2000/01/rdf-schema#label> "DataStoring"@en .
+# 
+# https://w3id.org/dedl#Decision
+<https://w3id.org/dedl#Decision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Decision> <http://www.w3.org/2000/01/rdf-schema#comment> "An outcome regarding an authorization request, e.g. Allow or Deny."@en .
+<https://w3id.org/dedl#Decision> <http://www.w3.org/2000/01/rdf-schema#label> "Decision"@en .
+# 
+# https://w3id.org/dedl#Endpoint
+<https://w3id.org/dedl#Endpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Endpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/EntryPoint> .
+<https://w3id.org/dedl#Endpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "HTTP(S) endpoint of an API that can be invoked by a process. DEDL 0.1 deliberately covers REST only; protocol-specific Endpoint subclasses are deferred."@en .
+<https://w3id.org/dedl#Endpoint> <http://www.w3.org/2000/01/rdf-schema#label> "Endpoint"@en .
+# 
+# https://w3id.org/dedl#Entity
+<https://w3id.org/dedl#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Base> .
+<https://w3id.org/dedl#Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/didl#Identity> .
+_:genid17 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/dedl#identity> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/dedl#Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/dedl#Policy> .
+_:genid18 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/dedl#policy> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/dedl#Entity> <http://www.w3.org/2000/01/rdf-schema#comment> "Any identifiable object of a participant within the data ecosystem, e.g. a device or digital resource."@en .
+<https://w3id.org/dedl#Entity> <http://www.w3.org/2000/01/rdf-schema#label> "Entity"@en .
+# 
+# https://w3id.org/dedl#Finding
+<https://w3id.org/dedl#Finding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Finding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Process> .
+<https://w3id.org/dedl#Finding> <http://www.w3.org/2000/01/rdf-schema#comment> "An optional process that enables information or data to be found within a data ecosystem."@en .
+<https://w3id.org/dedl#Finding> <http://www.w3.org/2000/01/rdf-schema#label> "Finding"@en .
+# 
+# https://w3id.org/dedl#GUI
+<https://w3id.org/dedl#GUI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#GUI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Interface> .
+<https://w3id.org/dedl#GUI> <http://www.w3.org/2000/01/rdf-schema#comment> "Graphical User Interface; a subclass of Interface representing an interface through which users can visually interact with components of a data ecosystem."@en .
+<https://w3id.org/dedl#GUI> <http://www.w3.org/2000/01/rdf-schema#label> "GUI"@en .
+# 
+# https://w3id.org/dedl#HttpLocation
+<https://w3id.org/dedl#HttpLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#HttpLocation> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#oneOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/dedl#Path> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/dedl#Header> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#HttpLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Enumeration of the places in an HTTP request in which a parameter can be carried. The request body is not part of this enumeration; it is described through requestHttpBodySchema."@en .
+<https://w3id.org/dedl#HttpLocation> <http://www.w3.org/2000/01/rdf-schema#label> "HttpLocation"@en .
+# 
+# https://w3id.org/dedl#HttpParameter
+<https://w3id.org/dedl#HttpParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#HttpParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "A single parameter of an HTTP request that is carried outside the body, i.e. in the path or in a header."@en .
+<https://w3id.org/dedl#HttpParameter> <http://www.w3.org/2000/01/rdf-schema#label> "HttpParameter"@en .
+# 
+# https://w3id.org/dedl#HttpResponse
+<https://w3id.org/dedl#HttpResponse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#HttpResponse> <http://www.w3.org/2000/01/rdf-schema#comment> "One possible response of an endpoint, identified by its status code and optionally carrying a body schema."@en .
+<https://w3id.org/dedl#HttpResponse> <http://www.w3.org/2000/01/rdf-schema#label> "HttpResponse"@en .
+# 
+# https://w3id.org/dedl#IdentityAndAccessManagement
+<https://w3id.org/dedl#IdentityAndAccessManagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#IdentityAndAccessManagement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#IdentityAndAccessManagement> <http://www.w3.org/2000/01/rdf-schema#comment> "A framework ensuring that only authorized Participants have access to a data ecosystem."@en .
+<https://w3id.org/dedl#IdentityAndAccessManagement> <http://www.w3.org/2000/01/rdf-schema#label> "IdentityAndAccessManagement"@en .
+# 
+# https://w3id.org/dedl#IdentityProvider
+<https://w3id.org/dedl#IdentityProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#IdentityProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#IdentityAndAccessManagement> .
+<https://w3id.org/dedl#IdentityProvider> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of IdentityAndAccessManagement representing a component responsible for managing digital identities, facilitating onboarding and offboarding processes in a data ecosystem."@en .
+<https://w3id.org/dedl#IdentityProvider> <http://www.w3.org/2000/01/rdf-schema#label> "IdentityProvider"@en .
+# 
+# https://w3id.org/dedl#Individual
+<https://w3id.org/dedl#Individual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Individual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Person> .
+<https://w3id.org/dedl#Individual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Participant> .
+<https://w3id.org/dedl#Individual> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/dedl#Organization> .
+<https://w3id.org/dedl#Individual> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of Participant representing a natural person."@en .
+<https://w3id.org/dedl#Individual> <http://www.w3.org/2000/01/rdf-schema#label> "Individual"@en .
+# 
+# https://w3id.org/dedl#Interface
+<https://w3id.org/dedl#Interface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Interface> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#Interface> <http://www.w3.org/2000/01/rdf-schema#comment> "An access point for participants to join and interact within a data ecosystem."@en .
+<https://w3id.org/dedl#Interface> <http://www.w3.org/2000/01/rdf-schema#label> "Interface"@en .
+# 
+# https://w3id.org/dedl#Negotiating
+<https://w3id.org/dedl#Negotiating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Negotiating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Process> .
+<https://w3id.org/dedl#Negotiating> <http://www.w3.org/2000/01/rdf-schema#comment> "An optional process where participants discuss and agree on policies leading to contracts within a data ecosystem."@en .
+<https://w3id.org/dedl#Negotiating> <http://www.w3.org/2000/01/rdf-schema#label> "Negotiating"@en .
+# 
+# https://w3id.org/dedl#Offboarding
+<https://w3id.org/dedl#Offboarding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Offboarding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Process> .
+<https://w3id.org/dedl#Offboarding> <http://www.w3.org/2000/01/rdf-schema#comment> "A mandatory process for removing participant identities from a data ecosystem ensuring compliance or voluntary exit."@en .
+<https://w3id.org/dedl#Offboarding> <http://www.w3.org/2000/01/rdf-schema#label> "Offboarding"@en .
+# 
+# https://w3id.org/dedl#OfferStorage
+<https://w3id.org/dedl#OfferStorage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#OfferStorage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#PolicyStorage> .
+<https://w3id.org/dedl#OfferStorage> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of PolicyStorage where data offers are stored, allowing participants in a data ecosystem to publish and manage their available datasets or services."@en .
+<https://w3id.org/dedl#OfferStorage> <http://www.w3.org/2000/01/rdf-schema#label> "OfferStorage"@en .
+# 
+# https://w3id.org/dedl#Onboarding
+<https://w3id.org/dedl#Onboarding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Onboarding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Process> .
+<https://w3id.org/dedl#Onboarding> <http://www.w3.org/2000/01/rdf-schema#comment> "A mandatory process that manages the creation of digital identities, enabling Participants to access a data ecosystem."@en .
+<https://w3id.org/dedl#Onboarding> <http://www.w3.org/2000/01/rdf-schema#label> "Onboarding"@en .
+# 
+# https://w3id.org/dedl#Organization
+<https://w3id.org/dedl#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Organization> .
+<https://w3id.org/dedl#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Participant> .
+<https://w3id.org/dedl#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of Participant representing a legal entity."@en .
+<https://w3id.org/dedl#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
+# 
+# https://w3id.org/dedl#ParameterEncoding
+<https://w3id.org/dedl#ParameterEncoding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#ParameterEncoding> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#oneOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/dedl#Base64Url> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#ParameterEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "Enumeration of the transformations an endpoint requires before a parameter value is placed into the request. Not reused from jsonschema:contentEncoding, which describes how the content of a StringSchema value is stored, is limited to the RFC values up to base64, and would leave the value itself encoded in the model."@en .
+<https://w3id.org/dedl#ParameterEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "ParameterEncoding"@en .
+# 
+# https://w3id.org/dedl#ParameterMapping
+<https://w3id.org/dedl#ParameterMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#ParameterMapping> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a value of the process with a field of a message. Referenced from a Task through mapsInput or mapsOutput; the mapping itself is direction-agnostic, which is why source and target carry mirrored meanings depending on which of the two properties points at it."@en .
+<https://w3id.org/dedl#ParameterMapping> <http://www.w3.org/2000/01/rdf-schema#label> "ParameterMapping"@en .
+# 
+# https://w3id.org/dedl#Participant
+<https://w3id.org/dedl#Participant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Participant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#DataEcosystemElement> .
+<https://w3id.org/dedl#Participant> <http://www.w3.org/2000/01/rdf-schema#comment> "A stakeholder participating in or operating the data ecosystem (either an Individual or Organization)."@en .
+<https://w3id.org/dedl#Participant> <http://www.w3.org/2000/01/rdf-schema#label> "Participant"@en .
+# 
+# https://w3id.org/dedl#Policy
+<https://w3id.org/dedl#Policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Policy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Base> .
+<https://w3id.org/dedl#Policy> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of rules or guidelines that govern data usage, sharing, and access."@en .
+<https://w3id.org/dedl#Policy> <http://www.w3.org/2000/01/rdf-schema#label> "Policy"@en .
+# 
+# https://w3id.org/dedl#PolicyLanguage
+<https://w3id.org/dedl#PolicyLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#PolicyLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "A formal language for defining and expressing policies."@en .
+<https://w3id.org/dedl#PolicyLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "PolicyLanguage"@en .
+# 
+# https://w3id.org/dedl#PolicyStorage
+<https://w3id.org/dedl#PolicyStorage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#PolicyStorage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Storage> .
+<https://w3id.org/dedl#PolicyStorage> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of storage that stores the conditions under which access to resources in a data ecosystem is granted and how they may be used."@en .
+<https://w3id.org/dedl#PolicyStorage> <http://www.w3.org/2000/01/rdf-schema#label> "PolicyStorage"@en .
+# 
+# https://w3id.org/dedl#Process
+<https://w3id.org/dedl#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Base> .
+<https://w3id.org/dedl#Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.irit.fr/recherches/MELODI/ontologies/BBO#Process> .
+<https://w3id.org/dedl#Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/dedl#DataEcosystem> .
+_:genid24 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/dedl#byDataEcosystem> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/dedl#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "A series of operations or activities performed within the data ecosystem."@en .
+<https://w3id.org/dedl#Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process"@en .
+# 
+# https://w3id.org/dedl#Publishing
+<https://w3id.org/dedl#Publishing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Publishing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Process> .
+<https://w3id.org/dedl#Publishing> <http://www.w3.org/2000/01/rdf-schema#comment> "An optional process that makes data discoverable and allows its findability through catalogs or metadata integration."@en .
+<https://w3id.org/dedl#Publishing> <http://www.w3.org/2000/01/rdf-schema#label> "Publishing"@en .
+# 
+# https://w3id.org/dedl#Reference
+<https://w3id.org/dedl#Reference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Reference> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated since 1.0.0. In the DEDL information model, Reference is the type of attributes that point to another object by its id, e.g. inDataEcosystem or byDataEcosystem. In RDF, these references are object properties that point directly to the IRI of the target, so the class is no longer needed."@en .
+<https://w3id.org/dedl#Reference> <http://www.w3.org/2000/01/rdf-schema#label> "Reference"@en .
+<https://w3id.org/dedl#Reference> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/dedl#RunTimeEnvironment
+<https://w3id.org/dedl#RunTimeEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#RunTimeEnvironment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#RunTimeEnvironment> <http://www.w3.org/2000/01/rdf-schema#comment> "An infrastructure required for executing services within a data ecosystem, providing the necessary computing resources."@en .
+<https://w3id.org/dedl#RunTimeEnvironment> <http://www.w3.org/2000/01/rdf-schema#label> "RunTimeEnvironment"@en .
+# 
+# https://w3id.org/dedl#Service
+<https://w3id.org/dedl#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#Service> <http://www.w3.org/2000/01/rdf-schema#comment> "A service developed to address specific needs within a data ecosystem, often involving data processing or visualization."@en .
+<https://w3id.org/dedl#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en .
+# 
+# https://w3id.org/dedl#ServiceExecuting
+<https://w3id.org/dedl#ServiceExecuting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#ServiceExecuting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Transacting> .
+<https://w3id.org/dedl#ServiceExecuting> <http://www.w3.org/2000/01/rdf-schema#comment> "A  subclass of Transaction representing the process that enables third-party services execution to generate additional value from the managed data in a data ecosystem."@en .
+<https://w3id.org/dedl#ServiceExecuting> <http://www.w3.org/2000/01/rdf-schema#label> "ServiceExecuting"@en .
+# 
+# https://w3id.org/dedl#Status
+<https://w3id.org/dedl#Status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Status> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#oneOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/dedl#UPDATE> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/dedl#MAINTENANCE> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/dedl#INACTIVE> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/dedl#ERROR> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/dedl#ACTIVE> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Status> <http://www.w3.org/2000/01/rdf-schema#comment> "Enumeration of possible status values for an element."@en .
+<https://w3id.org/dedl#Status> <http://www.w3.org/2000/01/rdf-schema#label> "Status"@en .
+# 
+# https://w3id.org/dedl#Storage
+<https://w3id.org/dedl#Storage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Storage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#TechnicalDataEcosystemElement> .
+<https://w3id.org/dedl#Storage> <http://www.w3.org/2000/01/rdf-schema#comment> "A component where various types of information are stored in a data ecosystem."@en .
+<https://w3id.org/dedl#Storage> <http://www.w3.org/2000/01/rdf-schema#label> "Storage"@en .
+# 
+# https://w3id.org/dedl#TechnicalDataEcosystemElement
+<https://w3id.org/dedl#TechnicalDataEcosystemElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#TechnicalDataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#DataEcosystemElement> .
+<https://w3id.org/dedl#TechnicalDataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/dedl#Participant> .
+_:genid31 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/dedl#operatedBy> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/dedl#TechnicalDataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of DataEcosystemElement focused on technical components necessary for the operation of a data ecosystem."@en .
+<https://w3id.org/dedl#TechnicalDataEcosystemElement> <http://www.w3.org/2000/01/rdf-schema#label> "TechnicalDataEcosystemElement"@en .
+# 
+# https://w3id.org/dedl#Transacting
+<https://w3id.org/dedl#Transacting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dedl#Transacting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dedl#Process> .
+<https://w3id.org/dedl#Transacting> <http://www.w3.org/2000/01/rdf-schema#comment> "A mandatory process that enables the exchange or transfer of data or other resources between Participants within a data ecosystem."@en .
+<https://w3id.org/dedl#Transacting> <http://www.w3.org/2000/01/rdf-schema#label> "Transacting"@en .
+# 
+# https://w3id.org/didl#Identity
+<https://w3id.org/didl#Identity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/didl#Identity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/didl> .
+# 
+# https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource
+<https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://www.irit.fr/recherches/MELODI/ontologies/BBO#Expression
+<https://www.irit.fr/recherches/MELODI/ontologies/BBO#Expression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.irit.fr/recherches/MELODI/ontologies/BBO#Expression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.irit.fr/recherches/MELODI/ontologies/BBO> .
+# 
+# https://www.irit.fr/recherches/MELODI/ontologies/BBO#InputSet
+<https://www.irit.fr/recherches/MELODI/ontologies/BBO#InputSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.irit.fr/recherches/MELODI/ontologies/BBO#InputSet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.irit.fr/recherches/MELODI/ontologies/BBO> .
+# 
+# https://www.irit.fr/recherches/MELODI/ontologies/BBO#Process
+<https://www.irit.fr/recherches/MELODI/ontologies/BBO#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.irit.fr/recherches/MELODI/ontologies/BBO#Process> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.irit.fr/recherches/MELODI/ontologies/BBO> .
+# 
+# https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task
+<https://www.irit.fr/recherches/MELODI/ontologies/BBO#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://www.w3.org/2019/wot/json-schema#DataSchema
+<https://www.w3.org/2019/wot/json-schema#DataSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/2019/wot/json-schema#DataSchema> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/2019/wot/json-schema> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/dedl#ABAC
+<https://w3id.org/dedl#ABAC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#ABAC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AccessControlModel> .
+<https://w3id.org/dedl#ABAC> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribute-based Access Control model, relying on attributes to define permissions."@en .
+<https://w3id.org/dedl#ABAC> <http://www.w3.org/2000/01/rdf-schema#label> "ABAC"@en .
+# 
+# https://w3id.org/dedl#ACP
+<https://w3id.org/dedl#ACP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#ACP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#PolicyLanguage> .
+<https://w3id.org/dedl#ACP> <http://www.w3.org/2000/01/rdf-schema#comment> "Access control policy language (ACP), a particular set of grammar, syntax rules (logical and mathematical), and operators which provides an abstraction-layer for access control policy specifications, see https://solid.github.io/authorization-panel/acp-specification/"@en .
+<https://w3id.org/dedl#ACP> <http://www.w3.org/2000/01/rdf-schema#label> "ACP"@en .
+# 
+# https://w3id.org/dedl#ACTIVE
+<https://w3id.org/dedl#ACTIVE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#ACTIVE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#Status> .
+<https://w3id.org/dedl#ACTIVE> <http://www.w3.org/2000/01/rdf-schema#comment> "Active status."@en .
+<https://w3id.org/dedl#ACTIVE> <http://www.w3.org/2000/01/rdf-schema#label> "ACTIVE"@en .
+# 
+# https://w3id.org/dedl#Allow
+<https://w3id.org/dedl#Allow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Allow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#Decision> .
+<https://w3id.org/dedl#Allow> <http://www.w3.org/2000/01/rdf-schema#comment> "A Decision indicating that access is permitted."@en .
+<https://w3id.org/dedl#Allow> <http://www.w3.org/2000/01/rdf-schema#label> "Allow"@en .
+# 
+# https://w3id.org/dedl#Base64Url
+<https://w3id.org/dedl#Base64Url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Base64Url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#ParameterEncoding> .
+<https://w3id.org/dedl#Base64Url> <http://www.w3.org/2000/01/rdf-schema#comment> "A ParameterEncoding requiring the value to be base64url-encoded without padding, as the Asset Administration Shell API does for identifiers carried in a path."@en .
+<https://w3id.org/dedl#Base64Url> <http://www.w3.org/2000/01/rdf-schema#label> "Base64Url"@en .
+# 
+# https://w3id.org/dedl#Bearer
+<https://w3id.org/dedl#Bearer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Bearer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationScheme> .
+<https://w3id.org/dedl#Bearer> <http://www.w3.org/2000/01/rdf-schema#comment> "An AuthenticationScheme in which a previously obtained access token is sent in the Authorization header."@en .
+<https://w3id.org/dedl#Bearer> <http://www.w3.org/2000/01/rdf-schema#label> "Bearer"@en .
+# 
+# https://w3id.org/dedl#Behavior
+<https://w3id.org/dedl#Behavior> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Behavior> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationRiskContext> .
+<https://w3id.org/dedl#Behavior> <http://www.w3.org/2000/01/rdf-schema#comment> "A context factor reflecting user behavioral patterns (e.g., keystroke dynamics)."@en .
+<https://w3id.org/dedl#Behavior> <http://www.w3.org/2000/01/rdf-schema#label> "Behavior"@en .
+# 
+# https://w3id.org/dedl#CapBAC
+<https://w3id.org/dedl#CapBAC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#CapBAC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AccessControlModel> .
+<https://w3id.org/dedl#CapBAC> <http://www.w3.org/2000/01/rdf-schema#comment> "Capability-based Access Control relying on tokens or 'capabilities' to grant permissions."@en .
+<https://w3id.org/dedl#CapBAC> <http://www.w3.org/2000/01/rdf-schema#label> "CapBAC"@en .
+# 
+# https://w3id.org/dedl#ClientCredentials
+<https://w3id.org/dedl#ClientCredentials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#ClientCredentials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationScheme> .
+<https://w3id.org/dedl#ClientCredentials> <http://www.w3.org/2000/01/rdf-schema#comment> "An AuthenticationScheme in which client id and client secret are sent to obtain a token; the credentials are part of the request body rather than a header."@en .
+<https://w3id.org/dedl#ClientCredentials> <http://www.w3.org/2000/01/rdf-schema#label> "ClientCredentials"@en .
+# 
+# https://w3id.org/dedl#Cryptography
+<https://w3id.org/dedl#Cryptography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Cryptography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationProtocol> .
+<https://w3id.org/dedl#Cryptography> <http://www.w3.org/2000/01/rdf-schema#comment> "An authentication protocol leveraging cryptographic techniques to prove identity."@en .
+<https://w3id.org/dedl#Cryptography> <http://www.w3.org/2000/01/rdf-schema#label> "Cryptography"@en .
+# 
+# https://w3id.org/dedl#DAC
+<https://w3id.org/dedl#DAC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#DAC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AccessControlModel> .
+<https://w3id.org/dedl#DAC> <http://www.w3.org/2000/01/rdf-schema#comment> "Discretionary Access Control, where resource owners grant or deny permissions."@en .
+<https://w3id.org/dedl#DAC> <http://www.w3.org/2000/01/rdf-schema#label> "DAC"@en .
+# 
+# https://w3id.org/dedl#Deny
+<https://w3id.org/dedl#Deny> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Deny> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#Decision> .
+<https://w3id.org/dedl#Deny> <http://www.w3.org/2000/01/rdf-schema#comment> "A Decision indicating that access is refused."@en .
+<https://w3id.org/dedl#Deny> <http://www.w3.org/2000/01/rdf-schema#label> "Deny"@en .
+# 
+# https://w3id.org/dedl#Device
+<https://w3id.org/dedl#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationRiskContext> .
+<https://w3id.org/dedl#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "A factor in the authentication risk context indicating the device used for login."@en .
+<https://w3id.org/dedl#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device"@en .
+# 
+# https://w3id.org/dedl#ERROR
+<https://w3id.org/dedl#ERROR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#ERROR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#Status> .
+<https://w3id.org/dedl#ERROR> <http://www.w3.org/2000/01/rdf-schema#comment> "Error status indicating a failure or problem."@en .
+<https://w3id.org/dedl#ERROR> <http://www.w3.org/2000/01/rdf-schema#label> "ERROR"@en .
+# 
+# https://w3id.org/dedl#Geolocation
+<https://w3id.org/dedl#Geolocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Geolocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationRiskContext> .
+<https://w3id.org/dedl#Geolocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A factor in the authentication risk context representing physical or network location."@en .
+<https://w3id.org/dedl#Geolocation> <http://www.w3.org/2000/01/rdf-schema#label> "Geolocation"@en .
+# 
+# https://w3id.org/dedl#Header
+<https://w3id.org/dedl#Header> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Header> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#HttpLocation> .
+<https://w3id.org/dedl#Header> <http://www.w3.org/2000/01/rdf-schema#comment> "An HttpLocation indicating that the parameter is carried in an HTTP header."@en .
+<https://w3id.org/dedl#Header> <http://www.w3.org/2000/01/rdf-schema#label> "Header"@en .
+# 
+# https://w3id.org/dedl#HybridArchitecture
+<https://w3id.org/dedl#HybridArchitecture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#HybridArchitecture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthorizationArchitecture> .
+<https://w3id.org/dedl#HybridArchitecture> <http://www.w3.org/2000/01/rdf-schema#comment> "An AuthorizationArchitecture combining policy-based and token-based architecture"@en .
+<https://w3id.org/dedl#HybridArchitecture> <http://www.w3.org/2000/01/rdf-schema#label> "HybridArchitecture"@en .
+# 
+# https://w3id.org/dedl#INACTIVE
+<https://w3id.org/dedl#INACTIVE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#INACTIVE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#Status> .
+<https://w3id.org/dedl#INACTIVE> <http://www.w3.org/2000/01/rdf-schema#comment> "Inactive status."@en .
+<https://w3id.org/dedl#INACTIVE> <http://www.w3.org/2000/01/rdf-schema#label> "INACTIVE"@en .
+# 
+# https://w3id.org/dedl#Kerberos
+<https://w3id.org/dedl#Kerberos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Kerberos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationProtocol> .
+<https://w3id.org/dedl#Kerberos> <http://www.w3.org/2000/01/rdf-schema#comment> "A protocol using a trusted third-party ticket-granting service for authentication."@en .
+<https://w3id.org/dedl#Kerberos> <http://www.w3.org/2000/01/rdf-schema#label> "Kerberos"@en .
+# 
+# https://w3id.org/dedl#LDAP
+<https://w3id.org/dedl#LDAP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#LDAP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationProtocol> .
+<https://w3id.org/dedl#LDAP> <http://www.w3.org/2000/01/rdf-schema#comment> "Lightweight Directory Access Protocol, often used to manage authentication data in directories."@en .
+<https://w3id.org/dedl#LDAP> <http://www.w3.org/2000/01/rdf-schema#label> "LDAP"@en .
+# 
+# https://w3id.org/dedl#MAC
+<https://w3id.org/dedl#MAC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#MAC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AccessControlModel> .
+<https://w3id.org/dedl#MAC> <http://www.w3.org/2000/01/rdf-schema#comment> "Mandatory Access Control, where policies are enforced by a central authority."@en .
+<https://w3id.org/dedl#MAC> <http://www.w3.org/2000/01/rdf-schema#label> "MAC"@en .
+# 
+# https://w3id.org/dedl#MAINTENANCE
+<https://w3id.org/dedl#MAINTENANCE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#MAINTENANCE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#Status> .
+<https://w3id.org/dedl#MAINTENANCE> <http://www.w3.org/2000/01/rdf-schema#comment> "Maintenance status indicating planned or ongoing maintenance."@en .
+<https://w3id.org/dedl#MAINTENANCE> <http://www.w3.org/2000/01/rdf-schema#label> "MAINTENANCE"@en .
+# 
+# https://w3id.org/dedl#MPEG-21
+<https://w3id.org/dedl#MPEG-21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#MPEG-21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#PolicyLanguage> .
+<https://w3id.org/dedl#MPEG-21> <http://www.w3.org/2000/01/rdf-schema#comment> "A digital rights management and usage rights framework which can serve as a policy language."@en .
+<https://w3id.org/dedl#MPEG-21> <http://www.w3.org/2000/01/rdf-schema#label> "MPEG-21"@en .
+# 
+# https://w3id.org/dedl#MultiFactor
+<https://w3id.org/dedl#MultiFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#MultiFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationFactor> .
+<https://w3id.org/dedl#MultiFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "An authentication factor requiring two or more independent credentials."@en .
+<https://w3id.org/dedl#MultiFactor> <http://www.w3.org/2000/01/rdf-schema#label> "MultiFactor"@en .
+# 
+# https://w3id.org/dedl#Negotiate
+<https://w3id.org/dedl#Negotiate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Negotiate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthorizationPattern> .
+<https://w3id.org/dedl#Negotiate> <http://www.w3.org/2000/01/rdf-schema#comment> "An authorization pattern in which the parties negotiate or exchange data before access is decided."@en .
+<https://w3id.org/dedl#Negotiate> <http://www.w3.org/2000/01/rdf-schema#label> "Negotiate"@en .
+# 
+# https://w3id.org/dedl#OBAC
+<https://w3id.org/dedl#OBAC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#OBAC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AccessControlModel> .
+<https://w3id.org/dedl#OBAC> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology-based Access Control focusing on contextual policy enforcement"@en .
+<https://w3id.org/dedl#OBAC> <http://www.w3.org/2000/01/rdf-schema#label> "OBAC"@en .
+# 
+# https://w3id.org/dedl#ODRL
+<https://w3id.org/dedl#ODRL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#ODRL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#PolicyLanguage> .
+<https://w3id.org/dedl#ODRL> <http://www.w3.org/2000/01/rdf-schema#comment> "Open Digital Rights Language, commonly used to specify rights, constraints, and obligations."@en .
+<https://w3id.org/dedl#ODRL> <http://www.w3.org/2000/01/rdf-schema#label> "ODRL"@en .
+# 
+# https://w3id.org/dedl#OIDC
+<https://w3id.org/dedl#OIDC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#OIDC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationProtocol> .
+<https://w3id.org/dedl#OIDC> <http://www.w3.org/2000/01/rdf-schema#comment> "OpenID Connect, a simple identity layer built on OAuth 2.0 used for single sign-on."@en .
+<https://w3id.org/dedl#OIDC> <http://www.w3.org/2000/01/rdf-schema#label> "OIDC"@en .
+# 
+# https://w3id.org/dedl#OneWay
+<https://w3id.org/dedl#OneWay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#OneWay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationPattern> .
+<https://w3id.org/dedl#OneWay> <http://www.w3.org/2000/01/rdf-schema#comment> "A one-directional authentication pattern, typically a client proving its identity to a server."@en .
+<https://w3id.org/dedl#OneWay> <http://www.w3.org/2000/01/rdf-schema#label> "OneWay"@en .
+# 
+# https://w3id.org/dedl#OrBAC
+<https://w3id.org/dedl#OrBAC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#OrBAC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AccessControlModel> .
+<https://w3id.org/dedl#OrBAC> <http://www.w3.org/2000/01/rdf-schema#comment> "Organization-based Access Control, focusing on roles and contexts within an organization."@en .
+<https://w3id.org/dedl#OrBAC> <http://www.w3.org/2000/01/rdf-schema#label> "OrBAC"@en .
+# 
+# https://w3id.org/dedl#Path
+<https://w3id.org/dedl#Path> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Path> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#HttpLocation> .
+<https://w3id.org/dedl#Path> <http://www.w3.org/2000/01/rdf-schema#comment> "An HttpLocation indicating that the parameter is substituted into a placeholder of the endpoint path."@en .
+<https://w3id.org/dedl#Path> <http://www.w3.org/2000/01/rdf-schema#label> "Path"@en .
+# 
+# https://w3id.org/dedl#PolicyBasedArchitecture
+<https://w3id.org/dedl#PolicyBasedArchitecture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#PolicyBasedArchitecture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthorizationArchitecture> .
+<https://w3id.org/dedl#PolicyBasedArchitecture> <http://www.w3.org/2000/01/rdf-schema#comment> "An AuthorizationArchitecture where authorization relies on evaluating formalized policies."@en .
+<https://w3id.org/dedl#PolicyBasedArchitecture> <http://www.w3.org/2000/01/rdf-schema#label> "PolicyBasedArchitecture"@en .
+# 
+# https://w3id.org/dedl#Poll
+<https://w3id.org/dedl#Poll> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Poll> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthorizationPattern> .
+<https://w3id.org/dedl#Poll> <http://www.w3.org/2000/01/rdf-schema#comment> "An authorization pattern in which a client periodically checks the server for an access decision."@en .
+<https://w3id.org/dedl#Poll> <http://www.w3.org/2000/01/rdf-schema#label> "Poll"@en .
+# 
+# https://w3id.org/dedl#Ponder
+<https://w3id.org/dedl#Ponder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Ponder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#PolicyLanguage> .
+<https://w3id.org/dedl#Ponder> <http://www.w3.org/2000/01/rdf-schema#comment> "A policy specification language for security and management in distributed systems."@en .
+<https://w3id.org/dedl#Ponder> <http://www.w3.org/2000/01/rdf-schema#label> "Ponder"@en .
+# 
+# https://w3id.org/dedl#Push
+<https://w3id.org/dedl#Push> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Push> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthorizationPattern> .
+<https://w3id.org/dedl#Push> <http://www.w3.org/2000/01/rdf-schema#comment> "An authorization pattern in which the server proactively notifies the client about decisions."@en .
+<https://w3id.org/dedl#Push> <http://www.w3.org/2000/01/rdf-schema#label> "Push"@en .
+# 
+# https://w3id.org/dedl#RBAC
+<https://w3id.org/dedl#RBAC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#RBAC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AccessControlModel> .
+<https://w3id.org/dedl#RBAC> <http://www.w3.org/2000/01/rdf-schema#comment> "Role-based Access Control, assigning permissions to roles which are then assigned to users."@en .
+<https://w3id.org/dedl#RBAC> <http://www.w3.org/2000/01/rdf-schema#label> "RBAC"@en .
+# 
+# https://w3id.org/dedl#Rego
+<https://w3id.org/dedl#Rego> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Rego> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#PolicyLanguage> .
+<https://w3id.org/dedl#Rego> <http://www.w3.org/2000/01/rdf-schema#comment> "A declarative policy language used with Open Policy Agent (OPA) to define fine-grained permissions."@en .
+<https://w3id.org/dedl#Rego> <http://www.w3.org/2000/01/rdf-schema#label> "Rego"@en .
+# 
+# https://w3id.org/dedl#RightsML
+<https://w3id.org/dedl#RightsML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#RightsML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#PolicyLanguage> .
+<https://w3id.org/dedl#RightsML> <http://www.w3.org/2000/01/rdf-schema#comment> "An ODRL-based language for expressing rights and usage constraints, common in news/media."@en .
+<https://w3id.org/dedl#RightsML> <http://www.w3.org/2000/01/rdf-schema#label> "RightsML"@en .
+# 
+# https://w3id.org/dedl#SAML_2.0
+<https://w3id.org/dedl#SAML_2.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#SAML_2.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationProtocol> .
+<https://w3id.org/dedl#SAML_2.0> <http://www.w3.org/2000/01/rdf-schema#comment> "Security Assertion Markup Language (2.0), exchanging authentication and authorization data."@en .
+<https://w3id.org/dedl#SAML_2.0> <http://www.w3.org/2000/01/rdf-schema#label> "SAML2.0"@en .
+# 
+# https://w3id.org/dedl#Signature
+<https://w3id.org/dedl#Signature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Signature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationProtocol> .
+<https://w3id.org/dedl#Signature> <http://www.w3.org/2000/01/rdf-schema#comment> "An authentication protocol relying on digital signatures for verification."@en .
+<https://w3id.org/dedl#Signature> <http://www.w3.org/2000/01/rdf-schema#label> "Signature"@en .
+# 
+# https://w3id.org/dedl#SingleFactor
+<https://w3id.org/dedl#SingleFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#SingleFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationFactor> .
+<https://w3id.org/dedl#SingleFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "An authentication factor using only one method of verification (e.g., a single password)."@en .
+<https://w3id.org/dedl#SingleFactor> <http://www.w3.org/2000/01/rdf-schema#label> "SingleFactor"@en .
+# 
+# https://w3id.org/dedl#ThreeWay
+<https://w3id.org/dedl#ThreeWay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#ThreeWay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationPattern> .
+<https://w3id.org/dedl#ThreeWay> <http://www.w3.org/2000/01/rdf-schema#comment> "An authentication pattern based on a three-part handshake or three-step verification."@en .
+<https://w3id.org/dedl#ThreeWay> <http://www.w3.org/2000/01/rdf-schema#label> "ThreeWay"@en .
+# 
+# https://w3id.org/dedl#Time-based
+<https://w3id.org/dedl#Time-based> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#Time-based> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationRiskContext> .
+<https://w3id.org/dedl#Time-based> <http://www.w3.org/2000/01/rdf-schema#comment> "A context factor referencing time-sensitive credentials or restrictions (e.g., OTPs)."@en .
+<https://w3id.org/dedl#Time-based> <http://www.w3.org/2000/01/rdf-schema#label> "TimeBased"@en .
+# 
+# https://w3id.org/dedl#TokenBasedArchitecture
+<https://w3id.org/dedl#TokenBasedArchitecture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#TokenBasedArchitecture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthorizationArchitecture> .
+<https://w3id.org/dedl#TokenBasedArchitecture> <http://www.w3.org/2000/01/rdf-schema#comment> "An authorization architecture using tokens (e.g., JWT)"@en .
+<https://w3id.org/dedl#TokenBasedArchitecture> <http://www.w3.org/2000/01/rdf-schema#label> "TokenBasedArchitecture"@en .
+# 
+# https://w3id.org/dedl#TwoWay
+<https://w3id.org/dedl#TwoWay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#TwoWay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationPattern> .
+<https://w3id.org/dedl#TwoWay> <http://www.w3.org/2000/01/rdf-schema#comment> "A mutual authentication pattern in which both parties verify each other's identity."@en .
+<https://w3id.org/dedl#TwoWay> <http://www.w3.org/2000/01/rdf-schema#label> "TwoWay"@en .
+# 
+# https://w3id.org/dedl#UPDATE
+<https://w3id.org/dedl#UPDATE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#UPDATE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#Status> .
+<https://w3id.org/dedl#UPDATE> <http://www.w3.org/2000/01/rdf-schema#comment> "Update status indicating an ongoing update."@en .
+<https://w3id.org/dedl#UPDATE> <http://www.w3.org/2000/01/rdf-schema#label> "UPDATE"@en .
+# 
+# https://w3id.org/dedl#WebAuth
+<https://w3id.org/dedl#WebAuth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#WebAuth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#AuthenticationProtocol> .
+<https://w3id.org/dedl#WebAuth> <http://www.w3.org/2000/01/rdf-schema#comment> "A web-based authentication protocol, encompassing flows like OAuth, SAML, or WebAuthn."@en .
+<https://w3id.org/dedl#WebAuth> <http://www.w3.org/2000/01/rdf-schema#label> "WebAuth"@en .
+# 
+# https://w3id.org/dedl#XACMLPolicyLanguage
+<https://w3id.org/dedl#XACMLPolicyLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dedl#XACMLPolicyLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/dedl#PolicyLanguage> .
+<https://w3id.org/dedl#XACMLPolicyLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "An OASIS standard policy language for defining access control rules (XACML framework)."@en .
+<https://w3id.org/dedl#XACMLPolicyLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "XACMLPolicyLanguage"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://orcid.org/0000-0001-5970-6954> <http://www.w3.org/2000/01/rdf-schema#label> "Jiahang Chen" .
+<https://orcid.org/0000-0001-5970-6954> <https://schema.org/affiliation> <https://www.mmi.rwth-aachen.de/> .
+<https://orcid.org/0000-0001-5970-6954> <https://schema.org/email> "chen@mmi.rwth-aachen.de" .
+# 
+<https://orcid.org/0009-0002-5632-5464> <http://www.w3.org/2000/01/rdf-schema#label> "Lennart Klöpper" .
+<https://orcid.org/0009-0002-5632-5464> <https://schema.org/affiliation> <https://www.mmi.rwth-aachen.de/> .
+<https://orcid.org/0009-0002-5632-5464> <https://schema.org/email> "kloepper@mmi.rwth-aachen.de" .
+# 
+<https://www.mmi.rwth-aachen.de/> <http://www.w3.org/2000/01/rdf-schema#label> "MMI, RWTH Aachen University" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

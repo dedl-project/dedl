@@ -1,0 +1,1738 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/dedl#"
+     xml:base="https://w3id.org/dedl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/">
+    <owl:Ontology rdf:about="https://w3id.org/dedl">
+        <dc:creator xml:lang="en">Jiahang Chen</dc:creator>
+        <dc:creator xml:lang="en">Lennart Klöpper</dc:creator>
+        <dc:title xml:lang="en">DEDL Vocabulary &amp; Expression 0.1</dc:title>
+        <terms:abstract xml:lang="en">The Data Ecosystem Description Language (DEDL) is an abstract language to describe concepts of data ecosystems, in which different participants (i.e., organizations and individuals) share data and generate value as the primary aim.</terms:abstract>
+        <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
+        <rdfs:comment xml:lang="en">This is a vocabulary for DEDL version 0.1</rdfs:comment>
+        <rdfs:label xml:lang="en">DEDL</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+        <schema:affiliation>MMI, RWTH Aachen University</schema:affiliation>
+        <schema:email>chen@mmi.rwth-aachen.de</schema:email>
+        <schema:email>kloepper@mmi.rwth-aachen.de</schema:email>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- https://schema.org/affiliation -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/affiliation"/>
+    
+
+
+    <!-- https://schema.org/email -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/email"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/dedl#accessControlModel -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#accessControlModel">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Policy"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#AccessControlModel"/>
+        <rdfs:comment xml:lang="en">Associates a Policy with its AccessControlModel to define and enforce resource access rules.</rdfs:comment>
+        <rdfs:label xml:lang="en">accessControlModel</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#authenticationFactor -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#authenticationFactor">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Authenticator"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#AuthenticationFactor"/>
+        <rdfs:comment xml:lang="en">Indicates the AuthenticationFactor that an Authenticator uses.</rdfs:comment>
+        <rdfs:label xml:lang="en">authenticationFactor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#authenticationProcess -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#authenticationProcess">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Authenticator"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#Authentication"/>
+        <rdfs:comment xml:lang="en">Links an Authenticator to the authentication process used for identity verification.</rdfs:comment>
+        <rdfs:label xml:lang="en">authenticationProcess</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#authenticationProtocol -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#authenticationProtocol">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Authenticator"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#AuthenticationProtocol"/>
+        <rdfs:comment xml:lang="en">Specifies the AuthenticationProtocol an Authenticator follows.</rdfs:comment>
+        <rdfs:label xml:lang="en">authenticationProtocol</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#authenticationRiskContext -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#authenticationRiskContext">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Authenticator"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#AuthenticationRiskContext"/>
+        <rdfs:comment xml:lang="en">Associates an Authenticator with contextual factors that influence authentication risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">authenticationRiskContext</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#authorizationArchitecture -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#authorizationArchitecture">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Authorizator"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#AuthorizationArchitecture"/>
+        <rdfs:comment xml:lang="en">Specifies the AuthorizationArchitecture used by an Authorizator.</rdfs:comment>
+        <rdfs:label xml:lang="en">authorizationArchitecture</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#authorizationProcess -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#authorizationProcess">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Authorizator"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#Authorization"/>
+        <rdfs:comment xml:lang="en">Indicates the authorization process followed by an Authorizator.</rdfs:comment>
+        <rdfs:label xml:lang="en">authorizationProcess</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#byDataEcosystem -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#byDataEcosystem">
+        <owl:inverseOf rdf:resource="https://w3id.org/dedl#process"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Process"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#DataEcosystem"/>
+        <rdfs:comment xml:lang="en">Indicates the Process belonging to a DataEcosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">byDataEcosystem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#composedOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#composedOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/dedl#partOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#DataEcosystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#DataEcosystem"/>
+        <rdfs:comment xml:lang="en">Indicates if the data ecosystem consists of multiple data ecosystem</rdfs:comment>
+        <rdfs:label xml:lang="en">composedOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#correspondsToDataProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#correspondsToDataProperty">
+        <rdfs:domain rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:comment xml:lang="en">Associates a BBO:DataResource with an expected Property in another vocabulary (e.g. schema:legalName).</rdfs:comment>
+        <rdfs:label xml:lang="en">correspondsToDataProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#correspondsToThing -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#correspondsToThing">
+        <rdfs:domain rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Associates a BBO:DataResource with an expected Thing/Class in another vocabulary (e.g. vc:VerifiableCredential).</rdfs:comment>
+        <rdfs:label xml:lang="en">correspondsToThing</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#dataFlowIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#dataFlowIn">
+        <owl:inverseOf rdf:resource="https://w3id.org/dedl#dataFlowOut"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#DataEcosystemElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#DataEcosystemElement"/>
+        <rdfs:comment xml:lang="en">Links elements by specifying where data is sent.</rdfs:comment>
+        <rdfs:label xml:lang="en">dataFlowIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#dataFlowOut -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#dataFlowOut">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#DataEcosystemElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#DataEcosystemElement"/>
+        <rdfs:comment xml:lang="en">Links elements by specifying where data is received from.</rdfs:comment>
+        <rdfs:label xml:lang="en">dataFlowOut</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#entity -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#entity">
+        <owl:inverseOf rdf:resource="https://w3id.org/dedl#inParticipant"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#Entity"/>
+        <rdfs:comment xml:lang="en">Associates a Participant with a particular Entity in the data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">entity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#hasEndpoint -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#hasEndpoint">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Service"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#Endpoint"/>
+        <rdfs:comment xml:lang="en">Associates a Service with an Endpoint resource that contains connection details (URL, method, auth, etc.).</rdfs:comment>
+        <rdfs:label xml:lang="en">hasEndpoint</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#identity -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#identity">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Entity"/>
+        <rdfs:range rdf:resource="https://w3id.org/didl#Identity"/>
+        <rdfs:comment xml:lang="en">Indicates the Identity belonging to an Entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">identity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#inDataEcosystem -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#inDataEcosystem">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#DataEcosystemElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#DataEcosystem"/>
+        <rdfs:comment xml:lang="en">Indicates the DataEcosystemElement belonging to a DataEcosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">inDataEcosystem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#inParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#inParticipant">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Entity"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#Participant"/>
+        <rdfs:comment xml:lang="en">Indicates the Entity belonging to a Participant.</rdfs:comment>
+        <rdfs:label xml:lang="en">inParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#memberOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#memberOf">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Individual"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#Organization"/>
+        <rdfs:comment xml:lang="en">Links an Individual to an Organization.</rdfs:comment>
+        <rdfs:label xml:lang="en">memberOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#operatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#operatedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/dedl#operates"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#TechnicalDataEcosystemElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#Participant"/>
+        <rdfs:comment xml:lang="en">Indicates the Participant operating a TechnicalDataEcosystemElement (inverse of operates).</rdfs:comment>
+        <rdfs:label xml:lang="en">operatedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#operates -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#operates">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#TechnicalDataEcosystemElement"/>
+        <rdfs:comment xml:lang="en">Specifies an operator of a TechnicalDataEcosystemElement.</rdfs:comment>
+        <rdfs:label xml:lang="en">operates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#operator -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#operator">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#DataEcosystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#Participant"/>
+        <rdfs:comment xml:lang="en">Specifies an operator of a DataEcosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">operator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#partOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#partOf">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#DataEcosystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#DataEcosystem"/>
+        <rdfs:comment xml:lang="en">Indicates if the data ecosystem is part of another data ecosystem</rdfs:comment>
+        <rdfs:label xml:lang="en">partOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#participant -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#participant">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#DataEcosystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#Participant"/>
+        <rdfs:comment xml:lang="en">Specifies a participant within a DataEcosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#policy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#policy">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Entity"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#Policy"/>
+        <rdfs:comment xml:lang="en">Links an Entity to a Policy governing its usage or access rights.</rdfs:comment>
+        <rdfs:label xml:lang="en">policy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#policyLanguage -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#policyLanguage">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Policy"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#PolicyLanguage"/>
+        <rdfs:comment xml:lang="en">Specifies the PolicyLanguage used to express or encode a Policy.</rdfs:comment>
+        <rdfs:label xml:lang="en">policyLanguage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#process -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#process">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#DataEcosystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#Process"/>
+        <rdfs:comment xml:lang="en">Associates a DataEcosystem with a particular Process.</rdfs:comment>
+        <rdfs:label xml:lang="en">process</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#status -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#status">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#TechnicalDataEcosystemElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#Status"/>
+        <rdfs:comment xml:lang="en">Associates TechnicalDataEcosystemElement with their current state-</rdfs:comment>
+        <rdfs:label xml:lang="en">status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#technicalDataEcosystemElement -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#technicalDataEcosystemElement">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#DataEcosystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#TechnicalDataEcosystemElement"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">technicalDataEcosystemElement</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">composedBy (Oliveira)</rdfs:seeAlso>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#usedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#usedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/dedl#uses"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#TechnicalDataEcosystemElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#Participant"/>
+        <rdfs:comment xml:lang="en">Indicates the Participant using a TechnicalDataEcosystemElement (inverse of uses).</rdfs:comment>
+        <rdfs:label xml:lang="en">usedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#uses -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dedl#uses">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/dedl#TechnicalDataEcosystemElement"/>
+        <rdfs:comment xml:lang="en">Specifies a user of a TechnicalDataEcosystemElement.</rdfs:comment>
+        <rdfs:label xml:lang="en">uses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/dedl#authMethod -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/dedl#authMethod">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Endpoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Authentication method or scheme (e.g., OAuth2, APIKey).</rdfs:comment>
+        <rdfs:label xml:lang="en">authMethod</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#authRequired -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/dedl#authRequired">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Endpoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates whether authentication is required to call the endpoint.</rdfs:comment>
+        <rdfs:label xml:lang="en">authRequired</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#gaiaxTaCAccepted -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/dedl#gaiaxTaCAccepted">
+        <rdfs:domain rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates whether a Participant has accepted the Gaia-X Terms and Conditions.</rdfs:comment>
+        <rdfs:label xml:lang="en">gaiaxTaCAccepted</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/dedl#httpMethod -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/dedl#httpMethod">
+        <rdfs:domain rdf:resource="https://w3id.org/dedl#Endpoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">HTTP method used to call the endpoint (e.g., GET, POST).</rdfs:comment>
+        <rdfs:label xml:lang="en">httpMethod</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Property -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Class -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+    
+
+
+    <!-- https://w3id.org/dedl#API -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#API">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Interface"/>
+        <rdfs:comment xml:lang="en">Application Programming Interface; a subclass of Interface representing a set of protocols allowing different software entities to communicate within a data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">API</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#AccessControlModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#AccessControlModel">
+        <rdfs:comment xml:lang="en">A conceptual framework defining how access to resources is managed, granted, and restricted.</rdfs:comment>
+        <rdfs:label xml:lang="en">AccessControlModel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#AgreementStorage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#AgreementStorage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#PolicyStorage"/>
+        <rdfs:comment xml:lang="en">A subclass of PolicyStorage where concluded contracts are stored, ensuring that agreements between Participants are documented and accessible.</rdfs:comment>
+        <rdfs:label xml:lang="en">AgreementStorage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#AuditAndLogging -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#AuditAndLogging">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#TechnicalDataEcosystemElement"/>
+        <rdfs:comment xml:lang="en">A component responsible for documenting activities within a data ecosystem to ensure transparency.</rdfs:comment>
+        <rdfs:label xml:lang="en">AuditAndLogging</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Authentication -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Authentication">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Process"/>
+        <rdfs:comment xml:lang="en">A procedure or sequence of steps that verify the identity of a user or entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Authentication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#AuthenticationFactor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#AuthenticationFactor">
+        <rdfs:comment xml:lang="en">An element used to verify the identity of a user or entity (e.g. password, token, biometrics).</rdfs:comment>
+        <rdfs:label xml:lang="en">AuthenticationFactor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#AuthenticationProtocol -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#AuthenticationProtocol">
+        <rdfs:comment xml:lang="en">A specification of the interactions or steps used to perform authentication.</rdfs:comment>
+        <rdfs:label xml:lang="en">AuthenticationProtocol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#AuthenticationRiskContext -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#AuthenticationRiskContext">
+        <rdfs:comment xml:lang="en">Contextual attributes (time, location, device) that affect authentication risk levels.</rdfs:comment>
+        <rdfs:label xml:lang="en">AuthenticationRiskContext</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Authenticator -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Authenticator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#IdentityAndAccessManagement"/>
+        <rdfs:comment xml:lang="en">An Participant or component responsible for carrying out the authentication process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Authenticator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Authorization -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Authorization">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Process"/>
+        <rdfs:comment xml:lang="en">A method or set of steps determining if an entity may access a resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Authorization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#AuthorizationArchitecture -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#AuthorizationArchitecture">
+        <rdfs:comment xml:lang="en">A subclass of IdentityAndAccessManagement representing a structural framework that defines how authorization decisions are made and enforced.</rdfs:comment>
+        <rdfs:label xml:lang="en">AuthorizationArchitecture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Authorizator -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Authorizator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#IdentityAndAccessManagement"/>
+        <rdfs:comment xml:lang="en">A participant or component that assesses permissions and enforces authorization decisions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Authorizator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Base -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Base">
+        <rdfs:comment xml:lang="en">Base class defining various properties</rdfs:comment>
+        <rdfs:label xml:lang="en">Base</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Communication -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Communication">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#TechnicalDataEcosystemElement"/>
+        <rdfs:comment xml:lang="en">A mechanism through which participants in a data ecosystem exchange information and interact with each other.</rdfs:comment>
+        <rdfs:label xml:lang="en">Communication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#ContractAgreeing -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#ContractAgreeing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Negotiating"/>
+        <rdfs:comment xml:lang="en">A subclass of Negotiation representing the concluding process between data providers and consumers  when a policy is accepted by both parties and a contract is formed.</rdfs:comment>
+        <rdfs:label xml:lang="en">ContractAgreeing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#ContractOffering -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#ContractOffering">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Negotiating"/>
+        <rdfs:comment xml:lang="en">A subclass of Negotiating representing the process where data offers are made available to potential consumers.</rdfs:comment>
+        <rdfs:label xml:lang="en">ContractOffering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#ContractRequesting -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#ContractRequesting">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Negotiating"/>
+        <rdfs:comment xml:lang="en">A subclass of Negotiating representing the process where potential data consumers request specific conditions for the use or access of data.</rdfs:comment>
+        <rdfs:label xml:lang="en">ContractRequesting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#DataEcosystem -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#DataEcosystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Base"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/dedl#participant"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/dedl#Participant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/dedl#process"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/dedl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/dedl#technicalDataEcosystemElement"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/dedl#TechnicalDataEcosystemElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A socio-technical system in which participants share and manage data and associated processes.</rdfs:comment>
+        <rdfs:label xml:lang="en">DataEcosystem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#DataEcosystemElement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#DataEcosystemElement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Base"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/dedl#inDataEcosystem"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/dedl#DataEcosystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An element within a data ecosystem that contributes to its functionality and processes.</rdfs:comment>
+        <rdfs:label xml:lang="en">DataEcosystemElement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#DataExchanging -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#DataExchanging">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Transacting"/>
+        <rdfs:comment xml:lang="en">A subclass of Transaction that represents the process that facilitates the transfer of data within a data ecosystem between Participants.</rdfs:comment>
+        <rdfs:label xml:lang="en">DataExchanging</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#DataOffering -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#DataOffering">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Publishing"/>
+        <rdfs:comment xml:lang="en">A sublcass of Publishing representing the process where participants make their data available to others in the data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">DataOffering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#DataSpaceConnector -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#DataSpaceConnector">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Interface"/>
+        <rdfs:comment xml:lang="en">A subclass of Interface enabling secure and standardized interaction within data spaces (i.e., specialized realizations of data ecosystems).</rdfs:comment>
+        <rdfs:label xml:lang="en">DataSpaceConnector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#DataStorage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#DataStorage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Storage"/>
+        <rdfs:comment xml:lang="en">A subclass of Storage dedicated to string data within a data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">DataStorage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#DataStoring -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#DataStoring">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Publishing"/>
+        <rdfs:comment xml:lang="en">A subclass of Publishing representing the process that ensures datasets are stored securely, either centrally or decentrally, depending on the architecture of the data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">DataStoring</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Decision -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Decision">
+        <rdfs:comment xml:lang="en">An outcome regarding an authorization request, e.g. Allow or Deny.</rdfs:comment>
+        <rdfs:label xml:lang="en">Decision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Endpoint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Endpoint">
+        <rdfs:comment xml:lang="en">Represents a network endpoint (URL) and its operational metadata for a Service.</rdfs:comment>
+        <rdfs:label xml:lang="en">Endpoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Entity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Entity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Base"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/dedl#identity"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/didl#Identity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/dedl#policy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/dedl#Policy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Any identifiable object of a participant within the data ecosystem, e.g. a device or digital resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Finding -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Finding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Process"/>
+        <rdfs:comment xml:lang="en">An optional process that enables information or data to be found within a data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">Finding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#GUI -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#GUI">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Interface"/>
+        <rdfs:comment xml:lang="en">Graphical User Interface; a subclass of Interface representing an interface through which users can visually interact with components of a data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">GUI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#IdentityAndAccessManagement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#IdentityAndAccessManagement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#TechnicalDataEcosystemElement"/>
+        <rdfs:comment xml:lang="en">A framework ensuring that only authorized Participants have access to a data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">IdentityAndAccessManagement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#IdentityProvider -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#IdentityProvider">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#IdentityAndAccessManagement"/>
+        <rdfs:comment xml:lang="en">A subclass of IdentityAndAccessManagement representing a component responsible for managing digital identities, facilitating onboarding and offboarding processes in a data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">IdentityProvider</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Individual -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Individual">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Participant"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/dedl#Organization"/>
+        <rdfs:comment xml:lang="en">A subclass of Participant representing a legal person.</rdfs:comment>
+        <rdfs:label xml:lang="en">Individual</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Interface -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Interface">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#TechnicalDataEcosystemElement"/>
+        <rdfs:comment xml:lang="en">An access point for participants to join and interact within a data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">Interface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Negotiating -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Negotiating">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Process"/>
+        <rdfs:comment xml:lang="en">An optional process where participants discuss and agree on policies leading to contracts within a data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">Negotiating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Offboarding -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Offboarding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Process"/>
+        <rdfs:comment xml:lang="en">A mandatory process for removing participant identities from a data ecosystem ensuring compliance or voluntary exit.</rdfs:comment>
+        <rdfs:label xml:lang="en">Offboarding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#OfferStorage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#OfferStorage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#PolicyStorage"/>
+        <rdfs:comment xml:lang="en">A subclass of PolicyStorage where data offers are stored, allowing participants in a data ecosystem to publish and manage their available datasets or services.</rdfs:comment>
+        <rdfs:label xml:lang="en">OfferStorage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Onboarding -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Onboarding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Process"/>
+        <rdfs:comment xml:lang="en">A mandatory process that manages the creation of digital identities, enabling Participants to access a data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">Onboarding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Organization -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Organization">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Participant"/>
+        <rdfs:comment xml:lang="en">A subclass of Participant representing a legal entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Participant -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Participant">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#DataEcosystemElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/dedl#entity"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/dedl#Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A stakeholder participating in or operating the data ecosystem (either an Individual or Organization).</rdfs:comment>
+        <rdfs:label xml:lang="en">Participant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Policy -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Policy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Base"/>
+        <rdfs:comment xml:lang="en">A set of rules or guidelines that govern data usage, sharing, and access.</rdfs:comment>
+        <rdfs:label xml:lang="en">Policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#PolicyLanguage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#PolicyLanguage">
+        <rdfs:comment xml:lang="en">A formal language for defining and expressing policies.</rdfs:comment>
+        <rdfs:label xml:lang="en">PolicyLanguage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#PolicyStorage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#PolicyStorage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Storage"/>
+        <rdfs:comment xml:lang="en">A subclass of storage that stores the conditions under which access to resources in a data ecosystem is granted and how they may be used.</rdfs:comment>
+        <rdfs:label xml:lang="en">PolicyStorage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Process -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Process">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Base"/>
+        <rdfs:subClassOf rdf:resource="https://www.irit.fr/recherches/MELODI/ontologies/BBO#FlowElementsContainer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/dedl#byDataEcosystem"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/dedl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A series of operations or activities performed within the data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Publishing -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Publishing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Process"/>
+        <rdfs:comment xml:lang="en">An optional process that makes data discoverable and allows its findability through catalogs or metadata integration.</rdfs:comment>
+        <rdfs:label xml:lang="en">Publishing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Reference -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Reference">
+        <rdfs:comment xml:lang="en">Used for referencing between various classes</rdfs:comment>
+        <rdfs:label xml:lang="en">Reference</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#RunTimeEnvironment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#RunTimeEnvironment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#TechnicalDataEcosystemElement"/>
+        <rdfs:comment xml:lang="en">An infrastructure required for executing services within a data ecosystem, providing the necessary computing resources.</rdfs:comment>
+        <rdfs:label xml:lang="en">RunTimeEnvironment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Service -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Service">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#TechnicalDataEcosystemElement"/>
+        <rdfs:comment xml:lang="en">A service developed to address specific needs within a data ecosystem, often involving data processing or visualization.</rdfs:comment>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#ServiceExecuting -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#ServiceExecuting">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Transacting"/>
+        <rdfs:comment xml:lang="en">A  subclass of Transaction representing the process that enables third-party services execution to generate additional value from the managed data in a data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">ServiceExecuting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Status -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Status">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/dedl#ACTIVE"/>
+                    <rdf:Description rdf:about="https://w3id.org/dedl#ERROR"/>
+                    <rdf:Description rdf:about="https://w3id.org/dedl#INACTIVE"/>
+                    <rdf:Description rdf:about="https://w3id.org/dedl#MAINTENANCE"/>
+                    <rdf:Description rdf:about="https://w3id.org/dedl#UPDATE"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Enumeration of possible status values for an element.</rdfs:comment>
+        <rdfs:label xml:lang="en">Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Storage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Storage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#TechnicalDataEcosystemElement"/>
+        <rdfs:comment xml:lang="en">A component where various types of information are stored in a data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">Storage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#TechnicalDataEcosystemElement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#TechnicalDataEcosystemElement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#DataEcosystemElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/dedl#usedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/dedl#Participant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/dedl#operatedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/dedl#Participant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A subclass of DataEcosystemElement focused on technical components necessary for the operation of a data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">TechnicalDataEcosystemElement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dedl#Transacting -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dedl#Transacting">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Process"/>
+        <rdfs:comment xml:lang="en">A mandatory process that enables the exchange or transfer of data or other resources between Participants within a data ecosystem.</rdfs:comment>
+        <rdfs:label xml:lang="en">Transacting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/didl#Identity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/didl#Identity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dedl#Base"/>
+        <rdfs:comment xml:lang="en">A unique collection of attributes, credentials, or characteristics of an entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Identity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource -->
+
+
+    <owl:Class rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/BBO#DataResource"/>
+    
+
+
+    <!-- https://www.irit.fr/recherches/MELODI/ontologies/BBO#FlowElementsContainer -->
+
+
+    <owl:Class rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/BBO#FlowElementsContainer"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/dedl#ABAC -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#ABAC">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AccessControlModel"/>
+        <rdfs:comment xml:lang="en">Attribute-based Access Control model, relying on attributes to define permissions.</rdfs:comment>
+        <rdfs:label xml:lang="en">ABAC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#ACP -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#ACP">
+        <rdf:type rdf:resource="https://w3id.org/dedl#PolicyLanguage"/>
+        <rdfs:comment xml:lang="en">Access control policy language (ACP), a particular set of grammar, syntax rules (logical and mathematical), and operators which provides an abstraction-layer for access control policy specifications, see https://solid.github.io/authorization-panel/acp-specification/</rdfs:comment>
+        <rdfs:label xml:lang="en">ACP</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#ACTIVE -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#ACTIVE">
+        <rdf:type rdf:resource="https://w3id.org/dedl#Status"/>
+        <rdfs:comment xml:lang="en">Active status.</rdfs:comment>
+        <rdfs:label xml:lang="en">ACTIVE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#Allow -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#Allow">
+        <rdf:type rdf:resource="https://w3id.org/dedl#Decision"/>
+        <rdfs:comment xml:lang="en">A Decision indicating that access is permitted.</rdfs:comment>
+        <rdfs:label xml:lang="en">Allow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#Behavior -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#Behavior">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AuthenticationRiskContext"/>
+        <rdfs:comment xml:lang="en">A context factor reflecting user behavioral patterns (e.g., keystroke dynamics).</rdfs:comment>
+        <rdfs:label xml:lang="en">Behavior</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#CapBAC -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#CapBAC">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AccessControlModel"/>
+        <rdfs:comment xml:lang="en">Capability-based Access Control relying on tokens or &apos;capabilities&apos; to grant permissions.</rdfs:comment>
+        <rdfs:label xml:lang="en">CapBAC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#Cryptography -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#Cryptography">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AuthenticationProtocol"/>
+        <rdfs:comment xml:lang="en">An authentication protocol leveraging cryptographic techniques to prove identity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cryptography</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#DAC -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#DAC">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AccessControlModel"/>
+        <rdfs:comment xml:lang="en">Discretionary Access Control, where resource owners grant or deny permissions.</rdfs:comment>
+        <rdfs:label xml:lang="en">DAC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#Deny -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#Deny">
+        <rdf:type rdf:resource="https://w3id.org/dedl#Decision"/>
+        <rdfs:comment xml:lang="en">A Decision indicating that access is refused.</rdfs:comment>
+        <rdfs:label xml:lang="en">Deny</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#Device -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#Device">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AuthenticationRiskContext"/>
+        <rdfs:comment xml:lang="en">A factor in the authentication risk context indicating the device used for login.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#ERROR -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#ERROR">
+        <rdf:type rdf:resource="https://w3id.org/dedl#Status"/>
+        <rdfs:comment xml:lang="en">Error status indicating a failure or problem.</rdfs:comment>
+        <rdfs:label xml:lang="en">ERROR</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#Geolocation -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#Geolocation">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AuthenticationRiskContext"/>
+        <rdfs:comment xml:lang="en">A factor in the authentication risk context representing physical or network location.</rdfs:comment>
+        <rdfs:label xml:lang="en">Geolocation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#HybridArchitecture -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#HybridArchitecture">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AuthorizationArchitecture"/>
+        <rdfs:comment xml:lang="en">An AuthorizationArchitecture combining policy-based and token-based architecture</rdfs:comment>
+        <rdfs:label xml:lang="en">HybridArchitecture</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#INACTIVE -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#INACTIVE">
+        <rdf:type rdf:resource="https://w3id.org/dedl#Status"/>
+        <rdfs:comment xml:lang="en">Inactive status.</rdfs:comment>
+        <rdfs:label xml:lang="en">INACTIVE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#Kerberos -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#Kerberos">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AuthenticationProtocol"/>
+        <rdfs:comment xml:lang="en">A protocol using a trusted third-party ticket-granting service for authentication.</rdfs:comment>
+        <rdfs:label xml:lang="en">Kerberos</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#LDAP -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#LDAP">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AuthenticationProtocol"/>
+        <rdfs:comment xml:lang="en">Lightweight Directory Access Protocol, often used to manage authentication data in directories.</rdfs:comment>
+        <rdfs:label xml:lang="en">LDAP</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#MAC -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#MAC">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AccessControlModel"/>
+        <rdfs:comment xml:lang="en">Mandatory Access Control, where policies are enforced by a central authority.</rdfs:comment>
+        <rdfs:label xml:lang="en">MAC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#MAINTENANCE -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#MAINTENANCE">
+        <rdf:type rdf:resource="https://w3id.org/dedl#Status"/>
+        <rdfs:comment xml:lang="en">Maintenance status indicating planned or ongoing maintenance.</rdfs:comment>
+        <rdfs:label xml:lang="en">MAINTENANCE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#MPEG-21 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#MPEG-21">
+        <rdf:type rdf:resource="https://w3id.org/dedl#PolicyLanguage"/>
+        <rdfs:comment xml:lang="en">A digital rights management and usage rights framework which can serve as a policy language.</rdfs:comment>
+        <rdfs:label xml:lang="en">MPEG-21</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#MultiFactor -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#MultiFactor">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AuthenticationFactor"/>
+        <rdfs:comment xml:lang="en">An authentication factor requiring two or more independent credentials.</rdfs:comment>
+        <rdfs:label xml:lang="en">MultiFactor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#Negotiate -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#Negotiate">
+        <rdf:type rdf:resource="https://w3id.org/dedl#Authorization"/>
+        <rdfs:comment xml:lang="en">An authorization process involving negotiation or exchange of data before deciding access.</rdfs:comment>
+        <rdfs:label xml:lang="en">Negotiate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#OBAC -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#OBAC">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AccessControlModel"/>
+        <rdfs:comment xml:lang="en">Ontology-based Access Control focusing on contextual policy enforcement</rdfs:comment>
+        <rdfs:label xml:lang="en">OBAC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#ODRL -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#ODRL">
+        <rdf:type rdf:resource="https://w3id.org/dedl#PolicyLanguage"/>
+        <rdfs:comment xml:lang="en">Open Digital Rights Language, commonly used to specify rights, constraints, and obligations.</rdfs:comment>
+        <rdfs:label xml:lang="en">ODRL</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#OIDC -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#OIDC">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AuthenticationProtocol"/>
+        <rdfs:comment xml:lang="en">OpenID Connect, a simple identity layer built on OAuth 2.0 used for single sign-on.</rdfs:comment>
+        <rdfs:label xml:lang="en">OIDC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#OneWay -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#OneWay">
+        <rdf:type rdf:resource="https://w3id.org/dedl#Authentication"/>
+        <rdfs:comment xml:lang="en">A one-direction authentication process, typically from a client to a server.</rdfs:comment>
+        <rdfs:label xml:lang="en">OneWay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#OrBAC -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#OrBAC">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AccessControlModel"/>
+        <rdfs:comment xml:lang="en">Organization-based Access Control, focusing on roles and contexts within an organization.</rdfs:comment>
+        <rdfs:label xml:lang="en">OrBAC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#PolicyBasedArchitecture -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#PolicyBasedArchitecture">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AuthorizationArchitecture"/>
+        <rdfs:comment xml:lang="en">An AuthorizationArchitecture where authorization relies on evaluating formalized policies.</rdfs:comment>
+        <rdfs:label xml:lang="en">PolicyBasedArchitecture</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#Poll -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#Poll">
+        <rdf:type rdf:resource="https://w3id.org/dedl#Authorization"/>
+        <rdfs:comment xml:lang="en">An authorization process where a client periodically checks the server for an access decision.</rdfs:comment>
+        <rdfs:label xml:lang="en">Poll</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#Ponder -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#Ponder">
+        <rdf:type rdf:resource="https://w3id.org/dedl#PolicyLanguage"/>
+        <rdfs:comment xml:lang="en">A policy specification language for security and management in distributed systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ponder</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#Push -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#Push">
+        <rdf:type rdf:resource="https://w3id.org/dedl#Authorization"/>
+        <rdfs:comment xml:lang="en">An authorization process where the server proactively notifies the client about decisions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Push</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#RBAC -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#RBAC">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AccessControlModel"/>
+        <rdfs:comment xml:lang="en">Role-based Access Control, assigning permissions to roles which are then assigned to users.</rdfs:comment>
+        <rdfs:label xml:lang="en">RBAC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#Rego -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#Rego">
+        <rdf:type rdf:resource="https://w3id.org/dedl#PolicyLanguage"/>
+        <rdfs:comment xml:lang="en">A declarative policy language used with Open Policy Agent (OPA) to define fine-grained permissions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rego</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#RightsML -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#RightsML">
+        <rdf:type rdf:resource="https://w3id.org/dedl#PolicyLanguage"/>
+        <rdfs:comment xml:lang="en">An ODRL-based language for expressing rights and usage constraints, common in news/media.</rdfs:comment>
+        <rdfs:label xml:lang="en">RightsML</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#SAML_2.0 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#SAML_2.0">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AuthenticationProtocol"/>
+        <rdfs:comment xml:lang="en">Security Assertion Markup Language (2.0), exchanging authentication and authorization data.</rdfs:comment>
+        <rdfs:label xml:lang="en">SAML2.0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#Signature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#Signature">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AuthenticationProtocol"/>
+        <rdfs:comment xml:lang="en">An authentication protocol relying on digital signatures for verification.</rdfs:comment>
+        <rdfs:label xml:lang="en">Signature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#SingleFactor -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#SingleFactor">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AuthenticationFactor"/>
+        <rdfs:comment xml:lang="en">An authentication factor using only one method of verification (e.g., a single password).</rdfs:comment>
+        <rdfs:label xml:lang="en">SingleFactor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#ThreeWay -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#ThreeWay">
+        <rdf:type rdf:resource="https://w3id.org/dedl#Authentication"/>
+        <rdfs:comment xml:lang="en">An authentication process involving a three-part handshake or three-step verification.</rdfs:comment>
+        <rdfs:label xml:lang="en">ThreeWay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#Time-based -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#Time-based">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AuthenticationRiskContext"/>
+        <rdfs:comment xml:lang="en">A context factor referencing time-sensitive credentials or restrictions (e.g., OTPs).</rdfs:comment>
+        <rdfs:label xml:lang="en">TimeBased</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#TokenBasedArchitecture -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#TokenBasedArchitecture">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AuthorizationArchitecture"/>
+        <rdfs:comment xml:lang="en">An authorization architecture using tokens (e.g., JWT)</rdfs:comment>
+        <rdfs:label xml:lang="en">TokenBasedArchitecture</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#TwoWay -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#TwoWay">
+        <rdf:type rdf:resource="https://w3id.org/dedl#Authentication"/>
+        <rdfs:comment xml:lang="en">A mutual authentication process where both parties verify each other&apos;s identity.</rdfs:comment>
+        <rdfs:label xml:lang="en">TwoWay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#UPDATE -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#UPDATE">
+        <rdf:type rdf:resource="https://w3id.org/dedl#Status"/>
+        <rdfs:comment xml:lang="en">Update status indicating an ongoing update.</rdfs:comment>
+        <rdfs:label xml:lang="en">UPDATE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#WebAuth -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#WebAuth">
+        <rdf:type rdf:resource="https://w3id.org/dedl#AuthenticationProtocol"/>
+        <rdfs:comment xml:lang="en">A web-based authentication protocol, encompassing flows like OAuth, SAML, or WebAuthn.</rdfs:comment>
+        <rdfs:label xml:lang="en">WebAuth</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dedl#XACMLPolicyLanguage -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dedl#XACMLPolicyLanguage">
+        <rdf:type rdf:resource="https://w3id.org/dedl#PolicyLanguage"/>
+        <rdfs:comment xml:lang="en">An OASIS standard policy language for defining access control rules (XACML framework).</rdfs:comment>
+        <rdfs:label xml:lang="en">XACMLPolicyLanguage</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
